@@ -127,6 +127,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BottomIcon\mastercard-3.svg" />
+    <Content Include="BottomIcon\tiền mặt.png" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -163,6 +165,14 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="BottomIcon\facebook-brands-solid.svg" />
+    <Content Include="BottomIcon\money-bill-1-solid.svg" />
+    <Content Include="BottomIcon\shopee.svg" />
+    <Content Include="BottomIcon\square-instagram-brands-solid.svg" />
+    <Content Include="BottomIcon\visa.svg" />
+    <Content Include="BottomIcon\youtube-brands-solid.svg" />
+    <Content Include="TopIcon\Banner1.png" />
+    <Content Include="TopIcon\logo-tnc.png" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

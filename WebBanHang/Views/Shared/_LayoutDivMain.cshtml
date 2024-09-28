@@ -7,23 +7,450 @@
     <meta name="keywords" content="TNC, TNCStore, TNCStoreGaming" />
     <title>@ViewBag.Title</title>
     <style>
-        h3{
-            color:white;
+
+
+        body {
+            margin: 0;
+            background-color: white; /* Màu nền cho toàn trang */
+        }
+
+
+
+
+        /*Layout Top*/
+        #top {
+            
+        }
+        .banner1 {
+            max-width: 100%;
+        }
+        header {
+            background-color: #283350;
+            color: white;
+            padding-left: 160px;
+            padding-right: 160px;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 100px;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .search-bar select,
+        .search-bar input {
+            padding: 8px;
+            border-radius: 4px;
+            border: none;
+        }
+
+        .search-bar button {
+            padding: 8px 12px;
+            background-color: #007bff;
+            border: none;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .account-cart {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .account-cart a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .account-cart .cart {
+            display: flex;
+            align-items: center;
+        }
+
+        .cart-icon {
+            font-size: 20px;
+        }
+
+        .cart-count {
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            padding: 3px 6px;
+            margin-left: 5px;
+        }
+
+        nav {
+            background-color: #283350;
+            padding: 10px 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a .fire-emoji {
+            color: red;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+
+        /*Custom list của nav 3*/
+        .custom-list {
+            list-style: none; /* Xóa các kiểu danh sách mặc định */
+            padding: 0;
+        }
+
+        .custom-list li {
+            display: inline; /* Hiển thị các mục li theo hàng ngang */
+            margin-right: 10px; /* Khoảng cách giữa các mục */
+        }
+
+        .custom-list li::after {
+            content: "|"; /* Thêm dấu | sau mỗi mục */
+            margin-left: 10px; /* Khoảng cách giữa mục và dấu | */
+        }
+
+        .custom-list li:last-child::after {
+            content: ""; /* Không hiển thị dấu | sau mục cuối cùng */
+        }
+        /* Chỉnh lại font chữ*/
+        .custom-list {
+            font-size: 0.6rem;
+            font-weight: bold;
+        }
+        .custom-list {
+            display: inline; /* Hiển thị các mục li theo hàng ngang */
+            margin-right: 10px; /* Khoảng cách giữa các mục */
+            white-space: nowrap; /* Ngăn chặn xuống dòng */
+        }
+
+        /*Danh mục sản phẩm của nav3*/
+        .product-category {
+            position: relative; /* Để định vị dropdown */
+        }
+
+        .dropdown-content {
+            display: none; /* Ẩn dropdown ban đầu */
+            position: absolute; /* Định vị tuyệt đối */
+            background-color: #1f294d; /* Màu nền dropdown */
+            min-width: 200px; /* Chiều rộng tối thiểu của dropdown */
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1; /* Đảm bảo dropdown hiển thị trên các phần tử khác */
+        }
+
+        .dropdown-content ul {
+            list-style: none; /* Xóa kiểu danh sách mặc định */
+            padding: 0;
+            margin: 0;
+        }
+
+        .dropdown-content li {
+            padding: 12px 16px; /* Khoảng cách cho từng mục */
+        }
+
+        .dropdown-content li a {
+            color: white; /* Màu chữ */
+            text-decoration: none; /* Không có gạch chân */
+        }
+
+        .dropdown-content li:hover {
+            background-color: #3a4576; /* Màu nền khi hover */
+        }
+
+        /* Hiển thị dropdown khi hover */
+        .product-category:hover .dropdown-content {
+            display: block; /* Hiển thị dropdown khi hover vào danh mục */
+        }
+
+
+        /*Layout Bottom*/
+        /* Chứa toàn bộ nội dung và cách lề 160px */
+        .content-wrapper {
+            padding-left: 160px;
+            padding-right: 160px;
         }
         #div-footer {
-            background-color:#1a426b;
+            background-color: #283350;
+            height: 125px;
+            padding-left: 160px;
+            padding-right: 160px;
+        }
+        #div-footer h2 {
+                color: white;
+        }
+        .fm-social-left{
+            float:left;
+        }
+        .social-icon-left{
+            width:30px;
+            height:30px;
+            margin-right:10px;
+        }
+        .fm-social-right{
+            float:right;
 
         }
+        #txtDkyEmail {
+            width: 73%;
+            height: 30px;
+            padding: 2px;
+            border: 1px solid #ccc;
+            border-right: none; /* Xóa đường viền phải để kết nối với nút */
+            border-radius: 5px 0 0 5px; /* Góc bo tròn bên trái */
+            font-size: 1rem;
+            float:left
+        }
+
+        .btnMuaSocialRight {
+            height: 35.8px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 0 20px;
+            cursor: pointer;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #div-footer2 {
+            padding-left: 160px;
+            padding-right: 160px;
+            background-color:white;
+        }
+        .footer-columns {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .footer-column {
+            width: 30%; /* Thay đổi chiều rộng tùy theo số lượng cột */
+        }
+
+        .footer-column h3 {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.2rem; /* Kích thước chữ tiêu đề */
+        }
+
+        .footer-column p {
+            margin: 5px 0; /* Khoảng cách giữa các mục */
+            font-size: 1rem; /* Kích thước chữ cho các mục */
+        }
+        #contact-info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            float:left
+        }
+
+        #map {
+            margin-right:30px;
+        }
+
+        #details h3 {
+            margin: 0 0 10px;
+            font-size: 1.3rem; /* Kích thước chữ cho tiêu đề */
+            font-weight: bold;
+        }
+
+        #details p {
+            margin: 5px 0; /* Khoảng cách giữa các mục */
+            font-size: 1rem; /* Kích thước chữ cho các mục */
+        }
+        #payment h3{
+            margin: 0 0 10px;
+            font-size:1.2rem;
+            font-weight:bold;
+        }
+        #div-footer3 {
+            padding-left: 160px;
+            padding-right: 160px;
+            float: left;
+            background-color: lightgray;
+        }
+        #div-footer3{
+            height:60px;
+            width:100%;
+            margin-top:10px;
+            
+        }
+        
     </style>
 </head>
 <body>
-    <div>
+    <div id="top">
+        <div id="banner1">
+            <img src="~/TopIcon/Banner1.png" alt="banner1" class="banner1" />
+        </div>
+        <header>
+            <div class="header-container">
+                <div class="logo">
+                    <img src="~/TopIcon/logo-tnc.png" alt="TNC Logo">
+                </div>
+                <div class="search-bar">
+                    <select>
+                        <option>Tất cả danh mục</option>
+                        <!-- Add other options as needed -->
+                    </select>
+                    <input type="text" placeholder="Nhập sản phẩm cần tìm...">
+                    <button>Tìm kiếm</button>
+                </div>
+                <div class="account-cart">
+                    <a href="#">Tài khoản</a>
+                    <a href="#" class="cart">
+                        <span class="cart-icon">🛒</span>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+            <nav>
+                <ul class="custom-list">
+                    <li class="product-category">
+                        <button class="dropdown-btn">DANH MỤC SẢN PHẨM</button>
+                        <div class="dropdown-content">
+                            <a href="#">Xây dựng cấu hình PC</a><br />
+                            <a href="#">PC Gaming</a><br />
+                            <a href="#">PC Đồ Họa</a><br />
+                            <a href="#">PC AI</a><br />
+                            <a href="#">Laptop - Máy Tính Xách Tay</a><br />
+                            <a href="#">Màn Hình Máy Tính</a><br />
+                            <a href="#">Máy chơi game - Console</a><br />
+                            <a href="#">Tay Cầm Chơi Game</a><br />
+                            <a href="#">VGA - Card màn hình</a><br />
+                            <a href="#">Linh kiện máy tính</a><br />
+                            <a href="#">Gaming Gears</a><br />
+                            <a href="#">PC Văn Phòng</a><br />
+                            <a href="#">Phụ Kiện - Tản Nhiệt PC</a><br />
+                            <a href="#">Apple</a><br />
+                            <a href="#">AUDIO</a><br />
+                            <a href="#">Hàng Cũ - Giá Tốt</a><br />
+                            <a href="#">Thiết bị văn phòng</a><br />
+                            <a href="#">Thiết bị mạng</a><br />
+                        </div>
+                    </li>
+                    <li><a href="#">Xây Dựng Cấu Hình PC</a></li>
+                    <li><a href="#">PC Gaming</a></li>
+                    <li><a href="#">Màn Hình Gaming</a></li>
+                    <li><a href="#">PC Đồ Đại Học 2024 <span class="fire-emoji">🔥</span></a></li>
+                    <li><a href="#">Laptop Sinh Viên</a></li>
+                    <li><a href="#">PS5 Slim</a></li>
+                    <li><a href="#">Steam Deck</a></li>
+                    <li><a href="#">Khuyến Mãi</a></li>
+                    <li><a href="#">RTX 4070 Super</a></li>
+                    <li><a href="#">RTX 4080</a></li>
+                    <li><a href="#">Máy In</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <div class="content-wrapper">
         @RenderBody()
     </div>
     <div id="div-footer">
         <div class="fm-social-left">
-            <h3>Theo dõi chúng tôi tại</h3>
+            <h2><b>Theo dõi chúng tôi tại</b></h2>
+            <img src="~/BottomIcon/facebook-brands-solid.svg" class="social-icon-left" />
+            <img src="~/BottomIcon/square-instagram-brands-solid.svg" class="social-icon-left" />
+            <img src="~/BottomIcon/youtube-brands-solid.svg" class="social-icon-left" />
+            <img src="~/BottomIcon/shopee.svg" class="social-icon-left" />
         </div>
+        <div class="fm-social-right">
+            <h2><b>Đăng ký email để nhận tin khuyến mãi</b></h2>
+            <input type="text" id="txtDkyEmail" placeholder="Nhập email của bạn" />
+            <button class="btnMuaSocialRight" value="Mua">Đăng ký</button>
+        </div>
+    </div>
+    <div id="div-footer2">
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h3>Danh Mục Sản Phẩm</h3>
+                <p>PC Gaming</p>
+                <p>Laptop Gaming</p>
+                <p>VGA NVidia Rtx 4070</p>
+                <p>Ps5 Rẻ nhất Việt Nam</p>
+                <p>VGA NVidia Rtx 4060</p>
+            </div>
+            <div class="footer-column">
+                <h3>Thông Tin Chung</h3>
+                <p>Giới Thiệu</p>
+                <p>Tuyển Dụng</p>
+                <p>Tin Tức</p>
+                <p>Ý Kiến Khách Hàng</p>
+                <p>Liên Hệ Hợp Tác</p>
+            </div>
+            <div class="footer-column">
+                <h3>Chính Sách</h3>
+                <p>Quy Định Chung</p>
+                <p>Chính Sách Vận Chuyển</p>
+                <p>Chính Sách Bảo Hành</p>
+                <p>Chính Sách Đổi, Trả Hàng</p>
+                <p>Chính Sách Cho Doanh Nghiệp</p>
+            </div>
+            <div class="footer-column">
+                <h3>Thông Tin Hữu Ích</h3>
+                <p>Build PC là TNC</p>
+                <p>Hướng dẫn Build PC TNC</p>
+                <p>Tips Build PC TNC nhiều Khuyến Mại</p>
+                <p>Cách sửa cấu hình mẫu của Build PC TNC</p>
+                <p>Chính Sách Build PC TNC Cho Doanh Nghiệp</p>
+            </div>
+        </div>
+        <div id="contact-info">
+            <div id="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d59596.92270727487!2d105.84709124340816!3d21.000345415297396!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac70cf94287f%3A0x7362ea6005b5ac6e!2sTNC%20Store!5e0!3m2!1sen!2sus!4v1727513070287!5m2!1sen!2sus"
+                        width="400"
+                        height="200"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy">
+                </iframe>
+            </div>
+            <div id="details">
+                <h3>Công ty TNHH Thương mại & Tin học Tú Nguyệt</h3>
+                <p>Showroom: 172 Lê Thanh Nghị, Phường Đồng Tâm, Quận Hai Bà Trưng, Hà Nội</p>
+                <p>Tel: (024) 36288790 / (086) 830.2123</p>
+                <p>Trung tâm bảo hành: 172 Lê Thanh Nghị, Phường Đồng Tâm, Quận Hai Bà Trưng, Hà Nội</p>
+                <p>Tel: (098) 978 1468</p>
+                <p>Trụ sở [Không bán hàng]: 11 Vũ Thanh - Cát Linh - Đống Đa - Hà Nội</p>
+                <p>Tel: (086) 8302123</p>
+                <p>Fax: (024) 36288790</p>
+            </div>
+        </div>
+        <div style="clear:both"></div>
+        <div id="payment">
+            <h3>Hình thức thanh toán</h3>
+            <img src="~/BottomIcon/visa.svg" class="social-icon-left" />
+            <img src="~/BottomIcon/mastercard-3.svg" class="social-icon-left" />
+            <img src="~/BottomIcon/money-bill-1-solid.svg" class="social-icon-left" />
+            <img src="~/BottomIcon/tiền mặt.png" style="width:50px;height:30px;margin-right:10px" />
+        </div>
+    </div>
+    <div id="div-footer3">
+        <p>&copy; @DateTime.Now.Year - Bản quyền của Công ty TNHH Hoàng Anh Tuấn & Nguyễn Anh Đức</p>
     </div>
 </body>
 </html>
