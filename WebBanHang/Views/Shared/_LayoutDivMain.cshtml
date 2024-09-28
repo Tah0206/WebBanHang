@@ -23,6 +23,30 @@
         }
         .banner1 {
             max-width: 100%;
+            margin-bottom:-4px;
+        }
+        #top-nav1{
+            padding-left:160px;
+            padding-right:160px;
+            padding-top:10px;
+            text-align:right;
+        }
+        #top-nav1{
+            background-color:#2879F2;
+            width:100%;
+            height:30px;
+            float:right;
+            color:white;
+        }
+        #top-nav1 a{
+            color:white;
+            font-size:0.8rem;
+            font-weight:bold;
+        }
+        .nav1-icon{
+            width:13px;
+            height:13px;
+            margin-right:6px;
         }
         header {
             background-color: #283350;
@@ -38,7 +62,9 @@
         }
 
         .logo img {
-            width: 100px;
+            width: 160px;
+            height:56px;
+            margin-top:15px;
         }
 
         .search-bar {
@@ -137,18 +163,25 @@
         }
         /* Chỉnh lại font chữ*/
         .custom-list {
-            font-size: 0.6rem;
+            font-size: 0.64rem;
             font-weight: bold;
         }
         .custom-list {
             display: inline; /* Hiển thị các mục li theo hàng ngang */
-            margin-right: 10px; /* Khoảng cách giữa các mục */
+            margin-right: 5px; /* Khoảng cách giữa các mục */
             white-space: nowrap; /* Ngăn chặn xuống dòng */
         }
 
         /*Danh mục sản phẩm của nav3*/
         .product-category {
             position: relative; /* Để định vị dropdown */
+        }
+        .dropdown-btn {
+            background-color: #283350;
+            border: none; /* Remove border */
+            color: white; /* Ensure text color is visible */
+            padding: 10px; /* Add some padding for better appearance */
+            cursor: pointer; /* Change cursor to pointer */
         }
 
         .dropdown-content {
@@ -304,12 +337,20 @@
 <body>
     <div id="top">
         <div id="banner1">
-            <img src="~/TopIcon/Banner1.png" alt="banner1" class="banner1" />
+            <a href="~/Home/Home"><img src="~/TopIcon/Banner1.png" alt="banner1" class="banner1" /></a>
         </div>
+        <div id="top-nav1">
+            <ul class="custom-list">
+                <li><a href="#">Tất cả sản phẩmm</a></li>
+                <li><a href="tel:0876754228"><img src="~/TopIcon/phone-volume-solid.svg" alt="PhoneIcon" class="nav1-icon" />0876754228</a></li>
+                <li><a href="mailto:Tah02.06.05@gmail.com">Tah02.06.05@gmail.com</a></li>
+            </ul>
+        </div>
+        <div style="clear:both"></div>
         <header>
             <div class="header-container">
                 <div class="logo">
-                    <img src="~/TopIcon/logo-tnc.png" alt="TNC Logo">
+                    <a href="~/Home/Home"><img src="~/TopIcon/logo-tnc.png" alt="TNC Logo"></a>
                 </div>
                 <div class="search-bar">
                     <select>
