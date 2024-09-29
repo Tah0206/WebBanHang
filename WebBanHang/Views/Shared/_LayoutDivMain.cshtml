@@ -67,26 +67,50 @@
             margin-top:15px;
         }
 
+
+        /*Thanh tìm kiếm */
         .search-bar {
             display: flex;
             align-items: center;
             gap: 10px;
+            background-color: #f5f5f5; /* Light background for the search bar */
+            /*border-radius: 25px;*/ /* Rounded corners */
+            /*padding: 5px 10px;*/ /* Padding for a better look */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            width:68%;
         }
 
         .search-bar select,
         .search-bar input {
-            padding: 8px;
-            border-radius: 4px;
-            border: none;
+            padding: 10px;
+            /*border-radius: 20px;*/ /* Rounded edges */
+            border: 1px solid #ccc;
+            outline: none; /* Remove outline on focus */
+            }
+
+        .search-bar input {
+            flex: 1; /* Allow input to take available space */
+            border: none; /* Remove border */
+            background-color: transparent; /* Make background transparent */
+            font-size: 1rem; /* Adjust font size */
+        }
+
+        .search-bar input:focus {
+            border-color: #007bff; /* Change border color on focus */
         }
 
         .search-bar button {
-            padding: 8px 12px;
-            background-color: #007bff;
+            padding: 12px 30px; 
+            background-color: #007bff; 
             border: none;
+            /*border-radius: 20px;*/ 
             color: white;
-            border-radius: 4px;
             cursor: pointer;
+            transition: background-color 0.3s; /* Làm chuyển động mượt hơn */
+        }
+
+        .search-bar button:hover {
+            background-color: #0056b3; /* Đổi màu khi di chuột vô */
         }
 
         .account-cart {
@@ -116,6 +140,97 @@
             padding: 3px 6px;
             margin-left: 5px;
         }
+        .close-btn-login {
+            position: absolute;
+            top: 0px; /* Đặt vị trí ở góc trên bên trái */
+            right: 10px; /* Đặt vào góc phải */
+            font-size: 40px; /* Kích thước chữ */
+            color: #aaa; /* Màu sắc */
+            cursor: pointer; /* Đổi con trỏ thành hình bàn tay khi hover */
+            /*margin-top:100px;*/
+        }
+
+        .close-btn-login:hover {
+            color: red; /* Đổi màu khi hover */
+        }
+        .login-box {
+            background-color: white;
+            padding: 40px;
+            /*border-radius: 8px;*/
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            width: 320px;
+            /*margin-top:100px;*/
+        }
+
+        .login-box h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color:black;
+        }
+        .options p{
+            color:gray;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            font-size: 14px;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .input-group input {
+            width: 93%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            /*border-radius: 5px;*/
+            font-size: 14px;
+        }
+        .login-container {
+            display: none; /* Ẩn mặc định */
+            position: absolute; /* Định vị tuyệt đối */
+            top: 60px; /* Điều chỉnh theo chiều cao của header */
+            right: 160px; /* Đặt ở vị trí bên phải */
+            background-color: white; /* Nền trắng */
+            /*border-radius: 8px;*/ /* Bo tròn góc */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Đổ bóng */
+            z-index: 1000; /* Đảm bảo nằm trên các phần tử khác */
+            margin-top:80px;
+        }
+        .login-box button {
+            width: 100%;
+            padding: 10px;
+            background-color: #1976D2;
+            color: white;
+            border: none;
+            /*border-radius: 5px;*/
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .login-box button:hover {
+            background-color: #1565C0;
+        }
+
+        .options {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .options a {
+            color: #1976D2;
+            text-decoration: none;
+        }
+
+        .options a:hover {
+            text-decoration: underline;
+        }
+        
 
         nav {
             background-color: #283350;
@@ -178,10 +293,10 @@
         }
         .dropdown-btn {
             background-color: #283350;
-            border: none; /* Remove border */
-            color: white; /* Ensure text color is visible */
-            padding: 10px; /* Add some padding for better appearance */
-            cursor: pointer; /* Change cursor to pointer */
+            border: none; /* bỏ viền */
+            color: white; 
+            padding: 10px; 
+            cursor: pointer; /* Đổi cursor */
         }
 
         .dropdown-content {
@@ -343,7 +458,7 @@
             <ul class="custom-list">
                 <li><a href="#">Tất cả sản phẩmm</a></li>
                 <li><a href="tel:0876754228"><img src="~/TopIcon/phone-volume-solid.svg" alt="PhoneIcon" class="nav1-icon" />0876754228</a></li>
-                <li><a href="mailto:Tah02.06.05@gmail.com">Tah02.06.05@gmail.com</a></li>
+                <li><a href="mailto:Tah02.06.05@gmail.com"> <img src="~/TopIcon/envelope-solid.svg" alt="MailIcon" class="nav1-icon" />Tah02.06.05@gmail.com</a></li>
             </ul>
         </div>
         <div style="clear:both"></div>
@@ -361,7 +476,28 @@
                     <button>Tìm kiếm</button>
                 </div>
                 <div class="account-cart">
-                    <a href="#">Tài khoản</a>
+                    <a href="javascript:void(0);" onclick="toggleLogin()"> <img src="~/TopIcon/user-regular.svg" alt="UserIcon" class="nav1-icon" />Tài khoản</a>
+                    <div class="login-container" style="display: none;">
+                        <div class="login-box">
+                            <span class="close-btn-login" onclick="closeLogin(event);">&times;</span>
+                            <h2><b>Đăng Nhập</b></h2>
+                            <form>
+                                <div class="input-group">
+                                    <label for="email" style="color:black"><b>Email</b></label>
+                                    <input type="email" id="email" placeholder="Nhập email đăng ký của bạn">
+                                </div>
+                                <div class="input-group">
+                                    <label for="password" style="color:black"><b>Mật khẩu</b></label>
+                                    <input type="password" id="password" placeholder="Nhập mật khẩu của bạn">
+                                </div>
+                                <button type="submit" value="submit" class="ButtonLogin">Đăng nhập</button>
+                                <div class="options">
+                                    <p>Khách hàng mới? <a href="#">Tạo tài khoản</a></p>
+                                    <p>Quên mật khẩu? <a href="#">Đặt lại mật khẩu</a></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                     <a href="#" class="cart">
                         <span class="cart-icon">🛒</span>
                         <span class="cart-count">0</span>
@@ -493,5 +629,35 @@
     <div id="div-footer3">
         <p>&copy; @DateTime.Now.Year - Bản quyền của Công ty TNHH Hoàng Anh Tuấn & Nguyễn Anh Đức</p>
     </div>
+    <script>
+        // Lưu trữ tham chiếu đến phần đăng nhập
+        const loginContainer = document.querySelector('.login-container');
+
+        function toggleLogin() {
+            if (loginContainer.style.display === 'none' || loginContainer.style.display === '') {
+                loginContainer.style.display = 'block';
+            } else {
+                loginContainer.style.display = 'none';
+            }
+        }
+
+        // Thêm sự kiện click cho toàn bộ trang
+        document.addEventListener('click', function (event) {
+            // Kiểm tra xem nhấp chuột có nằm ngoài phần đăng nhập và nút tài khoản không
+            const target = event.target;
+            const isLoginContainer = loginContainer.contains(target);
+            const isAccountLink = target.closest('.account-cart a');
+
+            if (!isLoginContainer && !isAccountLink) {
+                // Ẩn khung đăng nhập nếu nhấp vào bên ngoài
+                loginContainer.style.display = 'none';
+            }
+        });
+        function closeLogin(event) {
+            event.stopPropagation(); // Ngăn sự kiện click tiếp tục
+            loginContainer.style.display = 'none'; // Ẩn khung đăng nhập
+        }
+    </script>
+
 </body>
 </html>
