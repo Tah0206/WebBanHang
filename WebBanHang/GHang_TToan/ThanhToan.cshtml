@@ -1,0 +1,176 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Thanh Toán</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            width: 1250px;
+        }
+
+        .container {
+            width: 750px;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            float: left;
+            margin-left: 50px;
+        }
+
+        .container_vch {
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            float: right;
+            margin-right: 30px;
+            width: 310px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-section {
+            margin-bottom: 20px;
+        }
+
+            .form-section label {
+                font-weight: bold;
+            }
+
+            .form-section input, .form-section select {
+                width: 95%;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            .form-section textarea {
+                width: 95%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                resize: none;
+            }
+
+        .cart-summary {
+            background-color: white;
+            padding: 15px;
+            border: 0px solid #ddd;
+            margin-top: 20px;
+            width: 300px;
+            float: left;
+        }
+
+            .cart-summary h4 {
+                margin: 0;
+            }
+
+            .cart-summary p {
+                margin: 5px 0;
+            }
+
+        .btn {
+            width: auto;
+            padding: 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+            .btn:hover {
+                background-color: #0056b3;
+            }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Thanh Toán</h2>
+
+        <!-- Thông tin giao hàng -->
+        <div class="form-section">
+            <h3>Thông tin giao hàng</h3>
+            <label for="name">Họ và Tên:</label>
+            <input type="text" id="name" placeholder="Nhập họ và tên">
+
+            <label for="phone">Số điện thoại:</label>
+            <input type="text" id="phone" placeholder="Nhập số điện thoại">
+
+            <label for="address">Địa chỉ giao hàng:</label>
+            <textarea id="address" rows="4" placeholder="Nhập địa chỉ giao hàng"></textarea>
+
+
+        </div>
+
+        <!-- Phương thức thanh toán -->
+        <div class="form-section">
+            <h3>Phương thức thanh toán</h3>
+            <label for="payment-method">Chọn phương thức thanh toán:</label>
+            <select id="payment-method">
+                <option value="cod">Thanh toán khi nhận hàng (COD)</option>
+                <option value="bank-transfer">Chuyển khoản ngân hàng</option>
+                <option value="credit-card">Thẻ tín dụng / Thẻ ghi nợ</option>
+            </select>
+        </div>
+
+
+    </div>
+    <div class="container_vch">
+        <div class="voucher">
+            <div>
+
+                <label for="voucher-code">Nhập mã voucher</label>
+                <input type="text" id="voucher-code" placeholder="Nhập mã khuyến mãi">
+            </div>
+            <button class="btn">Áp dụng</button>
+        </div>
+        <!-- Tóm tắt giỏ hàng -->
+        <div class="cart-summary">
+            <h4>Tóm tắt giỏ hàng</h4>
+            <p>Bàn Di Chuột Laptop TNC: 49.000đ</p>
+            <p>Tai Nghe Razer Kraken V3 HyperSense: 2.369.000đ</p>
+            <hr>
+            <p><strong>Tổng chi phí: 2.418.000đ</strong></p>
+            <!-- Nút hoàn tất thanh toán -->
+            <button class="btn">Hoàn tất thanh toán</button>
+        </div>
+    </div>
+
+
+    <script>
+            // Giả lập hành động thanh toán
+            document.querySelector('.btn').addEventListener('click', function () {
+                const name = document.getElementById('name').value;
+                const address = document.getElementById('address').value;
+                const phone = document.getElementById('phone').value;
+                const paymentMethod = document.getElementById('payment-method').value;
+
+                if (!name || !address || !phone) {
+                    alert('Vui lòng nhập đầy đủ thông tin giao hàng.');
+                    return;
+                }
+
+                alert(`Thanh toán thành công!\nTên: ${name}\nĐịa chỉ: ${address}\nSố điện thoại: ${phone}\nPhương thức thanh toán: ${paymentMethod}`);
+            });</script>
+
+</body>
+</html>
+
