@@ -174,7 +174,15 @@
     <Content Include="BottomIcon\visa.svg" />
     <Content Include="BottomIcon\youtube-brands-solid.svg" />
     <Content Include="TopIcon\Banner1.png" />
+    <Content Include="TopIcon\cart-shopping-solid.svg" />
+    <Content Include="TopIcon\chevron-down-solid.svg" />
+    <Content Include="TopIcon\chevron-right-solid.svg" />
+    <Content Include="TopIcon\chevron-up-solid.svg" />
+    <Content Include="TopIcon\envelope-solid.svg" />
+    <Content Include="TopIcon\list-solid.svg" />
     <Content Include="TopIcon\logo-tnc.png" />
+    <Content Include="TopIcon\phone-volume-solid.svg" />
+    <Content Include="TopIcon\user-regular.svg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
