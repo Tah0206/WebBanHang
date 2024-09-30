@@ -1,0 +1,87 @@
+﻿body {
+    
+}
+.container-tong{
+    margin-top:100px;
+}
+.container {
+    width: 750px;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    float: left;
+    margin-left: 50px;
+ 
+}
+
+.container_vch {
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    float: right;
+    margin-right: 30px;
+    width: 310px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-section {
+    margin-bottom: 20px;
+}
+
+    .form-section label {
+        font-weight: bold;
+    }
+
+    .form-section input, .form-section select {
+        width: 95%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .form-section textarea {
+        width: 95%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        resize: none;
+    }
+
+.cart-summary {
+    background-color: white;
+    padding: 15px;
+    border: 0px solid #ddd;
+    margin-top: 20px;
+    width: 300px;
+    float: left;
+}
+
+    .cart-summary h4 {
+        margin: 0;
+    }
+
+    .cart-summary p {
+        margin: 5px 0;
+    }
+
+.btn {
+    width: auto;
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+    .btn:hover {
+        background-color: #0056b3;
+    }

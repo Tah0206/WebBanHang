@@ -1,5 +1,5 @@
-﻿<!DOCTYPE html>
-
+﻿
+<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -15,14 +15,12 @@
         }
 
 
-
-
         /*Layout Top*/
         #top {
             
         }
         .banner1 {
-            max-width: 100%;
+            width: 100%;
             margin-bottom:-4px;
         }
         #top-nav1{
@@ -100,10 +98,11 @@
         }
 
         .search-bar button {
-            padding: 12px 30px; 
-            background-color: #007bff; 
+            padding: 14px 35px; 
+            background-color: #007bff;
+            font-size:0.8rem;
             border: none;
-            /*border-radius: 20px;*/ 
+            border-radius: 0; 
             color: white;
             cursor: pointer;
             transition: background-color 0.3s; /* Làm chuyển động mượt hơn */
@@ -125,51 +124,98 @@
         }
 
         .account-cart .cart {
-            display: flex;
+            display: inline;
             align-items: center;
+        }
+        .cart {
+            display: flex;
+            align-items: center; /* Căn giữa theo chiều dọc */
         }
 
         .cart-icon {
-            font-size: 20px;
+            margin-right: 8px; /* Khoảng cách giữa biểu tượng và số lượng */
         }
 
-        .cart-count {
-            background-color: red;
+        .cart-dropdown {
+            position: absolute;
+            right: 0;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            z-index: 1000;
+        }
+
+        .cart-items {
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+            .cart-items p {
+                padding: 10px;
+                text-align: left; /* Căn trái */
+            }
+
+        .cart-total {
+            padding: 10px;
+            border-top: 1px solid #ccc;
+        }
+
+        .checkout-button {
+            background-color: #007bff;
             color: white;
-            border-radius: 50%;
-            padding: 3px 6px;
-            margin-left: 5px;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+            .checkout-button:hover {
+                background-color: #0056b3;
+            }
+
+        .close-button-cart {
+            background: none;
+            border: none;
+            color: red; /* Màu sắc của nút X */
+            font-size: 16px; /* Kích thước chữ */
+            cursor: pointer;
+            float: right; /* Đưa nút sang bên phải */
+            margin: 10px; /* Khoảng cách bên ngoài */
         }
         .close-btn-login {
             position: absolute;
-            top: 0px; /* Đặt vị trí ở góc trên bên trái */
-            right: 10px; /* Đặt vào góc phải */
-            font-size: 40px; /* Kích thước chữ */
-            color: #aaa; /* Màu sắc */
-            cursor: pointer; /* Đổi con trỏ thành hình bàn tay khi hover */
-            /*margin-top:100px;*/
+            top: 0px;
+            right: 10px;
+            font-size: 40px;
+            color: #aaa;
+            cursor: pointer;
         }
 
         .close-btn-login:hover {
-            color: red; /* Đổi màu khi hover */
+            color: red;
         }
+
+        .cart-dropdown p{
+            color:black;
+            font-weight:bold;
+        }
+
         .login-box {
             background-color: white;
             padding: 40px;
-            /*border-radius: 8px;*/
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
             width: 320px;
-            /*margin-top:100px;*/
         }
 
         .login-box h2 {
             text-align: center;
             margin-bottom: 20px;
             font-size: 24px;
-            color:black;
+            color: black;
         }
-        .options p{
-            color:gray;
+
+        .options p {
+            color: gray;
         }
 
         .input-group {
@@ -187,47 +233,54 @@
             padding: 10px;
             margin-top: 5px;
             border: 1px solid #ccc;
-            /*border-radius: 5px;*/
             font-size: 14px;
         }
+
         .login-container {
-            display: none; /* Ẩn mặc định */
-            position: absolute; /* Định vị tuyệt đối */
-            top: 60px; /* Điều chỉnh theo chiều cao của header */
-            right: 160px; /* Đặt ở vị trí bên phải */
-            background-color: white; /* Nền trắng */
-            /*border-radius: 8px;*/ /* Bo tròn góc */
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Đổ bóng */
-            z-index: 1000; /* Đảm bảo nằm trên các phần tử khác */
-            margin-top:80px;
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 160px;
+            background-color: white;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            margin-top: 80px;
         }
+
         .login-box button {
             width: 100%;
             padding: 10px;
             background-color: #1976D2;
             color: white;
             border: none;
-            /*border-radius: 5px;*/
             font-size: 16px;
             cursor: pointer;
             transition: background-color 0.3s;
+        }
+        .login-box a{
+            color:black;
         }
 
         .login-box button:hover {
             background-color: #1565C0;
         }
 
-        .options {
+        .search-bar option {
             text-align: center;
             margin-top: 20px;
         }
 
-        .options a {
+        .search-bar option {
+            width: 100%;
+            padding: 10px;
+        }
+
+        .search-bar option a {
             color: #1976D2;
             text-decoration: none;
         }
 
-        .options a:hover {
+        .search-bar option a:hover {
             text-decoration: underline;
         }
         
@@ -278,7 +331,7 @@
         }
         /* Chỉnh lại font chữ*/
         .custom-list {
-            font-size: 0.64rem;
+            font-size: 0.8rem;
             font-weight: bold;
         }
         .custom-list {
@@ -382,6 +435,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            border-radius: 0;
         }
         #div-footer2 {
             padding-left: 160px;
@@ -473,15 +527,18 @@
                         <!-- Add other options as needed -->
                     </select>
                     <input type="text" placeholder="Nhập sản phẩm cần tìm...">
-                    <button>Tìm kiếm</button>
+                    <button class="btnTimKiem">Tìm kiếm</button>
                 </div>
                 <div class="account-cart">
-                    <a href="javascript:void(0);" onclick="toggleLogin()"> <img src="~/TopIcon/user-regular.svg" alt="UserIcon" class="nav1-icon" />Tài khoản</a>
+                    <a href="javascript:void(0);" onclick="toggleLogin()">
+                        <img src="~/TopIcon/user-regular.svg" alt="UserIcon" class="nav1-icon" />Tài khoản
+                    </a>
                     <div class="login-container" style="display: none;">
                         <div class="login-box">
                             <span class="close-btn-login" onclick="closeLogin(event);">&times;</span>
                             <h2><b>Đăng Nhập</b></h2>
-                            <form>
+                            <form onsubmit="return false;">
+                                <!-- Ngăn chặn reload trang -->
                                 <div class="input-group">
                                     <label for="email" style="color:black"><b>Email</b></label>
                                     <input type="email" id="email" placeholder="Nhập email đăng ký của bạn">
@@ -490,7 +547,7 @@
                                     <label for="password" style="color:black"><b>Mật khẩu</b></label>
                                     <input type="password" id="password" placeholder="Nhập mật khẩu của bạn">
                                 </div>
-                                <button type="submit" value="submit" class="ButtonLogin">Đăng nhập</button>
+                                <button type="submit" class="ButtonLogin">Đăng nhập</button>
                                 <div class="options">
                                     <p>Khách hàng mới? <a href="#">Tạo tài khoản</a></p>
                                     <p>Quên mật khẩu? <a href="#">Đặt lại mật khẩu</a></p>
@@ -498,16 +555,29 @@
                             </form>
                         </div>
                     </div>
-                    <a href="#" class="cart">
-                        <span class="cart-icon">🛒</span>
-                        <span class="cart-count">0</span>
-                    </a>
+                    <div class="cart">
+                        <a href="javascript:void(0);" onclick="toggleCart()">
+                            <img src="~/TopIcon/cart-shopping-solid.svg" class="cart-icon" />
+                            <span class="cart-count" id="cart-count">0</span>
+                        </a>
+                        <div class="cart-dropdown" id="cart-dropdown" style="display: none;">
+                            <button class="close-button-cart" onclick="toggleCart()">X</button>
+                            <div class="cart-items">
+                                <!-- Giỏ hàng sẽ được hiển thị ở đây -->
+                                <p>Không có sản phẩm nào trong giỏ hàng.</p>
+                            </div>
+                            <div class="cart-total">
+                                <p>Tổng: <span id="cart-total">0 VNĐ</span></p>
+                            </div>
+                            <button class="checkout-button">Thanh Toán</button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <nav>
                 <ul class="custom-list">
                     <li class="product-category">
-                        <button class="dropdown-btn">DANH MỤC SẢN PHẨM</button>
+                        <button class="dropdown-btn"><b>DANH MỤC SẢN PHẨM</b></button>
                         <div class="dropdown-content">
                             <a href="#">Xây dựng cấu hình PC</a><br />
                             <a href="#">PC Gaming</a><br />
@@ -630,34 +700,99 @@
         <p>&copy; @DateTime.Now.Year - Bản quyền của Công ty TNHH Hoàng Anh Tuấn & Nguyễn Anh Đức</p>
     </div>
     <script>
-        // Lưu trữ tham chiếu đến phần đăng nhập
         const loginContainer = document.querySelector('.login-container');
 
         function toggleLogin() {
-            if (loginContainer.style.display === 'none' || loginContainer.style.display === '') {
-                loginContainer.style.display = 'block';
-            } else {
-                loginContainer.style.display = 'none';
-            }
+            loginContainer.style.display = (loginContainer.style.display === 'none' || loginContainer.style.display === '') ? 'block' : 'none';
         }
 
-        // Thêm sự kiện click cho toàn bộ trang
         document.addEventListener('click', function (event) {
-            // Kiểm tra xem nhấp chuột có nằm ngoài phần đăng nhập và nút tài khoản không
             const target = event.target;
             const isLoginContainer = loginContainer.contains(target);
-            const isAccountLink = target.closest('.account-cart a');
+            const isAccountLink = target.closest('a[href="javascript:void(0);"]');
 
             if (!isLoginContainer && !isAccountLink) {
-                // Ẩn khung đăng nhập nếu nhấp vào bên ngoài
                 loginContainer.style.display = 'none';
             }
         });
+
+        const closeButton = document.querySelector('.close-btn-login');
+        if (closeButton) {
+            closeButton.addEventListener('click', closeLogin);
+        }
+
         function closeLogin(event) {
-            event.stopPropagation(); // Ngăn sự kiện click tiếp tục
-            loginContainer.style.display = 'none'; // Ẩn khung đăng nhập
+            event.stopPropagation();
+            loginContainer.style.display = 'none';
         }
     </script>
+    <script>
+        function toggleCart() {
+            const cartDropdown = document.getElementById('cart-dropdown');
+            if (cartDropdown) {
+                cartDropdown.style.display = (cartDropdown.style.display === 'none' || cartDropdown.style.display === '') ? 'block' : 'none';
+            }
+        }
 
+        function addToCart(product) {
+            const cartCount = document.getElementById('cart-count');
+            const cartTotal = document.getElementById('cart-total');
+
+            let count = parseInt(cartCount.textContent) + 1;
+            let total = 0; // Thay thế bằng tổng giá trị sản phẩm đã thêm
+
+            cartCount.textContent = count;
+            cartTotal.textContent = total + " VNĐ"; // Cập nhật tổng giá
+        }
+        function toggleCart() {
+            const cartDropdown = document.getElementById('cart-dropdown');
+            cartDropdown.style.display = (cartDropdown.style.display === 'none' || cartDropdown.style.display === '') ? 'block' : 'none';
+        }
+
+    </script>
+    <script>
+        let cartItems = []; // Mảng chứa sản phẩm trong giỏ hàng
+
+        function addToCart(product) {
+            cartItems.push(product); // Thêm sản phẩm vào mảng
+            const cartCount = document.getElementById('cart-count');
+            const cartTotal = document.getElementById('cart-total');
+            const cartItemsContainer = document.querySelector('.cart-items');
+            const checkoutButton = document.querySelector('.checkout-button');
+
+            // Cập nhật số lượng giỏ hàng và tổng giá
+            let count = cartItems.length;
+            let total = cartItems.reduce((sum, item) => sum + item.price, 0); // Tính tổng giá
+
+            cartCount.textContent = count;
+            cartTotal.textContent = total + " VNĐ"; // Cập nhật tổng giá
+
+            // Hiển thị các sản phẩm trong giỏ hàng
+            cartItemsContainer.innerHTML = ''; // Xóa nội dung hiện tại
+            cartItems.forEach(item => {
+                const itemElement = document.createElement('p');
+                itemElement.textContent = item.name + " - " + item.price + " VNĐ"; // Cập nhật thông tin sản phẩm
+                cartItemsContainer.appendChild(itemElement);
+            });
+
+            // Kiểm tra xem có sản phẩm nào trong giỏ không
+            if (cartItems.length === 0) {
+                checkoutButton.style.display = 'none'; // Ẩn nút "Thanh Toán" nếu giỏ hàng trống
+            } else {
+                checkoutButton.style.display = 'block'; // Hiển thị nút "Thanh Toán" nếu có sản phẩm
+            }
+        }
+
+        // Khi giỏ hàng trống, có thể gọi hàm này để đảm bảo nút "Thanh Toán" bị ẩn ngay từ đầu
+        function initializeCart() {
+            const checkoutButton = document.querySelector('.checkout-button');
+            if (cartItems.length === 0) {
+                checkoutButton.style.display = 'none';
+            }
+        }
+
+        initializeCart();
+
+    </script>
 </body>
 </html>

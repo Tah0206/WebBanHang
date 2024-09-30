@@ -1,0 +1,102 @@
+﻿body {
+   
+}
+.container {
+    width: 740px;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    float: left;
+    margin-left: 50px;
+
+}
+
+.container_vch {
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    float: right;
+    margin-right: 30px;
+    width: 310px;
+    padding-top:30px;
+}
+
+.container_tong {
+    width: 1250px;
+    margin: 0;
+    padding: 0;
+    background-color: lightgray;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+    .cart-item img {
+        width: 100px;
+        height: 100px;
+    }
+
+.item-details {
+    flex: 3;
+    padding-left: 20px;
+}
+
+
+.item-price, .item-quantity {
+    flex: 1;
+    text-align: center;
+}
+
+.item-actions {
+    flex: 1;
+    text-align: right;
+}
+
+.cart-summary {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+    text-align: left;
+    background-color: white;
+}
+
+
+.cart-summary span {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: right;
+}
+
+.voucher {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.btn {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: lightblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 10px;
+}
+
+.btn:hover {
+        background-color: #0056b3;
+}
+
+.promotion {
+    width: auto;
+}

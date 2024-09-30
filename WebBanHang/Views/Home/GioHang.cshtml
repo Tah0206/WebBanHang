@@ -1,0 +1,96 @@
+﻿
+@{
+    ViewBag.Title = "Giỏ Hàng";
+    Layout = "~/Views/Shared/_LayoutDivMain.cshtml";
+}
+<link href="~/Content/Style-product-giohang.css" rel="stylesheet" />
+<div class="container_tong">
+    <div class="container">
+        <h2>Thông tin sản phẩm</h2>
+
+        <div class="cart-item">
+            <img src="~/image/lotchuot.jpg"
+                 alt="Bàn di chuột" />
+            <div class="item-details">
+                <h4>Bàn Di Chuột Laptop TNC</h4>
+                <p>49.000đ</p>
+            </div>
+            <div class="item-quantity">
+                <input type="number" value="1" min="1">
+            </div>
+            <div class="item-actions">
+                <button class="btn">Xóa</button>
+            </div>
+        </div>
+
+        <div class="cart-item">
+            <img src="~/image/tainghe1.jpg"
+                 alt="Tai nghe" />
+            <div class="item-details">
+                <h4>Tai Nghe Razer Kraken V3 HyperSense</h4>
+                <p>2.369.000đ</p>
+                <div class="promotion">
+                    <p>Khuyến mãi áp dụng:</p>
+                    <ul>
+                        <li>Giảm 5% tối đa 100.000đ khi mua kèm Bàn Phím Cơ</li>
+                        <li>Giảm 5% tối đa 100.000đ khi mua kèm Chuột Gaming</li>
+                        <li>Giảm 5% tối đa 100.000đ khi mua kèm Bàn Di Chuột</li>
+                        <li>Giảm 5% tối đa 100.000đ khi mua kèm Tay Cầm Chơi Game</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item-quantity">
+                <input type="number" value="1" min="1">
+            </div>
+            <div class="item-actions">
+                <button class="btn">Xóa</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container_vch">
+        <div class="voucher">
+            <div>
+
+                <label for="voucher-code">Nhập mã voucher</label>
+                <input type="text" id="voucher-code" placeholder="Nhập mã khuyến mãi">
+            </div>
+            <button class="btn">Áp dụng</button>
+        </div>
+
+        <div class="cart-summary">
+            <h2> Thông tin giỏ hàng </h2>
+            <p>Tổng số lượng sản phẩm: <span id="total-quantity"> 2 </span></p>
+            <p>Tổng chi phí: <span id="total-price"> 2.418.000đ </span></p>
+            <button class="btn">Tiến hành thanh toán</button>
+        </div>
+
+    </div>
+</div>
+<div style="clear:both;margin-top:100px;"></div>
+<script>
+        // Giả lập tính toán tổng giá tiền
+        const updateCartSummary = () => {
+            let totalQuantity = 0;
+            let totalPrice = 0;
+
+            const quantities = document.querySelectorAll('.item-quantity input');
+            const prices = [49000, 2369000];  // Giá của các sản phẩm
+
+            quantities.forEach((quantity, index) => {
+                const qty = parseInt(quantity.value);
+                totalQuantity += qty;
+                totalPrice += qty * prices[index];
+            });
+
+            document.getElementById('total-quantity').innerText = totalQuantity;
+            document.getElementById('total-price').innerText = totalPrice.toLocaleString('vi-VN') + 'đ';
+        }
+
+        // Cập nhật khi thay đổi số lượng
+        document.querySelectorAll('.item-quantity input').forEach(input => {
+            input.addEventListener('change', updateCartSummary);
+        });
+</script>
+
+

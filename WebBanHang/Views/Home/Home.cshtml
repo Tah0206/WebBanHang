@@ -3,6 +3,107 @@
     ViewBag.Title = "TNC Store - PC Gaming";
     Layout = "~/Views/Shared/_LayoutDivMain.cshtml";
 }
+<link href="~/Content/style-product-home.css" rel="stylesheet" />
+<script src="~/Scripts/boobstrap-home.js"></script>
+<div class="deal-section">
+    <div class="deal-header">
+        <h2 class="deal-title">Deal Giờ Vàng</h2>
+        <span>/</span>
+        <span class="countdown" id="countdown">12:34:56</span>
+        <a href="#" class="view-all">Xem tất cả</a>
+    </div>
 
-<h2>Home</h2>
+     @*Nút điều hướng bên trái*@ 
+    <button id="prev-btn" class="nav-button">&lt;</button>
 
+     @*Danh sách sản phẩm*@ 
+    <div class="product-list-container">
+        <div class="product-list">
+            <div class="product">
+                <div class="best-choice">Best Choice</div>
+                <img src="~/image/deal1.jpg" alt="Product 1" />
+                <p class="product-name">Tai Nghe Razer Kraken V3 <br> Gaming Headset</p>
+                <p class="product-rating">★★★★☆ (120 đánh giá)</p>
+                <p class="product-price"> <span class="original-price">1.200.000đ</span></p>
+                <p class="discount-price"> 1.059.000đ <span class="discount-percent">-4%</span></p>
+                <button class="stock-btn">Còn lại : 1</button>
+            </div>
+            <div class="product">
+                <div class="best-choice">Best Choice</div>
+                <img src="~/image/deal2.jpg" alt="Product 2" />
+                <p class="product-name">Chuột Gaming Logitech G102</p>
+                <p class="product-rating">★★★★★ (200 đánh giá)</p>
+                <p class="product-price"> <span class="original-price">700.000đ</span></p>
+                <p class="discount-price"> 499.000đ <span class="discount-percent">-20%</span></p>
+                <button class="stock-btn">Còn lai : 1</button>
+            </div>
+            <div class="product">
+                <div class="best-choice">Best Choice</div>
+                <img src="~/image/deal3.jpg" alt="Product 3" />
+                <p class="product-name">Bàn Phím Cơ Razer BlackWidow</p>
+                <p class="product-rating">★★★★☆ (150 đánh giá)</p>
+                <p class="product-price"> <span class="original-price">2.000.000đ</span></p>
+                <p class="discount-price"> 1.800.000đ <span class="discount-percent">-10%</span></p>
+                <button class="stock-btn">Còn lại : 1</button>
+            </div>
+            <div class="product">
+                <div class="best-choice">Best Choice</div>
+                <img src="~/image/deal4.jpg" alt="Product 4" />
+                <p class="product-name">Màn Hình Gaming ASUS 24"</p>
+                <p class="product-rating">★★★★★ (180 đánh giá)</p>
+                <p class="product-price"> <span class="original-price">5.000.000đ</span></p>
+                <p class="discount-price"> 4.500.000đ <span class="discount-percent">-10%</span></p>
+                <button class="stock-btn">Còn lại : 1</button>
+            </div>
+            <div class="product">
+                <div class="best-choice">Best Choice</div>
+                <img src="~/image/deal5.jpg" alt="Product 5" />
+                <p class="product-name">Card Màn Hình GTX 1660</p>
+                <p class="product-rating">★★★★☆ (300 đánh giá)</p>
+                <p class="product-price"> <span class="original-price">7.000.000đ</span></p>
+                <p class="discount-price"> 6.000.000đ <span class="discount-percent">-15%</span></p>
+                <button class="stock-btn">Còn lại : 1</button>
+            </div>
+            <div class="product">
+                <div class="best-choice">Best Choice</div>
+                <img src="~/image/deal2.jpg" alt="Product 2" />
+                <p class="product-name">Chuột Gaming Logitech G102</p>
+                <p class="product-rating">★★★★★ (200 đánh giá)</p>
+                <p class="product-price"> <span class="original-price">700.000đ</span></p>
+                <p class="discount-price"> 499.000đ <span class="discount-percent">-20%</span></p>
+                <button class="stock-btn">Còn lai : 1</button>
+            </div>
+            <div class="product">
+                <div class="best-choice">Best Choice</div>
+                <img src="~/image/deal2.jpg" alt="Product 2" />
+                <p class="product-name">Chuột Gaming Logitech G102</p>
+                <p class="product-rating">★★★★★ (200 đánh giá)</p>
+                <p class="product-price"> <span class="original-price">700.000đ</span></p>
+                <p class="discount-price"> 499.000đ <span class="discount-percent">-20%</span></p>
+                <button class="stock-btn">Còn lai : 1</button>
+            </div>
+            <div class="product">
+                <div class="best-choice">Best Choice</div>
+                <img src="~/image/deal2.jpg" alt="Product 2" />
+                <p class="product-name">Chuột Gaming Logitech G102</p>
+                <p class="product-rating">★★★★★ (200 đánh giá)</p>
+                <p class="product-price"> <span class="original-price">700.000đ</span></p>
+                <p class="discount-price"> 499.000đ <span class="discount-percent">-20%</span></p>
+                <button class="stock-btn">Còn lai : 1</button>
+            </div>
+            <div class="product">
+                <div class="best-choice">Best Choice</div>
+                <img src="~/image/deal2.jpg" alt="Product 2" />
+                <p class="product-name">Chuột Gaming Logitech G102</p>
+                <p class="product-rating">★★★★★ (200 đánh giá)</p>
+                <p class="product-price"> <span class="original-price">700.000đ</span></p>
+                <p class="discount-price"> 499.000đ <span class="discount-percent">-20%</span></p>
+                <button class="stock-btn">Còn lai : 1</button>
+            </div>
+        </div>
+    </div>
+
+     @*Nút điều hướng bên phải*@ 
+    <button id="next-btn" class="nav-button">&gt;</button>
+</div>
+<h1>chó hậu</h1>

@@ -8,6 +8,14 @@ namespace WebBanHang.Controllers
 {
     public class HomeController : Controller
     {
+        public ActionResult ThanhToan()
+        {
+            return View();
+        }
+        public ActionResult GioHang() 
+        {
+            return View(); 
+        }
         public ActionResult Home()
         {
             return View();
