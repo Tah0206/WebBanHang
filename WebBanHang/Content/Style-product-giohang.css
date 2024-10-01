@@ -83,7 +83,7 @@
     margin-bottom: 20px;
 }
 
-.btn {
+.btn-thanhtoan {
     cursor: pointer;
     padding: 10px 20px;
     background-color: lightblue;
@@ -93,8 +93,8 @@
     font-size: 10px;
 }
 
-.btn:hover {
-        background-color: #0056b3;
+.btn-thanhtoan:hover {
+    background-color: #0056b3;
 }
 
 .promotion {

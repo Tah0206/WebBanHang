@@ -151,7 +151,7 @@ font-family: Arial, sans-serif;
 
 .slider-container {
     position: relative;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 50px auto;
     overflow: hidden;
     border-radius: 10px;
@@ -179,15 +179,15 @@ button.prev-slider, button.next-slider {
     font-size: 24px;
     padding: 10px;
     cursor: pointer;
-    /*border-radius: 50%;*/
+    border-radius: 50%;
 }
 
 button.prev-slider {
-/*    left: 10px;*/
+    left: 10px;
 }
 
 button.next-slider {
-/*    right: 10px;*/
+    right: 10px;
 }
 
 button .prev-slider, button .next-slider:hover {
