@@ -169,18 +169,34 @@
             width: 100%;
         }
 
-            .checkout-button:hover {
-                background-color: #0056b3;
-            }
+        .checkout-button:hover {
+            background-color: #0056b3;
+        }
 
         .close-button-cart {
             background: none;
             border: none;
-            color: red; /* Màu sắc của nút X */
-            font-size: 16px; /* Kích thước chữ */
+            color: #aaa; /* Màu sắc của nút X */
+            font-size: 30px; /* Kích thước chữ */
             cursor: pointer;
             float: right; /* Đưa nút sang bên phải */
             margin: 10px; /* Khoảng cách bên ngoài */
+        }
+        .close-btn-login:hover {
+            color: red;
+        }
+        .view-cart-button {
+            background-color: #28a745; /* Màu nền cho nút Xem Giỏ Hàng */
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px; /* Khoảng cách giữa 2 nút */
+        }
+
+        .view-cart-button:hover {
+            background-color: #218838; /* Màu nền khi hover */
         }
         .close-btn-login {
             position: absolute;
@@ -570,6 +586,7 @@
                                 <p>Tổng: <span id="cart-total">0 VNĐ</span></p>
                             </div>
                             <button class="checkout-button">Thanh Toán</button>
+                            <button class="view-cart-button">Xem Giỏ Hàng</button>
                         </div>
                     </div>
                 </div>
@@ -792,7 +809,9 @@
         }
 
         initializeCart();
-
+        document.querySelector('.view-cart-button').addEventListener('click', function () {
+            window.location.href = '/Home/GioHang'; // Thay đổi URL tới trang giỏ hàng
+        });
     </script>
 </body>
 </html>
