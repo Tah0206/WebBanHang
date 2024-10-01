@@ -193,6 +193,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutDivMain.cshtml" />
     <Content Include="Views\Home\Home.cshtml" />
+    <Content Include="TrangSanPham\TrangSanPham_lotchuot.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
