@@ -148,6 +148,14 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="hinhanhPC1\hinhanhPC2\pc2.1.jpg" />
+    <Content Include="hinhanhPC1\hinhanhPC2\pc2.2.jpg" />
+    <Content Include="hinhanhPC1\hinhanhPC2\pc2.3.jpg" />
+    <Content Include="hinhanhPC1\hinhanhPC2\pc2.4.jpg" />
+    <Content Include="hinhanhPC1\hinhanhPC2\pc2.5.jpg" />
+    <Content Include="hinhanhPC1\hinhanhPC2\pc2.6.jpg" />
+    <Content Include="hinhanhPC1\hinhanhPC2\pcmt1.jpg" />
+    <Content Include="hinhanhPC1\hinhanhPC2\pcmt2.jpg" />
     <Content Include="hinhanhPC1\mota.png" />
     <Content Include="hinhanhPC1\pc1.2.jpg" />
     <Content Include="hinhanhPC1\pc1.3.jpg" />
@@ -203,6 +211,7 @@
     <Content Include="Views\Home\Home.cshtml" />
     <Content Include="TrangSanPham\TrangSanPham_lotchuot.cshtml" />
     <Content Include="TrangSanPham\TrangSanPham_PC1.cshtml" />
+    <Content Include="TrangSanPham\TrangSanPham_PC2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
