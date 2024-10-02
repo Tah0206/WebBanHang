@@ -1,0 +1,229 @@
+﻿body {
+    background-color: #f4f4f4;
+}
+.container-sanpham {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.product-section-sanpham {
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-image-sanpham img {
+    width: 250px;
+}
+
+.product-details-sanpham {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.product-details-sanpham h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.price {
+    color: red;
+    font-size: 28px;
+}
+
+.product-features {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+    .product-features li {
+        margin: 5px 0;
+        font-family: Bahnschrift;
+        font-weight: 600;
+    }
+
+.actions {
+    margin-top: 20px;
+}
+
+    .actions label {
+        font-size: 16px;
+    }
+
+#quantity {
+    width: 50px;
+    margin-left: 10px;
+}
+
+.buy-now {
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.add-to-cart {
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.add-to-cart {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+.buy-now {
+    background-color: #28a745;
+    color: white;
+    border: none;
+}
+
+.support ul {
+    margin-top: 20px;
+    list-style-type: none;
+}
+
+    .support ul li {
+        margin: 7px 0;
+        color: #555;
+        font-family: Bahnschrift;
+        font-weight: 600;
+    }
+
+.info-section {
+    background-color: white;
+    margin-top: 20px;
+    padding: 20px;
+    width: 300px;
+}
+
+.description-section {
+    background-color: white;
+    margin-top: 20px;
+    padding: 20px;
+    width: 850px;
+}
+
+.reviews-section {
+    background-color: white;
+    margin-top: 20px;
+    padding: 20px;
+    width: 850px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+    .rating span {
+        font-size: 20px;
+        margin-right: 10px;
+    }
+
+.bar {
+    width: 200px;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+    position: relative;
+}
+
+    .bar .fill {
+        width: 100%;
+        height: 100%;
+        background-color: gold;
+        border-radius: 5px;
+    }
+
+.write-review {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.related-news-section {
+    background-color: white;
+    margin-top: 20px;
+    padding: 20px;
+    width: 300px;
+}
+
+    .related-news-section ul {
+        list-style-type: none;
+    }
+
+        .related-news-section ul li {
+            margin: 10px 0;
+        }
+
+            .related-news-section ul li a {
+                text-decoration: none;
+                color: #007bff;
+            }
+
+                .related-news-section ul li a:hover {
+                    text-decoration: underline;
+                }
+
+
+.gachchanboder {
+    border-bottom: 1px solid #e0e0e0;
+    margin: 10px 0;
+}
+
+.ttin_dagia {
+    width: fit-content;
+    height: 24px;
+    border-bottom: 1px solid #e0e0e0;
+    margin: 10px 0;
+    padding-bottom:15px;
+}
+
+.msp, .danhgia{
+    display: inline-flex;
+    justify-content: center;
+    height: 18px;
+    width: fit-content;
+    border-right: 1px solid #e0e0e0;
+    margin-right: 10px;
+}
+.luotxem {
+    display: inline-flex;
+    justify-content: center;
+    height: 18px;
+    width: fit-content;
+    margin-right: 10px;
+}
+.text, .code {
+    color: #9b9e9e;
+    font-family: Bahnschrift;
+    font-size: small;
+    font-weight: 600;
+}
+
+.right_bonus, .left_bonus {
+    display: flex;
+    flex-direction: column;
+}
+
+.left_bonus {
+    margin-right: 10px;
+}
+
+.funtion {
+    display: flex;
+    justify-content: space-around;
+}

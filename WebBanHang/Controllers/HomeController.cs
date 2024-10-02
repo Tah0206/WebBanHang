@@ -8,6 +8,11 @@ namespace WebBanHang.Controllers
 {
     public class HomeController : Controller
     {
+        public ActionResult TrangSanPham_LotChuot()
+        {
+            return View();
+        }
+
         public ActionResult ThanhToan()
         {
             return View();
@@ -39,4 +44,5 @@ namespace WebBanHang.Controllers
             return View();
         }
     }
+
 }

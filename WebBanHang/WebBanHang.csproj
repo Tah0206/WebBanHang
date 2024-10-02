@@ -151,6 +151,11 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="image\banner.jpg" />
+    <Content Include="image\channel1.jpg" />
+    <Content Include="image\channel2.jpg" />
+    <Content Include="image\channel3.jpg" />
+    <Content Include="image\channel4.jpg" />
     <Content Include="image\deal1.jpg" />
     <Content Include="image\deal2.jpg" />
     <Content Include="image\deal3.jpg" />
@@ -161,6 +166,14 @@
     <Content Include="image\hinh3.jpg" />
     <Content Include="image\hinh4.png" />
     <Content Include="image\lotchuot.jpg" />
+    <Content Include="image\pc1.jpg" />
+    <Content Include="image\pc2.jpg" />
+    <Content Include="image\pc3.jpg" />
+    <Content Include="image\pc4.jpg" />
+    <Content Include="image\pc5.jpg" />
+    <Content Include="image\pc6.jpg" />
+    <Content Include="image\pc7.jpg" />
+    <Content Include="image\pc8.jpg" />
     <Content Include="image\slider1.jpg" />
     <Content Include="image\slider2.jpg" />
     <Content Include="image\slider3.jpg" />
@@ -172,6 +185,10 @@
     <Content Include="image\slider9.jpg" />
     <Content Include="image\tainghe1.jpg" />
     <Content Include="image\tainghe2.jpg" />
+    <Content Include="image\tintuc1.jpg" />
+    <Content Include="image\tintuc2.jpg" />
+    <Content Include="image\tintuc3.jpg" />
+    <Content Include="image\tintuc4.jpg" />
     <Content Include="Scripts\Boobstrap-layoutHome.js" />
     <Content Include="Scripts\boobstrap-home.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -197,6 +214,7 @@
     <Content Include="BottomIcon\square-instagram-brands-solid.svg" />
     <Content Include="BottomIcon\visa.svg" />
     <Content Include="BottomIcon\youtube-brands-solid.svg" />
+    <Content Include="Content\Style-product-SPChuot.css" />
     <Content Include="TopIcon\Banner1.png" />
     <Content Include="TopIcon\cart-shopping-solid.svg" />
     <Content Include="TopIcon\chevron-down-solid.svg" />
@@ -225,10 +243,12 @@
     <Content Include="Views\Home\Home.cshtml" />
     <Content Include="Views\Home\GioHang.cshtml" />
     <Content Include="Views\Home\ThanhToan.cshtml" />
+    <Content Include="Views\Home\TrangSanPham_LotChuot.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\TrangSanPham\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
