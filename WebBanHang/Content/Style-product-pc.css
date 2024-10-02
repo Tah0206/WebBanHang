@@ -1,0 +1,415 @@
+﻿body {
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.product-section {
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-image_nho {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.product-image_nho_chitiet {
+    display: flex;
+    flex-direction: row;
+}
+
+.product-image img {
+    width: 305px;
+}
+
+.product-details {
+    flex: 1;
+    margin-left: 20px;
+}
+
+    .product-details h1 {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+.product-image_nho_chitiet img {
+    width: 100px;
+    height: 100px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+.price {
+    color: red;
+    font-size: 28px;
+    margin-top: 20px;
+}
+
+.price_giam {
+    color: #888888;
+    font-size: 18px;
+    margin-top: 25px;
+    text-decoration: line-through;
+    margin-left: 10px;
+}
+
+.phamtramKM {
+    border: 1px solid #FF3300;
+    margin-left: 10px;
+    margin-top: 25px;
+    align-items: center;
+    display: flex;
+}
+
+.baohanh {
+    font-size: 15px;
+    margin-bottom: 15px;
+    background-color: #CCCCCC;
+    padding: 5px;
+    width: fit-content;
+}
+
+.price_goc_giam {
+    display: flex;
+    align-items: center;
+}
+
+.product-features {
+    margin-top: 20px;
+}
+
+    .product-features li {
+        margin: 5px 0;
+        font-family: Bahnschrift;
+        font-size: 13px;
+    }
+
+.actions {
+    margin-top: 20px;
+}
+
+    .actions label {
+        font-size: 18px;
+    }
+
+#quantity {
+    width: 200px;
+    margin-left: 20px;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.buy-now {
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.buy-now {
+    background-color: #28a745;
+    color: white;
+    border: none;
+}
+
+.add-to-cart {
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.add-to-cart {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+.support ul {
+    margin-top: 20px;
+    list-style-type: none;
+}
+
+    .support ul li {
+        margin: 7px 0;
+        color: #555;
+        font-family: Bahnschrift;
+        font-weight: 600;
+    }
+
+
+
+.gachchanboder {
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+}
+
+.ttin_dagia {
+    width: fit-content;
+    height: 35px;
+    border-bottom: 1px solid #e0e0e0;
+    margin: 10px 0;
+}
+
+.msp, .danhgia {
+    display: inline-flex;
+    justify-content: center;
+    height: 20px;
+    width: fit-content;
+    border-right: 1px solid #e0e0e0;
+    margin-right: 10px;
+}
+
+.luotxem {
+    display: inline-flex;
+    justify-content: center;
+    height: 20px;
+    width: fit-content;
+    margin-right: 10px;
+}
+
+.text, .code {
+    color: #9b9e9e;
+    font-family: Bahnschrift;
+    font-size: small;
+    font-weight: 600;
+}
+
+.funtion {
+    display: flex;
+    justify-content: space-around;
+}
+
+.right_bonus, .left_bonus {
+    display: flex;
+    flex-direction: column;
+}
+
+.left_bonus {
+    margin-right: 10px;
+}
+
+.info-section {
+    background-color: white;
+    margin-top: 20px;
+    padding: 20px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: underline blue;
+}
+
+.description-section {
+    background-color: white;
+    margin-top: 20px;
+    padding: 20px;
+    width: 850px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+}
+
+    .description-section p {
+        margin-top: 15px;
+    }
+
+    .description-section h2 {
+        text-decoration: underline blue;
+    }
+
+.reviews-section {
+    background-color: white;
+    margin-top: 20px;
+    padding: 20px;
+    width: 850px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+    .rating span {
+        font-size: 20px;
+        margin-right: 10px;
+    }
+
+.bar {
+    width: 200px;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+    position: relative;
+}
+
+    .bar .fill {
+        width: 100%;
+        height: 100%;
+        background-color: gold;
+        border-radius: 5px;
+    }
+
+.write-review {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.review {
+    background-color: white;
+    margin-top: 20px;
+    padding: 20px;
+    width: 850px;
+}
+
+.related-news-section {
+    background-color: white;
+    margin-top: 20px;
+    padding: 20px;
+    width: 300px;
+}
+
+    .related-news-section h2 {
+        text-decoration: underline blue;
+    }
+
+    .related-news-section ul {
+        list-style-type: none;
+    }
+
+        .related-news-section ul li {
+            margin: 10px 0;
+        }
+
+            .related-news-section ul li a {
+                text-decoration: none;
+                color: #007bff;
+            }
+
+                .related-news-section ul li a:hover {
+                    text-decoration: underline;
+                }
+
+.voucher {
+    width: 350px;
+    background-color: white;
+}
+
+.voucher_top {
+    background-color: #FF0000;
+    padding: 10px;
+    flex: 1;
+}
+
+    .voucher_top h3 {
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+.voucher_bot {
+    border: 1px solid #FF0000;
+    flex: 1;
+    padding: 10px;
+}
+
+    .voucher_bot ul {
+        list-style-type: none;
+    }
+
+    .voucher_bot li {
+        margin: 5px;
+        font-size: 15px;
+    }
+
+.chonSanPham {
+    margin-top: 20px;
+}
+
+.tieudesanpham {
+    color: #9b9e9e;
+    font-family: Bahnschrift;
+    font-size: revert;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.price_nho {
+    color: red;
+    font-size: 13px;
+    font-family: 'Eras ITC';
+}
+
+.luachon {
+    display: flex;
+    flex-direction: column;
+}
+
+.luachonngang {
+    display: flex;
+    justify-content: space-between;
+}
+
+.luachonspcuthe {
+    border: 1px solid #FF0000;
+    padding: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 205px;
+}
+
+.text_blue {
+    color: blue;
+}
+
+.mota {
+    margin-top: 20px;
+}
+
+.linhkien, .linhkien1 {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.linhkien1 {
+    background-color: #EEEEEE;
+}
+
+.linhkien_left, .linhkien_right {
+    color: blue;
+    font-size: 13px;
+}
+
+.linhkien_left {
+    margin: 20px;
+}
+
+.linhkien_right {
+    margin-left: 20px;
+}

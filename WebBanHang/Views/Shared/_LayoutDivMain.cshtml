@@ -248,6 +248,7 @@
             padding: 40px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
             width: 320px;
+            opacity:1;
         }
 
             .login-box h2 {
@@ -323,19 +324,19 @@
             margin-bottom: 15px;
         }
 
-            .input-group label {
+        .input-group label {
                 font-size: 14px;
                 margin-bottom: 5px;
                 display: block;
-            }
+        }
 
-            .input-group input {
+        .input-group input {
                 width: 93%;
                 padding: 10px;
                 margin-top: 5px;
                 border: 1px solid #ccc;
                 font-size: 14px;
-            }
+        }
 
         .ButtonSignup, .ButtonLogin {
             width: 100%;
@@ -348,9 +349,9 @@
             transition: background-color 0.3s;
         }
 
-            .ButtonSignup:hover, .ButtonLogin:hover {
+        .ButtonSignup:hover, .ButtonLogin:hover {
                 background-color: #1565C0;
-            }
+        }
 
         .close-btn-signup, .close-btn-login {
             position: absolute;
@@ -361,9 +362,13 @@
             cursor: pointer;
         }
 
-            .close-btn-signup:hover, .close-btn-login:hover {
+        .close-btn-signup:hover, .close-btn-login:hover {
                 color: red;
-            }
+        }
+
+        .have-account{
+            opacity:0;
+        }
 
         .options p {
             color: gray;
@@ -668,7 +673,7 @@
                                 </div>
                                 <button type="submit" class="ButtonLogin">Đăng nhập</button>
                                 <div class="options">
-                                    <p>Khách hàng mới? <a href="#">Tạo tài khoản</a></p>
+                                    <p>Khách hàng mới? <a href="javascript:void(0);" onclick="toggleSignup()">Tạo tài khoản</a></p>
                                     <p>Quên mật khẩu? <a href="#">Đặt lại mật khẩu</a></p>
                                 </div>
                             </form>
@@ -693,7 +698,7 @@
                                 </div>
                                 <button type="submit" class="ButtonSignup">Tạo tài khoản</button>
                                 <div class="options">
-                                    <p>Đã có tài khoản? <a href="javascript:void(0);" onclick="toggleLogin()">Đăng nhập</a></p>
+                                    <p>Đã có tài khoản? <a href="javascript:void(0);" onclick="toggleLogin()" class="have-account">Đăng nhập</a></p>
                                 </div>
                             </form>
                         </div>
@@ -721,7 +726,7 @@
             <nav>
                 <ul class="custom-list">
                     <li class="product-category">
-                        <button class="dropdown-btn"><b>DANH MỤC SẢN PHẨM</b></button>
+                        <a href="~/Home/DanhMucSanPham"><button class="dropdown-btn"><b>DANH MỤC SẢN PHẨM</b></button></a>
                         <div class="dropdown-content">
                             <a href="#">Xây dựng cấu hình PC</a><br />
                             <a href="#">PC Gaming</a><br />
@@ -844,50 +849,127 @@
         <p>&copy; @DateTime.Now.Year - Bản quyền của Công ty TNHH Hoàng Anh Tuấn & Nguyễn Anh Đức</p>
     </div>
     @*<script>
-        const signupContainer = document.querySelector('.signup-container');
-        const loginContainer = document.querySelector('.login-container');
+            const signupContainer = document.querySelector('.signup-container');
+            const loginContainer = document.querySelector('.login-container');
 
-        function toggleSignup() {
-            signupContainer.style.display = (signupContainer.style.display === 'none' || signupContainer.style.display === '') ? 'block' : 'none';
-            loginContainer.style.display = 'none'; // Đóng khung đăng nhập nếu mở
-        }
+            function toggleSignup() {
+                signupContainer.style.display = (signupContainer.style.display === 'none' || signupContainer.style.display === '') ? 'block' : 'none';
+                loginContainer.style.display = 'none'; // Đóng khung đăng nhập nếu mở
+            }
 
-        function toggleLogin() {
-            loginContainer.style.display = (loginContainer.style.display === 'none' || loginContainer.style.display === '') ? 'block' : 'none';
-            signupContainer.style.display = 'none'; // Đóng khung đăng ký nếu mở
-        }
+            function toggleLogin() {
+                loginContainer.style.display = (loginContainer.style.display === 'none' || loginContainer.style.display === '') ? 'block' : 'none';
+                signupContainer.style.display = 'none'; // Đóng khung đăng ký nếu mở
+            }
 
-        document.addEventListener('click', function (event) {
-            const target = event.target;
-            const isSignupContainer = signupContainer.contains(target);
-            const isLoginContainer = loginContainer.contains(target);
-            const isAccountLink = target.closest('a[href="javascript:void(0);"]');
+            document.addEventListener('click', function (event) {
+                const target = event.target;
+                const isSignupContainer = signupContainer.contains(target);
+                const isLoginContainer = loginContainer.contains(target);
+                const isAccountLink = target.closest('a[href="javascript:void(0);"]');
 
-            if (!isSignupContainer && !isLoginContainer && !isAccountLink) {
+                if (!isSignupContainer && !isLoginContainer && !isAccountLink) {
+                    signupContainer.style.display = 'none';
+                    loginContainer.style.display = 'none';
+                }
+            });
+
+            const closeSignupButton = document.querySelector('.close-btn-signup');
+            if (closeSignupButton) {
+                closeSignupButton.addEventListener('click', closeSignup);
+            }
+
+            const closeLoginButton = document.querySelector('.close-btn-login');
+            if (closeLoginButton) {
+                closeLoginButton.addEventListener('click', closeLogin);
+            }
+
+            function closeSignup(event) {
+                event.stopPropagation();
                 signupContainer.style.display = 'none';
+            }
+
+            function closeLogin(event) {
+                event.stopPropagation();
                 loginContainer.style.display = 'none';
             }
+        </script>*@
+    @*<script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const signupContainer = document.querySelector('.signup-container');
+            const loginContainer = document.querySelector('.login-container');
+            const toggleLoginBtn = document.querySelector('.account-cart a');
+            const signupLink = document.querySelector('.options a'); // link "Tạo tài khoản"
+
+            // Hiển thị khung đăng nhập
+            function toggleLogin() {
+                loginContainer.style.display = (loginContainer.style.display === 'none' || loginContainer.style.display === '') ? 'block' : 'none';
+                signupContainer.style.display = 'none'; // Ẩn khung đăng ký nếu mở
+            }
+
+            // Hiển thị khung đăng ký
+            function toggleSignup() {
+                signupContainer.style.display = (signupContainer.style.display === 'none' || signupContainer.style.display === '') ? 'block' : 'none';
+                loginContainer.style.display = 'none'; // Ẩn khung đăng nhập nếu mở
+            }
+
+            // Gắn sự kiện cho nút "Tài khoản" để mở khung đăng nhập
+            toggleLoginBtn.addEventListener('click', function () {
+                toggleLogin();
+            });
+
+            // Gắn sự kiện cho link "Tạo tài khoản" trong khung đăng nhập để mở khung đăng ký
+            signupLink.addEventListener('click', function (event) {
+                event.preventDefault(); // Ngăn chặn hành động mặc định của link
+                toggleSignup();
+            });
+
+            // Đóng khung đăng ký và đăng nhập khi nhấn dấu X
+            document.querySelector('.close-btn-login').addEventListener('click', function (event) {
+                event.stopPropagation();
+                loginContainer.style.display = 'none';
+            });
+
+            document.querySelector('.close-btn-signup').addEventListener('click', function (event) {
+                event.stopPropagation();
+                signupContainer.style.display = 'none';
+            });
+
+            // Đóng khung đăng ký và đăng nhập khi click ra ngoài vùng modal
+            document.addEventListener('click', function (event) {
+                const target = event.target;
+                if (!loginContainer.contains(target) && !signupContainer.contains(target) && !toggleLoginBtn.contains(target)) {
+                    loginContainer.style.display = 'none';
+                    signupContainer.style.display = 'none';
+                }
+            });
+        });
+    </script>*@
+    @*<script>
+        // ==================LOGIN FORM======================
+        const login_from = document.getElementById("login-box"),
+            user_login = document.getElementById("ButtonLogin"),
+            loginClose = document.getElementById("login-close");
+
+        user_login.addEventListener("click", () => {
+            login_from.classList.add("show-login");
         });
 
-        const closeSignupButton = document.querySelector('.close-btn-signup');
-        if (closeSignupButton) {
-            closeSignupButton.addEventListener('click', closeSignup);
-        }
+        loginClose.addEventListener("click", () => {
+            login_from.classList.remove("show-login");
+        });
 
-        const closeLoginButton = document.querySelector('.close-btn-login');
-        if (closeLoginButton) {
-            closeLoginButton.addEventListener('click', closeLogin);
-        }
+        const container = document.getElementById("container-login"),
+            registerBtn = document.getElementById("ButtonSignup"),
+            loginBtn = document.getElementById("login");
 
-        function closeSignup(event) {
-            event.stopPropagation();
-            signupContainer.style.display = 'none';
-        }
+        registerBtn.addEventListener("click", () => {
+            container.classList.add("active");
+        });
 
-        function closeLogin(event) {
-            event.stopPropagation();
-            loginContainer.style.display = 'none';
-        }
+        loginBtn.addEventListener("click", () => {
+            container.classList.remove("active");
+        });
     </script>*@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -903,6 +985,11 @@
                 loginContainer.style.display = (loginContainer.style.display === 'none' || loginContainer.style.display === '') ? 'block' : 'none';
                 signupContainer.style.display = 'none'; // Đóng khung đăng ký nếu mở
             }
+
+
+            // //Đảm bảo rằng hàm toggleSignup() được liên kết với sự kiện onclick
+            //const signupLink = document.querySelector('a[href="javascript:void(0);"]');
+            //signupLink.addEventListener('click', toggleSignup);
 
             document.addEventListener('click', function (event) {
                 const target = event.target;
@@ -1004,82 +1091,82 @@
         });
     </script>
     <script>
-    const loginContainer = document.querySelector('.login-container');
-    const cartDropdown = document.getElementById('cart-dropdown');
+        const loginContainer = document.querySelector('.login-container');
+        const cartDropdown = document.getElementById('cart-dropdown');
 
-    function toggleLogin() {
-        // Ẩn giỏ hàng khi mở đăng nhập
-        if (cartDropdown.style.display === 'block') {
-            cartDropdown.style.display = 'none';
-        }
-        
-        // Toggle đăng nhập
-        loginContainer.style.display = (loginContainer.style.display === 'none' || loginContainer.style.display === '') ? 'block' : 'none';
-    }
+        function toggleLogin() {
+            // Ẩn giỏ hàng khi mở đăng nhập
+            if (cartDropdown.style.display === 'block') {
+                cartDropdown.style.display = 'none';
+            }
 
-    function toggleCart() {
-        // Ẩn đăng nhập khi mở giỏ hàng
-        if (loginContainer.style.display === 'block') {
-            loginContainer.style.display = 'none';
+            // Toggle đăng nhập
+            loginContainer.style.display = (loginContainer.style.display === 'none' || loginContainer.style.display === '') ? 'block' : 'none';
         }
 
-        // Toggle giỏ hàng
-        cartDropdown.style.display = (cartDropdown.style.display === 'none' || cartDropdown.style.display === '') ? 'block' : 'none';
-    }
+        function toggleCart() {
+            // Ẩn đăng nhập khi mở giỏ hàng
+            if (loginContainer.style.display === 'block') {
+                loginContainer.style.display = 'none';
+            }
 
-    document.addEventListener('click', function (event) {
-        const target = event.target;
-        const isLoginContainer = loginContainer.contains(target);
-        const isAccountLink = target.closest('a[href="javascript:void(0);"]');
-        const isCartDropdown = cartDropdown.contains(target);
-
-        // Kiểm tra nếu click ra ngoài thì sẽ ẩn cả hộp đăng nhập và giỏ hàng
-        if (!isLoginContainer && !isAccountLink && !isCartDropdown) {
-            loginContainer.style.display = 'none';
-            cartDropdown.style.display = 'none';
+            // Toggle giỏ hàng
+            cartDropdown.style.display = (cartDropdown.style.display === 'none' || cartDropdown.style.display === '') ? 'block' : 'none';
         }
-    });
 
-    const closeButton = document.querySelector('.close-btn-login');
-    if (closeButton) {
-        closeButton.addEventListener('click', closeLogin);
-    }
+        document.addEventListener('click', function (event) {
+            const target = event.target;
+            const isLoginContainer = loginContainer.contains(target);
+            const isAccountLink = target.closest('a[href="javascript:void(0);"]');
+            const isCartDropdown = cartDropdown.contains(target);
 
-    function closeLogin(event) {
-        event.stopPropagation();
-        loginContainer.style.display = 'none';
-    }
-
-    // Giữ nguyên các phần khác liên quan đến giỏ hàng như trước
-    function addToCart(product) {
-        cartItems.push(product); // Thêm sản phẩm vào mảng
-        const cartCount = document.getElementById('cart-count');
-        const cartTotal = document.getElementById('cart-total');
-        const cartItemsContainer = document.querySelector('.cart-items');
-        const checkoutButton = document.querySelector('.checkout-button');
-
-        // Cập nhật số lượng giỏ hàng và tổng giá
-        let count = cartItems.length;
-        let total = cartItems.reduce((sum, item) => sum + item.price, 0); // Tính tổng giá
-
-        cartCount.textContent = count;
-        cartTotal.textContent = total + " VNĐ"; // Cập nhật tổng giá
-
-        // Hiển thị các sản phẩm trong giỏ hàng
-        cartItemsContainer.innerHTML = ''; // Xóa nội dung hiện tại
-        cartItems.forEach(item => {
-            const itemElement = document.createElement('p');
-            itemElement.textContent = item.name + " - " + item.price + " VNĐ"; // Cập nhật thông tin sản phẩm
-            cartItemsContainer.appendChild(itemElement);
+            // Kiểm tra nếu click ra ngoài thì sẽ ẩn cả hộp đăng nhập và giỏ hàng
+            if (!isLoginContainer && !isAccountLink && !isCartDropdown) {
+                loginContainer.style.display = 'none';
+                cartDropdown.style.display = 'none';
+            }
         });
 
-        // Kiểm tra xem có sản phẩm nào trong giỏ không
-        if (cartItems.length === 0) {
-            checkoutButton.style.display = 'none'; // Ẩn nút "Thanh Toán" nếu giỏ hàng trống
-        } else {
-            checkoutButton.style.display = 'block'; // Hiển thị nút "Thanh Toán" nếu có sản phẩm
+        const closeButton = document.querySelector('.close-btn-login');
+        if (closeButton) {
+            closeButton.addEventListener('click', closeLogin);
         }
-    }
-</script>
+
+        function closeLogin(event) {
+            event.stopPropagation();
+            loginContainer.style.display = 'none';
+        }
+
+        // Giữ nguyên các phần khác liên quan đến giỏ hàng như trước
+        function addToCart(product) {
+            cartItems.push(product); // Thêm sản phẩm vào mảng
+            const cartCount = document.getElementById('cart-count');
+            const cartTotal = document.getElementById('cart-total');
+            const cartItemsContainer = document.querySelector('.cart-items');
+            const checkoutButton = document.querySelector('.checkout-button');
+
+            // Cập nhật số lượng giỏ hàng và tổng giá
+            let count = cartItems.length;
+            let total = cartItems.reduce((sum, item) => sum + item.price, 0); // Tính tổng giá
+
+            cartCount.textContent = count;
+            cartTotal.textContent = total + " VNĐ"; // Cập nhật tổng giá
+
+            // Hiển thị các sản phẩm trong giỏ hàng
+            cartItemsContainer.innerHTML = ''; // Xóa nội dung hiện tại
+            cartItems.forEach(item => {
+                const itemElement = document.createElement('p');
+                itemElement.textContent = item.name + " - " + item.price + " VNĐ"; // Cập nhật thông tin sản phẩm
+                cartItemsContainer.appendChild(itemElement);
+            });
+
+            // Kiểm tra xem có sản phẩm nào trong giỏ không
+            if (cartItems.length === 0) {
+                checkoutButton.style.display = 'none'; // Ẩn nút "Thanh Toán" nếu giỏ hàng trống
+            } else {
+                checkoutButton.style.display = 'block'; // Hiển thị nút "Thanh Toán" nếu có sản phẩm
+            }
+        }
+    </script>
 </body>
 </html>

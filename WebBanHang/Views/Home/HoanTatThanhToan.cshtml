@@ -1,0 +1,106 @@
+﻿
+@{
+    ViewBag.Title = "HoanTatThanhToan";
+    Layout = "~/Views/Shared/_LayoutDivMain.cshtml";
+}
+<h1 style="color:lightpink">Vì thời gian có hạn, tụi em đã cố gắng hết sức</h1>
+<h1 style="color:lightpink"><b>Em cảm ơn cô rất nhiều</b></h1>
+<style type="text/css">
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .slider-container {
+        position: relative;
+        max-width: 800px;
+        margin: 50px auto;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .slides {
+        display: flex;
+        transition: transform 0.5s ease;
+    }
+
+    .slide {
+        min-width: 33.33%;
+        height: 100%;
+        object-fit: cover;
+        transition: opacity 0.5s ease;
+    }
+
+    button.prev, button.next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        border: none;
+        color: white;
+        font-size: 24px;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+
+    button.prev {
+        left: 10px;
+    }
+
+    button.next {
+        right: 10px;
+    }
+
+    button:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+</style>
+<div class="slider-container">
+    <button class="prev" onclick="prevSlide()">&#10094;</button>
+
+    <div class="slides">
+        <img src="~/image/thanks/thankstuan.jpg" class="slide" style="max-height:266px" />
+        <img src="~/image/thanks/thanksduc.jpg" class="slide" />
+        <img src="~/image/thanks/thankshai.jpg" class="slide" />
+        <img src="~/image/thanks/thankshau.jpg" class="slide" />
+        <img src="~/image/thanks/thanksan.jpg" class="slide" />
+        
+    </div>
+
+    <button class="next" onclick="nextSlide()">&#10095;</button>
+    <button class="prev" onclick="prevSlide()">&#10094;</button>
+
+</div>
+
+<script>let currentSlide = 0;
+        const slideWidth = document.querySelector('.slide').clientWidth;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+
+            if (index >= totalSlides) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = totalSlides - 1;
+            } else {
+                currentSlide = index;
+            }
+
+
+            document.querySelector('.slides').style.transform = `translateX(${-slideWidth * currentSlide}px)`;
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+
+        showSlide(currentSlide);</script>
+
+

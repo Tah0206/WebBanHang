@@ -217,12 +217,12 @@ button .prev-slider, button .next-slider:hover {
     margin-bottom: 20px;
 }
 
-.header-pc-noi-bat h2 {
+    .header-pc-noi-bat h2 {
         font-size: 24px;
         font-weight: bold;
         text-decoration: underline;
         color: #002f6c;
-}
+    }
 
 .view-all-noibnat {
     color: #007bff;
@@ -246,13 +246,13 @@ button .prev-slider, button .next-slider:hover {
 }
 
     .banner-pc img {
-        width: 100%;
+        max-width: 100%;
         height: auto;
         border-radius: 8px;
     }
 
     .product img {
-        width: 100%;
+        max-width: 100%;
         height: auto;
         border-radius: 8px;
         margin-bottom: 10px;
@@ -335,50 +335,6 @@ button .prev-slider, button .next-slider:hover {
 
 
 
-#div-pro-list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    /*   background-color:white;*/
-    /*    width:200px;
-    height:300px;*/
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.box-pro {
-    height: 350px;
-    width: 280px;
-    text-align: center;
-    background-color: white;
-}
-
-.size-img {
-    height: 200px;
-    width: auto;
-    margin-left: 20px;
-    margin-top: 10px;
-}
-
-.box-describtion {
-    height: 120px;
-    width: auto;
-    background-color: gray;
-    margin-left: 20px;
-    margin-top: 10px;
-}
-
-.margin-des {
-    margin-left: 10px;
-    margin-top: 5px;
-}
-
-.box-pro {
-    margin: auto;
-    margin-top: 10px;
-}
-
-
 
 
 
@@ -423,10 +379,80 @@ button .prev-slider, button .next-slider:hover {
         text-decoration: underline;
 }
 .img-channel{
-    width:50px;
+    width:100px;
     height:50px;
 }
 .img-tintuc{
-    width:50px;
+    width:100px;
     height:50px;
+}
+
+
+
+
+.container-thuonghieu {
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-thuonghieu {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+    .header-thuonghieu h2 {
+        font-size: 24px;
+        font-weight: bold;
+        text-decoration: underline;
+        color: #002f6c;
+    }
+
+.slider-container-thuonghieu {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.slider-thuonghieu {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slider-item-thuonghieu {
+    flex: 1 0 12.5%; /* Chiều rộng 12.5% cho 8 logo */
+    text-align: center;
+    padding: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+    .slider-item-thuonghieu img {
+        width: 60%; /* Giảm kích thước hình ảnh để vừa hơn */
+        height: auto;
+        object-fit: contain; /* Điều chỉnh logo để vừa vặn */
+        margin-bottom: 10px;
+    }
+
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.slider-control-left, .slider-control-right {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
 }

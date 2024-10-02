@@ -1,0 +1,229 @@
+﻿
+@{
+    ViewBag.Title = "DanhMucSanPham";
+    Layout = "~/Views/Shared/_LayoutDivMain.cshtml";
+}
+
+<link href="~/Content/Style-product-DMSP.css" rel="stylesheet" />
+
+<div id="div-top-boloc" style="margin-top:50px;">
+
+</div>
+<div id="div-main-boloc">
+    <div id="div-left-boloc" style="float:left">
+        <ul id="ul-boloc" style="list-style: none">
+            <li>
+                <br>
+                <b href="Product Filter">Bộ lọc sản phẩm</b><br />
+            </li>
+            <br />
+            <li>
+                HÃNG SẢN XUẤT
+            </li>
+            <li>
+                <form id="form-boloc">
+                    <input type="checkbox" id="id_1" name="TNCGaming" value="TNCGaming" />
+                    <label for="id_1">TNC Gaming[90]</label><br />
+                </form>
+                <hr />
+            </li>
+            <li>
+                KHOẢNG GIÁ (VNĐ)
+            </li>
+            <li>
+                <form id="form-boloc">
+                    <br />
+                    <input type="checkbox" id="id_1" name="Dưới 8 triệu" value="Dưới 8 triệu" />
+                    <label for="id_1">Dưới 8 triệu[4]</label><br />
+
+                    <input type="checkbox" id="id_2" name="8 triệu - 11 triệu" value="8 triệu - 11 triệu" />
+                    <label for="id_2">8 triệu - 11 triệu[4]</label><br />
+
+                    <input type="checkbox" id="id_3" name="11 triệu - 15 triệu" value="11 triệu - 15 triệu" />
+                    <label for="id_3">11 triệu - 15 triệu[10]</label><br />
+
+                    <input type="checkbox" id="id_4" name="15 triệu - 20 triệu" value="15 triệu - 20 triệu" />
+                    <label for="id_4">15 triệu - 20 triệu[9]</label><br />
+
+                    <input type="checkbox" id="id_5" name="20 triệu - 25 triệu" value="20 triệu - 25 triệu" />
+                    <label for="id_5">20 triệu - 25 triệu[4]</label><br />
+
+                    <input type="checkbox" id="id_6" name="25 triệu - 30 triệu" value="25 triệu - 30 triệu" />
+                    <label for="id_6">25 triệu - 30 triệu[6]</label><br />
+
+                    <input type="checkbox" id="id_7" name="30 triệu - 50 triệu" value="30 triệu - 50 triệu" />
+                    <label for="id_7">30 triệu - 50 triệu[19]</label><br />
+
+                    <input type="checkbox" id="id_8" name="50 triệu - 70 triệu" value="50 triệu - 70 triệu" />
+                    <label for="id_8">50 triệu - 70 triệu[17]</label><br />
+
+                    <input type="checkbox" id="id_9" name="70 triệu - 80 triệu" value="70 triệu - 80 triệu" />
+                    <label for="id_9">70 triệu - 80 triệu[3]</label><br />
+
+                    <input type="checkbox" id="id_10" name="Trên 80 triệu" value="Trên 80 triệu" />
+                    <label for="id_10">Trên 80 triệu[14]</label><br />
+                </form>
+                <br />
+            </li>
+            <hr />
+            <li>
+                THẾ HỆ CPU
+            </li>
+            <form id="form-boloc">
+                <br />
+                <input type="checkbox" id="id_1" name="Intel Core i9" value="Intel Core i9" />
+                <label for="id_1">Intel Core i9[2]</label><br />
+
+                <input type="checkbox" id="id_2" name="Intel Core i7" value="Intel Core i7" />
+                <label for="id_2">Intel Core i7[10]</label><br />
+
+                <input type="checkbox" id="id_3" name="Intel Core i5" value="Intel Core i5" />
+                <label for="id_3">Intel Core i5[31]</label><br />
+
+                <input type="checkbox" id="id_4" name="Intel Core i3" value="Intel Core i3" />
+                <label for="id_4">Intel Core i3[9]</label><br />
+
+                <input type="checkbox" id="id_5" name="AMD Ryzen 3" value="AMD Ryzen 3" />
+                <label for="id_5">AMD Ryzen 3[1]</label><br />
+
+                <input type="checkbox" id="id_6" name="AMD Ryzen 5" value="AMD Ryzen 5" />
+                <label for="id_6">AMD Ryzen 5[3]</label><br />
+
+                <input type="checkbox" id="id_7" name="AMD Ryzen 7" value="AMD Ryzen 7" />
+                <label for="id_7">AMD Ryzen 7[3]</label><br />
+
+                <input type="checkbox" id="id_8" name="AMD Ryzen 9" value="AMD Ryzen 9" />
+                <label for="id_8">AMD Ryzen 9[2]</label><br />
+                <br />
+            </form>
+            <hr />
+            <li>
+                CARD MÀN HÌNH
+            </li>
+            <li>
+                <form id="form-boloc">
+                    <br />
+                    <input type="checkbox" id="id_1" name="RX 6900 XT" value="RX 6900 XT" />
+                    <label for="id_1">RX 6900 XT[2]</label><br />
+
+                    <input type="checkbox" id="id_2" name="RTX 4080 Super" value="RTX 4080 Super" />
+                    <label for="id_2">RTX 4080 Super[2]</label><br />
+
+                    <input type="checkbox" id="id_3" name="GTX 1660S" value="GTX 1660S" />
+                    <label for="id_3">GTX 1660S[4]</label><br />
+
+                    <input type="checkbox" id="id_4" name="RTX 3050" value="RTX 3050" />
+                    <label for="id_4">RTX 3050[4]</label><br />
+
+                    <input type="checkbox" id="id_5" name="RTX 4060" value="RTX 4060" />
+                    <label for="id_5">RTX 4060[4]</label><br />
+
+                    <input type="checkbox" id="id_6" name="UHD Graphic" value="UHD Graphic" />
+                    <label for="id_6">UHD Graphic[1]</label><br />
+
+                    <input type="checkbox" id="id_7" name="RTX 3060" value="RTX 3060" />
+                    <label for="id_7">RTX 3060[9]</label><br />
+
+                    <input type="checkbox" id="id_8" name="RTX 4060" value="RTX 4060" />
+                    <label for="id_8">RTX 4060[4]</label><br />
+                </form>
+                <br />
+            </li>
+        </ul>
+    </div>
+</div>
+
+    <ins><b><h2 style="text-align: left">Các sản phẩm</h2></b></ins>
+    <div id="div-pro-list">
+        <div class="box-pro-dmsp">
+            <img src="~/image/lotchuot.jpg" class="size-img-dmsp" />
+            <div class="box-description">
+                <a href="~/Home/TrangSanPham_LotChuot"><p class="margin-des"> Bàn Di Chuột Laptop TNC </p></a>
+                <br />
+                <p> <del> 149.000đ</p> </del>
+                <p style=" color:#b81414" class="margin-des"> <b>49.000đ</b> </p>
+        </div>
+    </div>
+        <div class="box-pro-dmsp">
+            <img src="~/image/DanhMucSanPham/250-11093-pc-do-dai-hoc-2024-nv2.jpg" class="size-img-dmsp" />
+            <div class="box-description">
+                <a href="~/Home/TrangSanPham_PC1"><p class="margin-des"> PC Đỗ Đại Học 2024 NV2 - Quẩy mượt WuKong </p></a>
+                <p> <del>  16.590.000đ </p> </del>
+                <p style=" color:#b81414" class="margin-des"> <b>15.890.000đ</b> </p>
+
+            </div>
+        </div>
+        <div class="box-pro-dmsp">
+            <img src="~/image/DanhMucSanPham/SanPham/pc2/pc2.1.jpg" class="size-img-dmsp" />
+            <div class="box-description">
+                <a href="~/Home/TrangSanPham_PC2"><p class="margin-des">PC Đỗ Đại Học 2024 NV1</p></a>
+                <br />
+                <p> <del> 16.590.000đ</p> </del>
+                <p style=" color:#b81414" class="margin-des"> <b>15.890.000đ</b> </p>
+            </div>
+        </div>
+        <div class="box-pro-dmsp">
+            <img src="~/image/DanhMucSanPham/250-10490-sniper-i4060---wh--.jpg" class="size-img-dmsp" />
+            <div class="box-description">
+                <p class="margin-des">PC Gaming - Sniper I4060 - WH</p>
+                <br />
+                <p> <del> 20.990.000đ </p> </del>
+                <p style=" color:#b81414" class="margin-des"><b>18.590.000đ</b></p>
+            </div>
+        </div>
+        <div class="box-pro-dmsp">
+            <img src="~/image/DanhMucSanPham/250-9979-pc-gaming-sentinel-i4090-wh--16-.jpg" class="size-img-dmsp" />
+            <div class="box-description">
+                <p class="margin-des">PC Gaming - Sentinel I4090 - WH</p>
+                <br />
+                <p> <del>120.990.000đ </p> </del>
+                <p style=" color:#b81414" class="margin-des"><b>108.990.000đ</b></p>
+            </div>
+        </div>
+        <div class="box-pro-dmsp">
+            <img src="~/image/DanhMucSanPham/250-9204-pc-gaming-sentinal-i4090-eva-02-limited-edition-01--16-.jpg" class="size-img-dmsp" />
+            <div class="box-description">
+                <p class="margin-des">PC Gaming - Sentinal I4090 Eva 02 Limited Edition 01</p>
+                <p> <del> 135.990.000đ</p> </del>
+                <p style=" color:#b81414" class="margin-des"> <b>129.990.000đ</b> </p>
+            </div>
+        </div>
+        <div class="box-pro-dmsp">
+            <img src="~/image/DanhMucSanPham/250-8959-z5869321085840_ac1dec54c8a48064e72439877728322c.jpg" class="size-img-dmsp" />
+            <div class="box-description">
+                <p class="margin-des">PC Gaming - Sniper I4060 - BL</p>
+                <br />
+                <p> <del> 28.990.000đ </p> </del>
+                <p style=" color:#b81414" class="margin-des"><b>18.990.000đ</b></p>
+            </div>
+        </div>
+        <div class="box-pro-dmsp">
+            <img src="~/image/DanhMucSanPham/250-8374-pc-gaming-sentinel-i4090-bl-01--16-.jpg" class="size-img-dmsp" />
+            <div class="box-description">
+                <p class="margin-des">PC Gaming - Sentinel I4090 - BL - 01</p>
+                <br />
+                <br />
+                <p style=" color:#b81414" class="margin-des"> <b>114.790.000đ</b></p>
+            </div>
+        </div>
+        <div class="box-pro-dmsp">
+            <img src="~/image/DanhMucSanPham/250-7799-tnc-store-pc-gaming-sentinel-i4090-bl-11-.jpg" class="size-img-dmsp" />
+            <div class="box-description">
+                <p class="margin-des">PC Gaming - Sentinel I4090 - BL</p>
+                <br />
+                <p> <del> 138.510.000đ </p> </del>
+                <p style=" color:#b81414" class="margin-des"> <b>116.799.000đ</b></p>
+            </div>
+        </div>
+        <div class="box-pro-dmsp">
+            <img src="~/image/DanhMucSanPham/250-7786-tnc-store-pc-gaming-glacier-i6600-13-.jpg" class="size-img-dmsp" />
+            <div class="box-description">
+                <p class="margin-des">PC Gaming Glacier i6600</p>
+                <br />
+                <p> <del> 14.790.000đ </p> </del>
+                <p style=" color:#b81414" class="margin-des"> <b>13.790.000đ </b></p>
+            </div>
+        </div>
+    </div>
+<div style="clear: both;margin-top:100px;"></div>
+

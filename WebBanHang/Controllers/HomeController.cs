@@ -8,6 +8,23 @@ namespace WebBanHang.Controllers
 {
     public class HomeController : Controller
     {
+        public ActionResult HoanTatThanhToan()
+        {
+            return View();
+        }
+        public ActionResult TrangSanPham_PC2()
+        {
+            return View();
+        }
+        public ActionResult TrangSanPham_PC1()
+        {
+            return View();
+        }
+        public ActionResult DanhMucSanPham()
+        {
+            return View();
+        }
+
         public ActionResult TrangSanPham_LotChuot()
         {
             return View();
