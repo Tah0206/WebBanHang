@@ -38,6 +38,7 @@
     text-decoration: underline;
     color: #007bff;
     margin-left: auto; /* Đẩy sang bên phải */
+
 }
 
 .product-list-container {
@@ -46,6 +47,7 @@
     border: 1px solid #ccc;
     padding: 10px;
     background-color: #fff;
+ 
 }
 
 .product-list {
@@ -59,17 +61,17 @@
     margin: 0 10px;
     position: relative;
 }
-
+/*
 .best-choice {
     position: absolute;
     top: 10px;
     left: 10px;
     background-color: orange;
-    color: white;
+    color: black;
     padding: 5px;
     font-size: 12px;
     border-radius: 3px;
-}
+}*/
 
 .product img {
     width: 100px;
@@ -307,7 +309,7 @@ button .prev-slider, button .next-slider:hover {
     top: 5px;
     left: 5px;
     background-color: greenyellow;
-    color: white;
+    color: black;
     font-size: 10px;
     font-weight: bold;
     padding: 2px 5px;
@@ -319,7 +321,7 @@ button .prev-slider, button .next-slider:hover {
     top: 5px;
     left: 5px;
     background-color: orange;
-    color: white;
+    color: black;
     font-size: 10px;
     font-weight: bold;
     padding: 2px 5px;

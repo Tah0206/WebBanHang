@@ -9,15 +9,27 @@
     <title>@ViewBag.Title</title>
     <style>
 
-
+        * {
+            box-sizing: border-box;
+/*            position: fixed;*/
+        }
         body {
             margin: 0;
             background-color: white; /* Màu nền cho toàn trang */
+            width: 100%;
+            height: 100%;
         }
 
 
         /*Layout Top*/
         #top {
+            position: fixed; /* Đặt header cố định */
+            top: 0; /* Đặt ở đầu trang */
+            left: 0; /* Căn trái */
+            width: 100%; /* Chiều rộng đầy đủ */
+          /*  height:100%;*/
+            z-index: 1000;
+           
         }
 
         .banner1 {
@@ -26,6 +38,7 @@
         }
 
         #top-nav1 {
+           /* position:fixed;*/
             padding-left: 160px;
             padding-right: 160px;
             padding-top: 10px;
@@ -33,9 +46,9 @@
         }
 
         #top-nav1 {
-            background-color: #2879F2;
+            background-color: #1c8ea4;
             width: 100%;
-            height: 30px;
+            height: 38px;
             float: right;
             color: white;
         }
@@ -53,13 +66,14 @@
         }
 
         header {
-            background-color: #283350;
+            background-color: #04323A;
             color: white;
             padding-left: 160px;
             padding-right: 160px;
         }
 
         .header-container {
+ 
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -399,7 +413,7 @@
 
 
         nav {
-            background-color: #283350;
+            background-color: #04323A;
             padding: 10px 20px;
         }
 
@@ -460,7 +474,7 @@
         }
 
         .dropdown-btn {
-            background-color: #283350;
+            background-color: #04323A;
             border: none; /* bỏ viền */
             color: white;
             padding: 10px;
@@ -468,9 +482,10 @@
         }
 
         .dropdown-content {
+            position: fixed;
             display: none; /* Ẩn dropdown ban đầu */
             position: absolute; /* Định vị tuyệt đối */
-            background-color: #1f294d; /* Màu nền dropdown */
+            background-color: #04323A; /* Màu nền dropdown */
             min-width: 200px; /* Chiều rộng tối thiểu của dropdown */
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             z-index: 1; /* Đảm bảo dropdown hiển thị trên các phần tử khác */
@@ -504,12 +519,13 @@
         /*Layout Bottom*/
         /* Chứa toàn bộ nội dung và cách lề 160px */
         .content-wrapper {
+            padding-top:225px;
             padding-left: 160px;
             padding-right: 160px;
         }
 
         #div-footer {
-            background-color: #283350;
+            background-color: #04323A;
             height: 125px;
             padding-left: 160px;
             padding-right: 160px;
@@ -535,7 +551,7 @@
 
         #txtDkyEmail {
             width: 73%;
-            height: 30px;
+            height: 35px;
             padding: 2px;
             border: 1px solid #ccc;
             border-right: none; /* Xóa đường viền phải để kết nối với nút */
@@ -634,7 +650,7 @@
         </div>
         <div id="top-nav1">
             <ul class="custom-list">
-                <li><a href="#">Tất cả sản phẩmm</a></li>
+                <li><a href="~/Home/DanhMucSanPham">Tất cả sản phẩmm</a></li>
                 <li><a href="tel:0876754228"><img src="~/TopIcon/phone-volume-solid.svg" alt="PhoneIcon" class="nav1-icon" />0876754228</a></li>
                 <li><a href="mailto:Tah02.06.05@gmail.com"> <img src="~/TopIcon/envelope-solid.svg" alt="MailIcon" class="nav1-icon" />Tah02.06.05@gmail.com</a></li>
             </ul>
@@ -648,10 +664,27 @@
                 <div class="search-bar">
                     <select>
                         <option>Tất cả danh mục</option>
-                        <!-- Add other options as needed -->
+                        <option>Xây dựng cấu hình PC</option>
+                        <option>PC Gaming</option>
+                        <option>PC Đồ Họa</option>
+                        <option>PC AI</option>
+                        <option>Laptop - Máy Tính Xách Tay</option>
+                        <option>Màn Hình Máy Tính</option>
+                        <option>Máy chơi game - Console</option>
+                        <option>Tay Cầm Chơi Game</option>
+                        <option>VGA - Card màn hình</option>
+                        <option>Linh kiện máy tính</option>
+                        <option>Gaming Gears</option>
+                        <option>PC Văn Phòng</option>
+                        <option>Phụ Kiện - Tản Nhiệt PC</option>
+                        <option>Apple</option>
+                        <option>AUDIO</option>
+                        <option>Hàng Cũ - Giá Tốt</option>
+                        <option>Thiết bị văn phòng</option>
+                        <option>Thiết bị mạng</option>
                     </select>
                     <input type="text" placeholder="Nhập sản phẩm cần tìm...">
-                    <button class="btnTimKiem">Tìm kiếm</button>
+                    <a href="~/Home/DanhMucSanPham"><button class="btnTimKiem">Tìm kiếm</button></a>
                 </div>
                 <div class="account-cart">
                     <a href="javascript:void(0);" onclick="toggleLogin()">
@@ -1167,6 +1200,78 @@
                 checkoutButton.style.display = 'block'; // Hiển thị nút "Thanh Toán" nếu có sản phẩm
             }
         }
+    </script>
+    @*Giỏ hàng và thanh toán*@
+    <script>
+        // Mảng chứa sản phẩm trong giỏ hàng
+        let cartItems = [];
+
+        // Hàm thêm sản phẩm vào giỏ hàng
+        function addToCart(product) {
+            cartItems.push(product);
+            updateCartDisplay();
+        }
+
+        // Cập nhật hiển thị giỏ hàng
+        function updateCartDisplay() {
+            const cartItemsContainer = document.querySelector('.cart-items');
+            const cartTotal = document.querySelector('.cart-total');
+
+            // Xóa nội dung cũ
+            cartItemsContainer.innerHTML = '';
+            let total = 0;
+
+            // Hiển thị các sản phẩm trong giỏ hàng
+            cartItems.forEach(item => {
+                const itemElement = document.createElement('p');
+                itemElement.textContent = `${item.name} - ${item.price}₫ x ${item.quantity}`;
+                cartItemsContainer.appendChild(itemElement);
+                total += item.price * item.quantity; // Tính tổng
+            });
+
+            // Hiển thị tổng
+            cartTotal.textContent = `Tổng cộng: ${total}₫`;
+        }
+
+        // Thêm sự kiện cho nút "Thêm Vào Giỏ Hàng"
+        document.querySelector('.add-to-cart').addEventListener('click', () => {
+        const quantity = document.getElementById('quantity').value;
+            const product = {
+                name: 'Bàn Di Chuột Laptop TNC',
+                price: 49000,
+                quantity: parseInt(quantity),
+            };
+            addToCart(product);
+        });
+</script>
+    <script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            const cartItemsContainer = document.querySelector('.cart-items');
+            let totalPrice = 0;
+
+            cartItems.forEach(item => {
+                const itemDiv = document.createElement('div');
+            itemDiv.classList.add('cart-item');
+
+            itemDiv.innerHTML = `
+            <img src="${item.image}" alt="${item.name}" />
+            <div class="item-details">
+                <h2>${item.name}</h2>
+                <p>Giá: ${item.price}₫</p>
+                <p>Số lượng: ${item.quantity}</p>
+                <p>Tổng: ${item.totalPrice()}₫</p>
+            </div>
+            `;
+
+            cartItemsContainer.appendChild(itemDiv);
+            totalPrice += item.totalPrice();
+            });
+
+            document.getElementById('total-price').innerText = totalPrice + '₫';
+        });
+    </script>
     </script>
 </body>
 </html>

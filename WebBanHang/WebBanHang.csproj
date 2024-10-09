@@ -150,10 +150,12 @@
     <Content Include="Content\style-product-home.css" />
     <Content Include="Content\Style-product-pc.css" />
     <Content Include="Content\Style-product-ThanhToan.css" />
+    <Content Include="Content\style_XacNhan.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="image\banner.jpg" />
+    <Content Include="image\bannerr2.jpg" />
     <Content Include="image\channel1.jpg" />
     <Content Include="image\channel2.jpg" />
     <Content Include="image\channel3.jpg" />
@@ -170,6 +172,7 @@
     <Content Include="image\DanhMucSanPham\250-9979-pc-gaming-sentinel-i4090-wh--16-.jpg" />
     <Content Include="image\DanhMucSanPham\banner3.jpg" />
     <Content Include="image\DanhMucSanPham\banner4.jpg" />
+    <Content Include="image\DanhMucSanPham\banner5.jpg" />
     <Content Include="image\DanhMucSanPham\game1.jpg" />
     <Content Include="image\DanhMucSanPham\game2.jpg" />
     <Content Include="image\DanhMucSanPham\game3.jpg" />
