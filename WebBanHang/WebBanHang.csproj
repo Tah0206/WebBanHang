@@ -183,6 +183,7 @@
     <Content Include="GHang_TToan\ThanhToan.cshtml" />
     <Content Include="GHang_TToan\GioHang.cshtml" />
     <Content Include="PCGaming\PCGaming.cshtml" />
+    <Content Include="GHang_TToan\HoanTatThanhToan.cshtml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
