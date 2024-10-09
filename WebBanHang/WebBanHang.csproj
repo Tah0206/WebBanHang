@@ -173,6 +173,15 @@
     <Content Include="HinhAnh\PC3\pc3.4.jpg" />
     <Content Include="HinhAnh\PC3\pc3.5.jpg" />
     <Content Include="HinhAnh\PC3\pc3.6.jpg" />
+    <Content Include="HinhAnh\PC4\Mtpc4.......1.jpg" />
+    <Content Include="HinhAnh\PC4\Mtpc4.2.jpg" />
+    <Content Include="HinhAnh\PC4\Mtpc4.3.jpg" />
+    <Content Include="HinhAnh\PC4\pc4.1.jpg" />
+    <Content Include="HinhAnh\PC4\pc4.2.png" />
+    <Content Include="HinhAnh\PC4\pc4.3.png" />
+    <Content Include="HinhAnh\PC4\pc4.4.png" />
+    <Content Include="HinhAnh\PC4\pc4.5.png" />
+    <Content Include="HinhAnh\PC4\pc4.6.png" />
     <Content Include="PCGaming\style.css" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -223,6 +232,7 @@
     <Content Include="TrangSanPham\TrangSanPham_PC1.cshtml" />
     <Content Include="TrangSanPham\TrangSanPham_PC2.cshtml" />
     <Content Include="TrangSanPham\TrangSanPham_PC3.cshtml" />
+    <Content Include="TrangSanPham\TrangSanPham_PC4.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
