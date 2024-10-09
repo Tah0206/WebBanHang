@@ -251,6 +251,7 @@
     <Content Include="image\tintuc2.jpg" />
     <Content Include="image\tintuc3.jpg" />
     <Content Include="image\tintuc4.jpg" />
+    <Content Include="image\verify-icon.svg" />
     <Content Include="Scripts\Boobstrap-layoutHome.js" />
     <Content Include="Scripts\boobstrap-home.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />

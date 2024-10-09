@@ -262,4 +262,32 @@
         </div>
     </div>
 </div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
+        // Thêm sản phẩm vào giỏ hàng
+        document.querySelector('.add-to-cart').addEventListener('click', () => {
+            const productName = document.querySelector('.product-details-sanpham h1').innerText;
+            const productPrice = parseFloat(document.querySelector('.price').innerText.replace('₫', '').replace(',', ''));
+            const quantity = parseInt(document.querySelector('#quantity').value);
+
+            // Kiểm tra số lượng
+            if (quantity <= 0) {
+                alert('Vui lòng nhập số lượng hợp lệ!');
+                return;
+            }
+
+            const existingProduct = cartItems.find(item => item.name === productName);
+            if (existingProduct) {
+                existingProduct.quantity += quantity; // Cập nhật số lượng
+            } else {
+                cartItems.push({ name: productName, price: productPrice, quantity }); // Thêm sản phẩm mới
+            }
+
+            // Lưu giỏ hàng vào localStorage
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            alert('Đã thêm sản phẩm vào giỏ hàng!');
+        });
+    });
+</script>

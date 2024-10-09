@@ -56,7 +56,7 @@
 }
 
 .product {
-    min-width: 25%; /* 5 sản phẩm trên 1 dòng */
+    min-width: 20%; /* 5 sản phẩm trên 1 dòng */
     text-align: center;
     margin: 0 10px;
     position: relative;
@@ -204,7 +204,7 @@ button .prev-slider, button .next-slider:hover {
 }*/
 
 .pc-noi-bat-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 20px auto;
     background-color: #fff;
     padding: 20px;
@@ -232,7 +232,7 @@ button .prev-slider, button .next-slider:hover {
     font-weight: bold;
 }
 
-.main-content-noibat {
+.main-content{
     display: flex;
     justify-content: center;
     align-items: flex-start;
