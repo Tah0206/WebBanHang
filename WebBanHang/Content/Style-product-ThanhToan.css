@@ -5,7 +5,7 @@
     margin-top:100px;
 }
 .container {
-    width: 750px;
+    width: 50%;
     margin: auto;
     padding: 20px;
     background-color: white;
@@ -17,11 +17,11 @@
 
 .container_vch {
     margin: auto;
-    padding: 20px;
+    padding: 1%;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     float: right;
-    width: 310px;
+    width: 20%;
 }
 
 h2 {
@@ -57,9 +57,8 @@ h2 {
     background-color: white;
     border: 0px solid #ddd;
     margin-top: 20px;
-    width: 300px;
+    width: 100%;
     float: left;
-
 }
 
 .cart-summary h4 {

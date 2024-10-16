@@ -3,7 +3,7 @@
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 78%;
     margin: 0 auto;
     padding: 20px;
 }
@@ -372,7 +372,7 @@
 
 .luachonngang {
     display: flex;
-    justify-content: space-between;
+/*    justify-content: space-between;*/
 }
 
 .luachonspcuthe {

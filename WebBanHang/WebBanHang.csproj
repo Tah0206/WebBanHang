@@ -145,6 +145,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\Style-dangnhap.css" />
     <Content Include="Content\Style-product-DMSP.css" />
     <Content Include="Content\Style-product-giohang.css" />
     <Content Include="Content\style-product-home.css" />
@@ -311,6 +312,7 @@
     <Content Include="Views\Home\TrangSanPham_PC1.cshtml" />
     <Content Include="Views\Home\TrangSanPham_PC2.cshtml" />
     <Content Include="Views\Home\HoanTatThanhToan.cshtml" />
+    <Content Include="Views\Home\DangNhap.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

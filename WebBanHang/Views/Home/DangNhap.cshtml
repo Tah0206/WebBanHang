@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "DangNhap";
+    Layout = "~/Views/Shared/_LayoutDivMain.cshtml";
+}
+<div class="signup-container" style="">
+    <div class="signup-box">
+        @*<span class="close-btn-signup" onclick="closeSignup(event);">&times;</span>*@
+        <h2><b>Tạo tài khoản</b></h2>
+        <form >
+            <div class="input-group">
+                <label for="name" style="color:black"><b>Họ và tên</b></label>
+                <input type="text" id="name" placeholder="Nhập họ và tên của bạn">
+            </div>
+            <div class="input-group">
+                <label for="signup-email" style="color:black"><b>Email</b></label>
+                <input type="email" id="signup-email" placeholder="Nhập email mà bạn muốn đăng ký">
+            </div>
+            <div class="input-group">
+                <label for="signup-password" style="color:black"><b>Mật khẩu</b></label>
+                <input type="password" id="signup-password" placeholder="Nhập mật khẩu của bạn">
+            </div>
+            <button type="submit" class="ButtonSignup">Tạo tài khoản</button>
+            <div class="options">
+                <p>Đã có tài khoản? <a href="javascript:void(0);" onclick="toggleLogin()" class="have-account">Đăng nhập</a></p>
+            </div>
+        </form>
+    </div>
+</div>

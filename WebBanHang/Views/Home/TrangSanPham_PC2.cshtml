@@ -268,7 +268,7 @@
 
         // Thêm sản phẩm vào giỏ hàng
         document.querySelector('.add-to-cart').addEventListener('click', () => {
-            const productName = document.querySelector('.product-details-sanpham h1').innerText;
+            const productName = document.querySelector('.product-details').innerText;
             const productPrice = parseFloat(document.querySelector('.price').innerText.replace('₫', '').replace(',', ''));
             const quantity = parseInt(document.querySelector('#quantity').value);
 
