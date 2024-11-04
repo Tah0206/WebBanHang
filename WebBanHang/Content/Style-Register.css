@@ -8,7 +8,7 @@
     background-color: #f5f5f5;
 }
 
-.login-container {
+.register-container {
     width: 30%;
     padding: 2%;
     background-color: #fff;
@@ -18,15 +18,17 @@
     margin: 3% 10% 3% 34%;
 }
 
-    .login-container h2 {
+    .register-container h2 {
         margin: 0;
         padding: 0 0 20px;
         font-size: 24px;
         color: #333;
     }
 
-    .login-container input[type="text"],
-    .login-container input[type="password"] {
+    .register-container input[type="text"],
+    .register-container input[type="tel"],
+    .register-container input[type="email"],
+    .register-container input[type="password"] {
         width: 100%;
         padding: 12px;
         margin: 8px 0;
@@ -35,7 +37,7 @@
         font-size: 16px;
     }
 
-    .login-container button {
+    .register-container button {
         width: 100%;
         padding: 12px;
         margin: 16px 0;
@@ -48,22 +50,20 @@
         transition: background-color 0.3s;
     }
 
-        .login-container button:hover {
+        .register-container button:hover {
             background-color: #d94423;
         }
-
-.login-options {
-    display: flex;
-    justify-content: space-between;
-    font-size: 14px;
+.register-options {
+  /*  font-size: 14px;*/
     color: #666;
+    margin-top: 10px;
 }
 
-    .login-options a {
+    .register-options a {
         color: #ee4d2d;
         text-decoration: none;
     }
 
-        .login-options a:hover {
+        .register-options a:hover {
             text-decoration: underline;
         }

@@ -8,7 +8,12 @@ namespace WebBanHang.Controllers
 {
     public class HomeController : Controller
     {
+
         public ActionResult DangNhap()
+        {
+            return View();
+        }
+        public ActionResult DangKy()
         {
             return View();
         }

@@ -152,6 +152,7 @@
     <Content Include="Content\style-product-home.css" />
     <Content Include="Content\Style-product-pc.css" />
     <Content Include="Content\Style-product-ThanhToan.css" />
+    <Content Include="Content\Style-Register.css" />
     <Content Include="Content\style_XacNhan.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -334,6 +335,7 @@
     <Content Include="Views\Home\DangNhap.cshtml" />
     <Content Include="Views\Home\TrangSanPham_PC3.cshtml" />
     <Content Include="Views\Home\TrangSanPham_PC4.cshtml" />
+    <Content Include="Views\Home\DangKy.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
