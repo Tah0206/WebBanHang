@@ -145,6 +145,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\Login.css" />
     <Content Include="Content\Style-dangnhap.css" />
     <Content Include="Content\Style-product-DMSP.css" />
     <Content Include="Content\Style-product-giohang.css" />
@@ -206,6 +207,24 @@
     <Content Include="image\DanhMucSanPham\SanPham\Pc2\pc2.6.jpg" />
     <Content Include="image\DanhMucSanPham\SanPham\Pc2\pcmt1.jpg" />
     <Content Include="image\DanhMucSanPham\SanPham\Pc2\pcmt2.jpg" />
+    <Content Include="image\DanhMucSanPham\SanPham\Pc3\Mtpc3.1.jpg" />
+    <Content Include="image\DanhMucSanPham\SanPham\Pc3\Mtpc3.2.jpg" />
+    <Content Include="image\DanhMucSanPham\SanPham\Pc3\Mtpc3.3.jpg" />
+    <Content Include="image\DanhMucSanPham\SanPham\Pc3\pc3.1.jpg" />
+    <Content Include="image\DanhMucSanPham\SanPham\Pc3\pc3.2.png" />
+    <Content Include="image\DanhMucSanPham\SanPham\Pc3\pc3.3.jpg" />
+    <Content Include="image\DanhMucSanPham\SanPham\Pc3\pc3.4.jpg" />
+    <Content Include="image\DanhMucSanPham\SanPham\Pc3\pc3.5.jpg" />
+    <Content Include="image\DanhMucSanPham\SanPham\Pc3\pc3.6.jpg" />
+    <Content Include="image\DanhMucSanPham\SanPham\Pc4\Mtpc4.1.jpg" />
+    <Content Include="image\DanhMucSanPham\SanPham\Pc4\Mtpc4.2.jpg" />
+    <Content Include="image\DanhMucSanPham\SanPham\Pc4\Mtpc4.3.jpg" />
+    <Content Include="image\DanhMucSanPham\SanPham\Pc4\pc4.1.jpg" />
+    <Content Include="image\DanhMucSanPham\SanPham\Pc4\pc4.2.png" />
+    <Content Include="image\DanhMucSanPham\SanPham\Pc4\pc4.3.png" />
+    <Content Include="image\DanhMucSanPham\SanPham\Pc4\pc4.4.png" />
+    <Content Include="image\DanhMucSanPham\SanPham\Pc4\pc4.5.png" />
+    <Content Include="image\DanhMucSanPham\SanPham\Pc4\pc4.6.png" />
     <Content Include="image\deal1.jpg" />
     <Content Include="image\deal2.jpg" />
     <Content Include="image\deal3.jpg" />
@@ -313,9 +332,12 @@
     <Content Include="Views\Home\TrangSanPham_PC2.cshtml" />
     <Content Include="Views\Home\HoanTatThanhToan.cshtml" />
     <Content Include="Views\Home\DangNhap.cshtml" />
+    <Content Include="Views\Home\TrangSanPham_PC3.cshtml" />
+    <Content Include="Views\Home\TrangSanPham_PC4.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Font\" />
     <Folder Include="Models\" />
     <Folder Include="Views\TrangSanPham\" />
   </ItemGroup>

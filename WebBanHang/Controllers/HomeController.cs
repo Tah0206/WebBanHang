@@ -21,6 +21,14 @@ namespace WebBanHang.Controllers
         {
             return View();
         }
+        public ActionResult TrangSanPham_PC4()
+        {
+            return View();
+        }
+        public ActionResult TrangSanPham_PC3()
+        {
+            return View();
+        }
         public ActionResult TrangSanPham_PC2()
         {
             return View();

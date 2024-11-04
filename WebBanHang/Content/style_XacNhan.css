@@ -7,6 +7,10 @@
     align-items: center;
     height: 100%;
 }
+.fm-iconverify{
+    width:10%;
+    height:10%;
+}
 
 .order-container {
     margin: 5% 25% 5% 30%;

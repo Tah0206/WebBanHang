@@ -6,12 +6,16 @@
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content="TNCStore" />
     <meta name="keywords" content="TNC, TNCStore, TNCStoreGaming" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <title>@ViewBag.Title</title>
     <style>
 
         * {
             box-sizing: border-box;
         }
+
         body {
             margin: 0;
             background-color: white; /* Màu nền cho toàn trang */
@@ -26,9 +30,8 @@
             top: 0; /* Đặt ở đầu trang */
             left: 0; /* Căn trái */
             width: 100%; /* Chiều rộng đầy đủ */
-          /*  height:100%;*/
+            /*  height:100%;*/
             z-index: 1000;
-           
         }
 
         .banner1 {
@@ -72,7 +75,6 @@
         }
 
         .header-container {
- 
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -220,7 +222,7 @@
             .view-cart-button:hover {
                 background-color: #218838; /* Màu nền khi hover */
             }
-
+/*
         .close-btn-login {
             position: absolute;
             top: 0px;
@@ -232,7 +234,9 @@
 
             .close-btn-login:hover {
                 color: red;
-            }*
+            }
+
+        *
 
         .cart-dropdown p {
             color: black;
@@ -242,9 +246,9 @@
 
         .options p {
             color: gray;
-        }
+        }*/
 
-
+/*
         .login-container {
             display: none;
             position: absolute;
@@ -261,7 +265,7 @@
             padding: 40px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
             width: 320px;
-            opacity:1;
+            opacity: 1;
         }
 
             .login-box h2 {
@@ -269,9 +273,9 @@
                 margin-bottom: 20px;
                 font-size: 24px;
                 color: black;
-            }
+            }*/
 
-        .input-group {
+      /*  .input-group {
             margin-bottom: 15px;
         }
 
@@ -337,19 +341,19 @@
             margin-bottom: 15px;
         }
 
-        .input-group label {
+            .input-group label {
                 font-size: 14px;
                 margin-bottom: 5px;
                 display: block;
-        }
+            }
 
-        .input-group input {
+            .input-group input {
                 width: 93%;
                 padding: 10px;
                 margin-top: 5px;
                 border: 1px solid #ccc;
                 font-size: 14px;
-        }
+            }
 
         .ButtonSignup, .ButtonLogin {
             width: 100%;
@@ -362,9 +366,9 @@
             transition: background-color 0.3s;
         }
 
-        .ButtonSignup:hover, .ButtonLogin:hover {
+            .ButtonSignup:hover, .ButtonLogin:hover {
                 background-color: #1565C0;
-        }
+            }
 
         .close-btn-signup, .close-btn-login {
             position: absolute;
@@ -375,12 +379,12 @@
             cursor: pointer;
         }
 
-        .close-btn-signup:hover, .close-btn-login:hover {
+            .close-btn-signup:hover, .close-btn-login:hover {
                 color: red;
-        }
+            }*/
 
-        .have-account{
-            opacity:0;
+        .have-account {
+            opacity: 0;
         }
 
         .options p {
@@ -470,6 +474,10 @@
         /*Danh mục sản phẩm của nav3*/
         .product-category {
             position: relative; /* Để định vị dropdown */
+        }
+        .dropdown-content_tach {
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
         }
 
         .dropdown-btn {
@@ -686,10 +694,10 @@
                     <a href="~/Home/DanhMucSanPham"><button class="btnTimKiem">Tìm kiếm</button></a>
                 </div>
                 <div class="account-cart">
-                    <a href="javascript:void(0);" onclick="toggleLogin()">
+                    <a href="#">
                         <img src="~/TopIcon/user-regular.svg" alt="UserIcon" class="nav1-icon" />Tài khoản
                     </a>
-                    <div class="login-container" style="display: none;">
+                    @*<div class="login-container" style="display: none;">
                         <div class="login-box">
                             <span class="close-btn-login" onclick="closeLogin(event);">&times;</span>
                             <h2><b>Đăng Nhập</b></h2>
@@ -710,8 +718,8 @@
                                 </div>
                             </form>
                         </div>
-                    </div>
-                    <div class="signup-container" style="display: none;">
+                    </div>*@
+                    @*<div class="signup-container" style="display: none;">
                         <div class="signup-box">
                             <span class="close-btn-signup" onclick="closeSignup(event);">&times;</span>
                             <h2><b>Tạo tài khoản</b></h2>
@@ -734,7 +742,7 @@
                                 </div>
                             </form>
                         </div>
-                    </div>
+                    </div>*@
                     <div class="cart">
                         <a href="javascript:void(0);" onclick="toggleCart()">
                             <img src="~/TopIcon/cart-shopping-solid.svg" class="cart-icon" />
@@ -760,24 +768,60 @@
                     <li class="product-category">
                         <a href="~/Home/DanhMucSanPham"><button class="dropdown-btn"><b>DANH MỤC SẢN PHẨM</b></button></a>
                         <div class="dropdown-content">
-                            <a href="#">Xây dựng cấu hình PC</a><br />
-                            <a href="#">PC Gaming</a><br />
-                            <a href="#">PC Đồ Họa</a><br />
-                            <a href="#">PC AI</a><br />
-                            <a href="#">Laptop - Máy Tính Xách Tay</a><br />
-                            <a href="#">Màn Hình Máy Tính</a><br />
-                            <a href="#">Máy chơi game - Console</a><br />
-                            <a href="#">Tay Cầm Chơi Game</a><br />
-                            <a href="#">VGA - Card màn hình</a><br />
-                            <a href="#">Linh kiện máy tính</a><br />
-                            <a href="#">Gaming Gears</a><br />
-                            <a href="#">PC Văn Phòng</a><br />
-                            <a href="#">Phụ Kiện - Tản Nhiệt PC</a><br />
-                            <a href="#">Apple</a><br />
-                            <a href="#">AUDIO</a><br />
-                            <a href="#">Hàng Cũ - Giá Tốt</a><br />
-                            <a href="#">Thiết bị văn phòng</a><br />
-                            <a href="#">Thiết bị mạng</a><br />
+                            <div class="dropdown-content_tach">
+                                <a href="#">Xây dựng cấu hình PC</a><br />
+                            </div>
+                            <div class="dropdown-content_tach">
+                                <a href="#">PC Gaming</a><br />
+                            </div>
+                            <div class="dropdown-content_tach">
+                                <a href="#">PC Đồ Họa</a><br />
+                            </div>
+                            <div class="dropdown-content_tach">
+                                <a href="#">PC AI</a><br />
+                            </div>
+                            <div class="dropdown-content_tach">
+                                <a href="#">Laptop - Máy Tính Xách Tay</a><br />
+                            </div>
+                            <div class="dropdown-content_tach">
+                                <a href="#">Màn Hình Máy Tính</a><br />
+                            </div>
+                            <div class="dropdown-content_tach">
+                                <a href="#">Máy chơi game - Console</a><br />
+                            </div>
+                            <div class="dropdown-content_tach">
+                                <a href="#">Tay Cầm Chơi Game</a><br />
+                            </div>
+                            <div class="dropdown-content_tach">
+                                <a href="#">VGA - Card màn hình</a><br />
+                            </div>
+                            <div class="dropdown-content_tach">
+                                <a href="#">Linh kiện máy tính</a><br />
+                            </div>
+                            <div class="dropdown-content_tach">
+                                <a href="#">Gaming Gears</a><br />
+                            </div>
+                            <div class="dropdown-content_tach">
+                                <a href="#">PC Văn Phòng</a><br />
+                            </div>
+                            <div class="dropdown-content_tach">
+                                <a href="#">Phụ Kiện - Tản Nhiệt PC</a><br />
+                            </div>
+                            <div class="dropdown-content_tach">
+                                <a href="#">Apple</a><br />
+                            </div>
+                            <div class="dropdown-content_tach">
+                                <a href="#">AUDIO</a><br />
+                            </div>
+                            <div class="dropdown-content_tach">
+                                <a href="#">Hàng Cũ - Giá Tốt</a><br />
+                            </div>
+                            <div class="dropdown-content_tach">
+                                <a href="#">Thiết bị văn phòng</a><br />
+                            </div>
+                            <div class="dropdown-content_tach">
+                                <a href="#">Thiết bị mạng</a><br />
+                            </div>
                         </div>
                     </li>
                     <li><a href="#">Xây Dựng Cấu Hình PC</a></li>
@@ -795,7 +839,7 @@
             </nav>
         </header>
     </div>
-    <div class="content-wrapper">
+    <div class="content-wrapper container-fluid col-md-8">
         @RenderBody()
     </div>
     <div id="div-footer">
@@ -1003,7 +1047,7 @@
             container.classList.remove("active");
         });
     </script>*@
-    <script>
+    @*<script>
         document.addEventListener("DOMContentLoaded", function () {
             const signupContainer = document.querySelector('.signup-container');
             const loginContainer = document.querySelector('.login-container');
@@ -1051,7 +1095,7 @@
                 });
             }
         });
-    </script>
+    </script>*@
     <script>
         function toggleCart() {
             const cartDropdown = document.getElementById('cart-dropdown');
@@ -1122,7 +1166,7 @@
             window.location.href = '/Home/GioHang'; // Thay đổi URL tới trang giỏ hàng
         });
     </script>
-    <script>
+    @*<script>
         const loginContainer = document.querySelector('.login-container');
         const cartDropdown = document.getElementById('cart-dropdown');
 
@@ -1199,7 +1243,7 @@
                 checkoutButton.style.display = 'block'; // Hiển thị nút "Thanh Toán" nếu có sản phẩm
             }
         }
-    </script>
+    </script>*@
     @*Giỏ hàng và thanh toán*@
     <script>
         // Mảng chứa sản phẩm trong giỏ hàng
