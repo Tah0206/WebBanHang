@@ -17,10 +17,6 @@ namespace WebBanHang.Controllers
         {
             return View();
         }
-        public ActionResult DangKy()
-        {
-            return View();
-        }
 
         public ActionResult HoanTatThanhToan()
         {

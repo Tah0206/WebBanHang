@@ -26,7 +26,7 @@
 
         /*Layout Top*/
         #top {
-            position: fixed; /* Đặt header cố định */
+            /*position: fixed;*/ /* Đặt header cố định */
             top: 0; /* Đặt ở đầu trang */
             left: 0; /* Căn trái */
             width: 100%; /* Chiều rộng đầy đủ */
@@ -526,9 +526,10 @@
         /*Layout Bottom*/
         /* Chứa toàn bộ nội dung và cách lề 160px */
         .content-wrapper {
-            padding-top: 225px;
+            padding-top: 60px;
             padding-left: 10%;
             padding-right: 10%;
+            padding-bottom:60px;
         }
 
         #div-footer {
@@ -694,7 +695,7 @@
                     <a href="~/Home/DanhMucSanPham"><button class="btnTimKiem">Tìm kiếm</button></a>
                 </div>
                 <div class="account-cart">
-                    <a href="#">
+                    <a href="~/Home/DangNhap">
                         <img src="~/TopIcon/user-regular.svg" alt="UserIcon" class="nav1-icon" />Tài khoản
                     </a>
                     @*<div class="login-container" style="display: none;">
