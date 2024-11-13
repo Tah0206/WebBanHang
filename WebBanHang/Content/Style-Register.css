@@ -41,7 +41,7 @@
         width: 100%;
         padding: 12px;
         margin: 16px 0;
-        background-color: #ee4d2d;
+        background-color: #0033CC;
         color: #fff;
         font-size: 16px;
         border: none;
@@ -51,7 +51,7 @@
     }
 
         .register-container button:hover {
-            background-color: #d94423;
+            background-color: #003399;
         }
 .register-options {
   /*  font-size: 14px;*/
@@ -60,7 +60,7 @@
 }
 
     .register-options a {
-        color: #ee4d2d;
+        color: #0066FF;
         text-decoration: none;
     }
 
