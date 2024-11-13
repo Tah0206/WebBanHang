@@ -8,7 +8,10 @@ namespace WebBanHang.Controllers
 {
     public class HomeController : Controller
     {
-
+        public ActionResult LichSuMuaHang()
+        {
+            return View();
+        }
         public ActionResult DangNhap()
         {
             return View();

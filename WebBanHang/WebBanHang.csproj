@@ -150,6 +150,7 @@
     <Content Include="Content\Style-product-DMSP.css" />
     <Content Include="Content\Style-product-giohang.css" />
     <Content Include="Content\style-product-home.css" />
+    <Content Include="Content\Style-product-lsmh.css" />
     <Content Include="Content\Style-product-pc.css" />
     <Content Include="Content\Style-product-ThanhToan.css" />
     <Content Include="Content\Style-Register.css" />
@@ -336,6 +337,7 @@
     <Content Include="Views\Home\TrangSanPham_PC3.cshtml" />
     <Content Include="Views\Home\TrangSanPham_PC4.cshtml" />
     <Content Include="Views\Home\DangKy.cshtml" />
+    <Content Include="Views\Home\LichSuMuaHang.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
