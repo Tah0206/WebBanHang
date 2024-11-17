@@ -1,0 +1,176 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>HoanTatThanhToan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .order-container {
+            background-color: white;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            width: 600px;
+        }
+
+            .order-container h1 {
+                color: #2e7d32;
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+
+        .lienhethanhtoan {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .order-info {
+            text-align: left;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 10px;
+        }
+
+            .order-info h3 {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+
+            .order-info p {
+                margin: 5px 0;
+            }
+
+        .product-info {
+            padding: 10px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .total-price {
+            font-weight: bold;
+            color: red;
+            font-size: 20px;
+        }
+
+        .chiphi_tong {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .chiphi_tong_left {
+            text-align: left;
+        }
+
+        .chitiet_tong_right {
+            text-align: right;
+        }
+
+        .gio_tong {
+            display: flex;
+            align-items: center;
+        }
+
+        .gio_img img {
+            height: 60px;
+            width: 80px;
+        }
+
+        .gio_infor {
+            margin-left: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+            .buttons a {
+                text-decoration: none;
+                color: blue;
+                background-color: white;
+                padding: 10px 20px;
+                font-size: 14px;
+                border: 1px solid blue;
+                width: 250px;
+                text-align: center;
+            }
+
+                .buttons a:hover {
+                    background-color: white;
+                }
+    </style>
+</head>
+<body>
+    <div class="order-container">
+        <img src="~/HinhAnhTK/HoanTatThanhToan/Ảnh chụp màn hình 2024-10-09 222908.png" />
+
+        <h2>MUA HÀNG THÀNH CÔNG</h2>
+        <p>
+            Thông tin chi tiết về đơn hàng đã được gửi đến địa chỉ email <a href="#">khtncstore@gmail.com.</a>
+            Nếu không tìm thấy email này, xin quý khách vui lòng kiểm tra thư mục Spam. Nếu có yêu
+            cầu đặc biệt, xin quý khách vui lòng liên hệ nhân viên tư vấn tại <a href="#">Facebook TNC</a> hoặc
+            hotline mua hàng trực tuyến: <a href="#"> 1900 1903</a>
+        </p>
+        <div class="lienhethanhtoan">
+            <div class="order-info">
+                <h3>Thông tin giao hàng</h3>
+                <p><strong>Mã đơn hàng:</strong> &nbsp; #1234</p>
+                <p><strong>Khách hàng:</strong> &nbsp; Anh Tuấn </p>
+                <p><strong>Số điện thoại:</strong> &nbsp;0987654441</p>
+                <p><strong>Email:</strong> &nbsp;hoanganhtuan@gmail.com</p>
+                <p><strong>Giao đến:</strong>&nbsp;sài gòn, thành phố Hồ Chí Minh </p>
+            </div>
+
+            <div class="product-info">
+                <h3> THÔNG TIN GIỎ HÀNG </h3>
+                <div class="gio_tong">
+                    <div class="gio_img">
+                        <img src="~/HinhAnhTK/TestLotchuot/lotchuot.jpg" />
+                    </div>
+                    <div class="gio_infor">
+                        <p><strong>Sản phẩm:</strong> Bàn Di Chuột Laptop TNC</p>
+                        <p class="total-price">49.000đ</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="chiphi_tong">
+                <div class="chiphi_tong_left">
+                    <p> Tổng số lượng sản phẩm </p>
+                    <p> Tổng chi phí </p>
+                </div>
+                <div class="chitiet_tong_right">
+                    <p> 1</p>
+                    <p class="total-price"> 49.000đ </p>
+                    <p>Đã bao gồm VAT [nếu có]</p>
+                </div>
+            </div>
+            <div class="buttons">
+                <a href="#">Chat với TNC</a>
+                <a href="#">Tiếp tục mua hàng</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

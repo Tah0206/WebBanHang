@@ -1,0 +1,678 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title> PC Gaming </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .product-section {
+            display: flex;
+            justify-content: space-around;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-image {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .product-image_nho {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .product-image_nho_chitiet {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .product-image img {
+            width: 305px;
+        }
+
+        .product-details {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+            .product-details h1 {
+                font-size: 24px;
+                font-weight: bold;
+            }
+
+        .product-image_nho_chitiet img {
+            width: 100px;
+            height: 100px;
+            margin-right: 5px;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            color: red;
+            font-size: 28px;
+            margin-top: 20px;
+        }
+
+        .price_giam {
+            color: #888888;
+            font-size: 18px;
+            margin-top: 25px;
+            text-decoration: line-through;
+            margin-left: 10px;
+        }
+
+        .phamtramKM {
+            border: 1px solid #FF3300;
+            margin-left: 10px;
+            margin-top: 25px;
+            align-items: center;
+            display: flex;
+        }
+
+        .baohanh {
+            font-size: 15px;
+            margin-bottom: 15px;
+            background-color: #CCCCCC;
+            padding: 5px;
+            width: fit-content;
+        }
+
+        .price_goc_giam {
+            display: flex;
+            align-items: center;
+        }
+
+        .product-features {
+            margin-top: 20px;
+        }
+
+            .product-features li {
+                margin: 5px 0;
+                font-family: Bahnschrift;
+                font-size: 13px;
+            }
+
+        .actions {
+            margin-top: 20px;
+        }
+
+            .actions label {
+                font-size: 18px;
+            }
+
+        #quantity {
+            width: 200px;
+            margin-left: 20px;
+            font-size: 18px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .buy-now {
+            padding: 10px 20px;
+            margin-left: 10px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .buy-now {
+            background-color: #28a745;
+            color: white;
+            border: none;
+        }
+
+        .add-to-cart {
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .add-to-cart {
+            background-color: #007bff;
+            color: white;
+            border: none;
+        }
+
+        .support ul {
+            margin-top: 20px;
+            list-style-type: none;
+        }
+
+            .support ul li {
+                margin: 7px 0;
+                color: #555;
+                font-family: Bahnschrift;
+                font-weight: 600;
+            }
+
+
+
+        .gachchanboder {
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ttin_dagia {
+            width: fit-content;
+            height: 35px;
+            border-bottom: 1px solid #e0e0e0;
+            margin: 10px 0;
+        }
+
+        .msp, .danhgia {
+            display: inline-flex;
+            justify-content: center;
+            height: 20px;
+            width: fit-content;
+            border-right: 1px solid #e0e0e0;
+            margin-right: 10px;
+        }
+
+        .luotxem {
+            display: inline-flex;
+            justify-content: center;
+            height: 20px;
+            width: fit-content;
+            margin-right: 10px;
+        }
+
+        .text, .code {
+            color: #9b9e9e;
+            font-family: Bahnschrift;
+            font-size: small;
+            font-weight: 600;
+        }
+
+        .funtion {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .right_bonus, .left_bonus {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .left_bonus {
+            margin-right: 10px;
+        }
+
+        .info-section {
+            background-color: white;
+            margin-top: 20px;
+            padding: 20px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            text-decoration: underline blue;
+        }
+
+        .description-section {
+            background-color: white;
+            margin-top: 20px;
+            padding: 20px;
+            width: 850px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-content: center;
+        }
+
+            .description-section p {
+                margin-top: 15px;
+            }
+
+            .description-section h2 {
+                text-decoration: underline blue;
+            }
+
+        .reviews-section {
+            background-color: white;
+            margin-top: 20px;
+            padding: 20px;
+            width: 850px;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+        }
+
+            .rating span {
+                font-size: 20px;
+                margin-right: 10px;
+            }
+
+        .bar {
+            width: 200px;
+            height: 20px;
+            background-color: #ddd;
+            border-radius: 5px;
+            margin-right: 10px;
+            position: relative;
+        }
+
+            .bar .fill {
+                width: 100%;
+                height: 100%;
+                background-color: gold;
+                border-radius: 5px;
+            }
+
+        .write-review {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .review {
+            background-color: white;
+            margin-top: 20px;
+            padding: 20px;
+            width: 850px;
+        }
+
+        .related-news-section {
+            background-color: white;
+            margin-top: 20px;
+            padding: 20px;
+            width: 300px;
+        }
+
+            .related-news-section h2 {
+                text-decoration: underline blue;
+            }
+
+            .related-news-section ul {
+                list-style-type: none;
+            }
+
+                .related-news-section ul li {
+                    margin: 10px 0;
+                }
+
+                    .related-news-section ul li a {
+                        text-decoration: none;
+                        color: #007bff;
+                    }
+
+                        .related-news-section ul li a:hover {
+                            text-decoration: underline;
+                        }
+
+        .voucher {
+            width: 350px;
+            background-color: white;
+        }
+
+        .voucher_top {
+            background-color: #FF0000;
+            padding: 10px;
+            flex: 1;
+        }
+
+            .voucher_top h3 {
+                color: white;
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+        .voucher_bot {
+            border: 1px solid #FF0000;
+            flex: 1;
+            padding: 10px;
+        }
+
+            .voucher_bot ul {
+                list-style-type: none;
+            }
+
+            .voucher_bot li {
+                margin: 5px;
+                font-size: 15px;
+            }
+
+        .chonSanPham {
+            margin-top: 20px;
+        }
+
+        .tieudesanpham {
+            color: #9b9e9e;
+            font-family: Bahnschrift;
+            font-size: revert;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .price_nho {
+            color: red;
+            font-size: 13px;
+            font-family: 'Eras ITC';
+        }
+
+        .luachon {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .luachonngang {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .luachonspcuthe {
+            border: 1px solid #FF0000;
+            padding: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            width: 205px;
+        }
+
+        .text_blue {
+            color: blue;
+        }
+
+        .mota {
+            margin-top: 20px;
+        }
+
+        .linhkien, .linhkien1 {
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+        }
+
+        .linhkien1 {
+            background-color: #EEEEEE;
+        }
+
+        .linhkien_left, .linhkien_right {
+            color: blue;
+            font-size: 13px;
+        }
+
+        .linhkien_left {
+            margin: 20px;
+        }
+
+        .linhkien_right {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Product Section -->
+        <div class="product-section">
+            <div class="product-image">
+                <img src="~/HinhAnhTK/PC3/pc3.1.jpg" />
+                <div class="product-image_nho">
+                    <div class="product-image_nho_chitiet">
+                        <img src="~/HinhAnhTK/PC3/pc3.1.jpg" />
+                        <img src="~/HinhAnhTK/PC3/pc3.2.png" />
+                        <img src="~/HinhAnhTK/PC3/pc3.3.jpg" />
+                    </div>
+                    <div class="product-image_nho_chitiet">
+                        <img src="~/HinhAnhTK/PC3/pc3.4.jpg" />
+                        <img src="~/HinhAnhTK/PC3/pc3.5.jpg" />
+                        <img src="~/HinhAnhTK/PC3/pc3.6.jpg" />
+                    </div>
+                </div>
+            </div>
+            <div class="product-details">
+                <h1>PC Đỗ Đại Học 2024 NV1</h1>
+                <div class="ttin_dagia">
+                    <div class="msp">
+                        <p class="code">MSP:  &nbsp; &nbsp;</p>
+                    </div>
+                    <div class="danhgia">
+                        <p class="text"> Đánh giá:★★★★★ &nbsp; &nbsp;</p>
+                    </div>
+                    <div class="luotxem">
+                        <p class="text"> Lượt xem:2478 &nbsp; &nbsp;</p>
+                    </div>
+                </div>
+                <ul class="product-features">
+                    <li>CPU Intel Core I5 14600K (24MB Cache, up to 5.30 GHz, 14C20T, socket 1700) Hàng NK</li>
+                    <li>Bo Mạch Chủ ASUS TUF GAMING Z790-PLUS WIFI DDR5</li>
+                    <li>Ram Kingston FURY Beast RGB 32GB (2x16GB) DDR5 bus 5600Mhz</li>
+                    <li>Ổ Cứng SSD Gigabyte Gen3 2500E 2TB NVMe PCIe (G325E2TB)</li>
+                    <li>Card Màn Hình ASUS ROG Strix GeForce RTX 4070 Ti SUPER 16GB OC GDDR6X</li>
+                    <li>Nguồn Máy Tính Gigabyte P750GM 750W - 80 Plus Gold</li>
+                    <li>Vỏ Case Corsair 4000D Airflow TG Black</li>
+                </ul>
+            </div>
+            <div>
+                <div class="actions">
+                    <div class="voucher">
+                        <div class="voucher_top">
+                            <h3> Khuyến mãi khi mua sản phẩm </h3>
+                        </div>
+                        <div class="voucher_bot">
+                            <ul>
+                                <li>Gói quà tặng trị giá <b>7.990.000đ bao gồm:</b></li>
+                                <li>- Tặng code game Black Myth: Wukong đến hết ngày 19.08.2024<b>tại đây</b> </li>
+                                <li>- Tặng 01 Tản nhiệt nước AIO Asus ROG Ryujin 240 RGB trị giá 7.590.000đ</li>
+                                <li>- Tặng 01 Bàn di chuột TNC</li>
+                                <li>- Tặng Voucher 5% tối đa 500k áp dụng cho KH mua Gear</li>
+                                <li>- Giảm trực tiếp 3% khi khách hàng mua thêm tản khí hoặc pack fan</li>
+                                <li>- Giảm trực tiếp 5% khi khách hàng mua thêm tản nhiệt nước AIO</li>
+                                <li>- Hỗ trợ trả góp với lãi suất 0%</li>
+                                <li>- Tặng Voucher 5% tối đa 150K áp dụng cho KH mua màn hình</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class=" gachchanboder">
+                        <div class="price_goc_giam">
+                            <div>
+                                <p class="price">
+                                    56.590.000đ
+                                </p>
+                            </div>
+                            <div class="price_giam">
+                                <p>65.990.000đ</p>
+                            </div>
+                            <div class="phamtramKM">
+                                <p>
+                                    -15%
+                                </p>
+                            </div>
+                        </div>
+                        <div class="baohanh">
+                            <p> Bảo hành theo linh kiện </p>
+                        </div>
+                    </div>
+                    <label for="quantity"> Số lượng: </label>
+                    <input type="number" id="quantity" value="1" min="1">
+                    <br />
+                    <button class="add-to-cart">Thêm Vào Giỏ Hàng</button>
+                    <button class="buy-now">Mua Ngay</button>
+                </div>
+
+                <div class="support">
+                    <ul>
+                        <li>Hỗ trợ trả góp 0%</li>
+                        <li>Hoàn tiền 200% nếu có hàng giả</li>
+                        <li>Giao hàng toàn quốc</li>
+                        <li>Hỗ trợ kỹ thuật 24/7</li>
+                        <li>Vệ sinh miễn phí PC, Laptop trọn đời</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Description Section -->
+        <div class="funtion">
+            <div class="left_bonus">
+                <div class="description-section">
+                    <h2>MÔ TẢ SẢN PHẨM</h2>
+                    <div class="mota">
+                        <h3> Đánh giá chi tiết bộ PC Gaming - Nova I4070Ti Super - BL </h3>
+                    </div>
+                    <img src="~/HinhAnhTK/PC3/Mtpc3.1.jpg" />
+                    <p>
+                        TNC Store giới thiệu bộ PC Gaming - Nova I4070Ti Super - BL với cấu hình
+                        siêu khủng, giá phải chăng, mang đến trải nghiệm chơi game tuyệt vời. Và cụ
+                        thể nó có gì hấp dẫn, cùng tìm hiểu qua bài viết dưới đây nhé.
+                    </p>
+                    <p>
+                        VIDEO
+                    </p>
+
+                    <div class="mota">
+                        <h3>CPU Intel Core I5 14600K (24MB Cache, up to 5.30 GHz, 14C20T) Hàng NK</h3>
+                    </div>
+                    <p>
+                        CPU Intel Core I5 14600K 14C20T 24MB thế hệ 14, sử dụng Socket LGA 1700 với hiệu
+                        năng vượt trội 14 lõi, 20 luồng, xung nhịp tối đa 5.3GHz và 44MB bộ nhớ đệm.
+
+                        Có thể nói, đây là bộ vi xử lý tưởng cho PC gaming cao cấp, streaming, và sử
+                        dụng phần mềm chuyên nghiệp. Hiệu suất chơi game cải thiện đến 12.4% so với thế hệ
+                        trước, là lựa chọn tuyệt vời cho game thủ.
+                    </p>
+                    <img src="~/HinhAnhTK/PC3/Mtpc3.2.jpg" />
+                    <div class="mota">
+                        <h3>Bo Mạch Chủ ASUS TUF GAMING Z790-PLUS WIFI DDR5</h3>
+                    </div>
+                    <p>
+                        Mainboard ASUS TUF GAMING Z790-PLUS WIFI DDR5 là lựa chọn tuyệt vời cho
+                        game thủ sử dụng CPU Intel mới nhất, kết hợp các linh kiện đạt chuẩn quân
+                        đội với giải pháp cấp điện nâng cấp và hệ thống tản nhiệt toàn diện, đảm
+                        bảo độ bền và ổn định cao nhất cho việc chơi game trong thời gian dài.
+
+
+                        Tính năng AI Cooling II tự động điều chỉnh quạt để cân bằng nhiệt và âm
+                        thanh, đảm bảo hiệu suất tối ưu mà không gây ồn. Chức năng tiết kiệm năng
+                        lượng cho phép dễ dàng tối ưu hóa tiêu thụ điện năng, giảm đèn nền và điều
+                        chỉnh cấu hình quạt.
+
+
+                        Phần mềm Armory Crate độc quyền của ASUS giúp quản lý và tùy chỉnh hệ sinh
+                        thái phần cứng, cho phép điều chỉnh RGB và đăng ký sản phẩm dễ dàng.
+                    </p>
+                    <img src="~/HinhAnhTK/PC3/Mtpc3.3.jpg" />
+                </div>
+
+
+                <div class="review">
+                    <h2> Video Review </h2>
+                    <p> Video đang được cập nhật </p>
+
+                </div>
+
+                <!-- Reviews Section -->
+                <div class="reviews-section">
+                    <h2>Đánh giá của khách hàng</h2>
+                    <div class="rating">
+                        <span> 5 ★</span>
+                        <div class="bar"><div class="fill"></div></div>
+
+                        <button class="write-review">Viết đánh giá</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related News Section -->
+            <div class="right_bonus">
+                <div class="info-section">
+                    <h2>THÔNG SỐ KĨ THUẬT</h2>
+                    <div class="linhkien">
+                        <div class="linhkien_left">
+                            <p> CPU </p>
+                        </div>
+                        <div class="linhkien_right">
+                            <p>
+                                CPU Intel Core i5-12400F 6C/12T
+                                (Up To 4.40GHz, 18MB, Socket 1700,
+                                Alder Lake) Hàng Tray
+                            </p>
+                        </div>
+                    </div>
+                    <div class="linhkien1">
+                        <div class="linhkien_left">
+                            <p> Bo Mạch Chủ </p>
+                        </div>
+                        <div class="linhkien_right">
+                            <p>
+                                Asus Prime B760M-K D4
+                            </p>
+                        </div>
+                    </div>
+                    <div class="linhkien">
+                        <div class="linhkien_left">
+                            <p> RAM </p>
+                        </div>
+                        <div class="linhkien_right">
+                            <p>
+                                G.Skill Ripjaws V 16GB (1x16GB) DDR4 3200MHz
+                                (F4-3200C16S-16GVK)
+                            </p>
+                        </div>
+                    </div>
+                    <div class="linhkien1">
+                        <div class="linhkien_left">
+                            <p> Card Màn Hình </p>
+                        </div>
+                        <div class="linhkien_right">
+                            <p>
+                                ASUS DUAL RTX 4060 O8G V2
+                            </p>
+                        </div>
+                    </div>
+                    <div class="linhkien">
+                        <div class="linhkien_left">
+                            <p> Nguồn </p>
+                        </div>
+                        <div class="linhkien_right">
+                            <p>
+                                AIGO VK650 - 650W (85 Plus/ Active PFC/ Single Rail)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="related-news-section">
+                    <h2>TIN TỨC LIÊN QUAN</h2>
+                    <ul>
+                        <li><a href="#">Cách Khắc Phục Lỗi Click Chuột Trái Ra Properties...</a></li>
+                        <li><a href="#">Silent Hill Hé Lộ Trò Chơi Nhập Vai Mới</a></li>
+                        <li><a href="#">DTCL Mùa 11: Cách Chơi Đội Hình Sưngra Định Mệnh</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

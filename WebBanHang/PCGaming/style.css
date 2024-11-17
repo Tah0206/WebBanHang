@@ -1,0 +1,45 @@
+﻿body {
+}
+
+#div-pro-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /*   background-color:white;*/
+    /*    width:200px;
+    height:300px;*/
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.box-pro {
+    height: 350px;
+    width: 280px;
+    text-align: center;
+    background-color: white;
+}
+
+.size-img {
+    height: 200px;
+    width: auto;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.box-describtion {
+    height: 120px;
+    width: auto;
+    background-color: gray;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.margin-des {
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.box-pro {
+    margin: auto;
+    margin-top: 10px;
+}
