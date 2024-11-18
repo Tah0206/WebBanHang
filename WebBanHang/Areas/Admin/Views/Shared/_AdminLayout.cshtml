@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title - Your Website</title>
+    <link href="~/Content/myStyle/Admin.css" rel="stylesheet" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <!-- Logo -->
+        <a href="@Url.Action("Index", "Home")">
+            <img src="/Content/images/logo.png" alt="Logo" />
+        </a>
+        <!-- Menu -->
+        <div class="menu">
+            <a href="@Url.Action("Index", "Home")">Trang chủ</a>
+            <a href="@Url.Action("Index", "Categories")">Danh mục</a>
+            <a href="@Url.Action("Index", "Products")">Sản phẩm</a>
+            <a href="@Url.Action("Index", "Orders")">Khánh hàng</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        @RenderBody()
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2024 STRESSMAMA. All Rights Reserved.</p>
+        <div class="footer-links">
+            <a href="#">Chính sách bảo mật</a> |
+            <a href="#">Điều khoản sử dụng</a> |
+            <a href="#">Hỗ trợ</a>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/stressmamaworldwide?locale=vi_VN" target="_blank">
+                <img src="/Content/images/facebook-icon.png" alt="Facebook" width="20" />
+            </a>
+            <a href="https://www.instagram.com/stress.mama/" target="_blank">
+                <img src="/Content/images/instagram-icon.png" alt="Instagram" width="20" />
+            </a>
+            <a href="https://x.com/?lang=vi" target="_blank">
+                <img src="/Content/images/twitter-icon.png" alt="Twitter" width="20" />
+            </a>
+        </div>
+        <p>Liên hệ: 0909-xxx-xxx | Email: support@stressmama.vn</p>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
