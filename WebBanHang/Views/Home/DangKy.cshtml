@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "DangKy";
+    Layout = "~/Views/Shared/_LayoutDivMain.cshtml";
+}
+<link href="~/Content/Style-Register.css" rel="stylesheet" />
+<div class="register-container">
+    <h2>Tạo Tài Khoản</h2>
+    <form action="register.php" method="post">
+        <input type="text" placeholder="Họ Tên" name="fullname" required>
+        <input type="tel" placeholder="Số Điện Thoại" name="phone" required>
+        <input type="email" placeholder="Địa Chỉ Email" name="email" required>
+        <input type="text" placeholder="Địa Chỉ" name="address" required>
+        <input type="password" placeholder="Mật Khẩu" name="password" required>
+        <input type="password" placeholder="Nhập Lại Mật Khẩu" name="confirm_password" required>
+        <button type="submit">Đăng Ký</button>
+    </form>
+    <div class="register-options">
+        Bạn đã có tài khoản? <a href="~/Home/DangNhap">Đăng nhập</a>
+    </div>
+</div>
+

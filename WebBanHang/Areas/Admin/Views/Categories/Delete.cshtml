@@ -1,0 +1,28 @@
+﻿@model WebBanHang.Models.Category
+
+@{
+    ViewBag.Title = "Xóa Danh Mục";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Xóa Danh Mục: @Model.CategoryName</h2>
+
+@if (ViewBag.ConfirmDeleteMessage != null)
+{
+    <div class="alert alert-warning">
+        <strong>@ViewBag.ConfirmDeleteMessage</strong>
+    </div>
+
+    <form method="post" action="@Url.Action("Delete", "Categories", new { id = Model.CategoryID })">
+        <button type="submit" class="btn btn-danger">Xóa</button>
+        <a href="@Url.Action("Index", "Categories")" class="btn btn-secondary">Hủy</a>
+    </form>
+}
+else
+{
+    <p>Bạn có chắc chắn muốn xóa danh mục này?</p>
+    <form method="post" action="@Url.Action("Delete", "Categories", new { id = Model.CategoryID })">
+        <button type="submit" class="btn btn-danger">Xóa</button>
+        <a href="@Url.Action("Index", "Categories")" class="btn btn-secondary">Hủy</a>
+    </form>
+}

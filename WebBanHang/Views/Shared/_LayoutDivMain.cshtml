@@ -6,18 +6,32 @@
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content="TNCStore" />
     <meta name="keywords" content="TNC, TNCStore, TNCStoreGaming" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <title>@ViewBag.Title</title>
     <style>
 
+        * {
+            box-sizing: border-box;
+        }
 
         body {
             margin: 0;
             background-color: white; /* Màu nền cho toàn trang */
+            width: 100%;
+            height: 100%;
         }
 
 
         /*Layout Top*/
         #top {
+            /*position: fixed;*/ /* Đặt header cố định */
+            top: 0; /* Đặt ở đầu trang */
+            left: 0; /* Căn trái */
+            width: 100%; /* Chiều rộng đầy đủ */
+            /*  height:100%;*/
+            z-index: 1000;
         }
 
         .banner1 {
@@ -26,16 +40,17 @@
         }
 
         #top-nav1 {
-            padding-left: 160px;
-            padding-right: 160px;
+            /* position:fixed;*/
+            padding-left: 10%;
+            padding-right: 10%;
             padding-top: 10px;
             text-align: right;
         }
 
         #top-nav1 {
-            background-color: #2879F2;
+            background-color: #1c8ea4;
             width: 100%;
-            height: 30px;
+            height: 38px;
             float: right;
             color: white;
         }
@@ -53,10 +68,10 @@
         }
 
         header {
-            background-color: #283350;
+            background-color: #04323A;
             color: white;
-            padding-left: 160px;
-            padding-right: 160px;
+            padding-left: 10%;
+            padding-right: 10%;
         }
 
         .header-container {
@@ -207,7 +222,7 @@
             .view-cart-button:hover {
                 background-color: #218838; /* Màu nền khi hover */
             }
-
+/*
         .close-btn-login {
             position: absolute;
             top: 0px;
@@ -221,6 +236,8 @@
                 color: red;
             }
 
+        *
+
         .cart-dropdown p {
             color: black;
             font-weight: bold;
@@ -229,9 +246,9 @@
 
         .options p {
             color: gray;
-        }
+        }*/
 
-
+/*
         .login-container {
             display: none;
             position: absolute;
@@ -248,6 +265,7 @@
             padding: 40px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
             width: 320px;
+            opacity: 1;
         }
 
             .login-box h2 {
@@ -255,9 +273,9 @@
                 margin-bottom: 20px;
                 font-size: 24px;
                 color: black;
-            }
+            }*/
 
-        .input-group {
+      /*  .input-group {
             margin-bottom: 15px;
         }
 
@@ -363,7 +381,11 @@
 
             .close-btn-signup:hover, .close-btn-login:hover {
                 color: red;
-            }
+            }*/
+
+        .have-account {
+            opacity: 0;
+        }
 
         .options p {
             color: gray;
@@ -394,7 +416,7 @@
 
 
         nav {
-            background-color: #283350;
+            background-color: #04323A;
             padding: 10px 20px;
         }
 
@@ -453,9 +475,13 @@
         .product-category {
             position: relative; /* Để định vị dropdown */
         }
+        .dropdown-content_tach {
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
 
         .dropdown-btn {
-            background-color: #283350;
+            background-color: #04323A;
             border: none; /* bỏ viền */
             color: white;
             padding: 10px;
@@ -463,9 +489,10 @@
         }
 
         .dropdown-content {
+            position: fixed;
             display: none; /* Ẩn dropdown ban đầu */
             position: absolute; /* Định vị tuyệt đối */
-            background-color: #1f294d; /* Màu nền dropdown */
+            background-color: #04323A; /* Màu nền dropdown */
             min-width: 200px; /* Chiều rộng tối thiểu của dropdown */
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             z-index: 1; /* Đảm bảo dropdown hiển thị trên các phần tử khác */
@@ -499,15 +526,17 @@
         /*Layout Bottom*/
         /* Chứa toàn bộ nội dung và cách lề 160px */
         .content-wrapper {
-            padding-left: 160px;
-            padding-right: 160px;
+            padding-top: 60px;
+            padding-left: 10%;
+            padding-right: 10%;
+            padding-bottom:60px;
         }
 
         #div-footer {
-            background-color: #283350;
+            background-color: #04323A;
             height: 125px;
-            padding-left: 160px;
-            padding-right: 160px;
+            padding-left: 10%;
+            padding-right: 10%;
         }
 
             #div-footer h2 {
@@ -530,7 +559,7 @@
 
         #txtDkyEmail {
             width: 73%;
-            height: 30px;
+            height: 35px;
             padding: 2px;
             border: 1px solid #ccc;
             border-right: none; /* Xóa đường viền phải để kết nối với nút */
@@ -629,7 +658,7 @@
         </div>
         <div id="top-nav1">
             <ul class="custom-list">
-                <li><a href="#">Tất cả sản phẩmm</a></li>
+                <li><a href="~/Home/DanhMucSanPham">Tất cả sản phẩmm</a></li>
                 <li><a href="tel:0876754228"><img src="~/TopIcon/phone-volume-solid.svg" alt="PhoneIcon" class="nav1-icon" />0876754228</a></li>
                 <li><a href="mailto:Tah02.06.05@gmail.com"> <img src="~/TopIcon/envelope-solid.svg" alt="MailIcon" class="nav1-icon" />Tah02.06.05@gmail.com</a></li>
             </ul>
@@ -643,21 +672,38 @@
                 <div class="search-bar">
                     <select>
                         <option>Tất cả danh mục</option>
-                        <!-- Add other options as needed -->
+                        <option>Xây dựng cấu hình PC</option>
+                        <option>PC Gaming</option>
+                        <option>PC Đồ Họa</option>
+                        <option>PC AI</option>
+                        <option>Laptop - Máy Tính Xách Tay</option>
+                        <option>Màn Hình Máy Tính</option>
+                        <option>Máy chơi game - Console</option>
+                        <option>Tay Cầm Chơi Game</option>
+                        <option>VGA - Card màn hình</option>
+                        <option>Linh kiện máy tính</option>
+                        <option>Gaming Gears</option>
+                        <option>PC Văn Phòng</option>
+                        <option>Phụ Kiện - Tản Nhiệt PC</option>
+                        <option>Apple</option>
+                        <option>AUDIO</option>
+                        <option>Hàng Cũ - Giá Tốt</option>
+                        <option>Thiết bị văn phòng</option>
+                        <option>Thiết bị mạng</option>
                     </select>
                     <input type="text" placeholder="Nhập sản phẩm cần tìm...">
-                    <button class="btnTimKiem">Tìm kiếm</button>
+                    <a href="~/Home/DanhMucSanPham"><button class="btnTimKiem">Tìm kiếm</button></a>
                 </div>
                 <div class="account-cart">
-                    <a href="javascript:void(0);" onclick="toggleLogin()">
+                    <a href="~/Home/DangNhap">
                         <img src="~/TopIcon/user-regular.svg" alt="UserIcon" class="nav1-icon" />Tài khoản
                     </a>
-                    <div class="login-container" style="display: none;">
+                    @*<div class="login-container" style="display: none;">
                         <div class="login-box">
                             <span class="close-btn-login" onclick="closeLogin(event);">&times;</span>
                             <h2><b>Đăng Nhập</b></h2>
                             <form onsubmit="return false;">
-                                <!-- Ngăn chặn reload trang -->
+                                 Ngăn chặn reload trang 
                                 <div class="input-group">
                                     <label for="email" style="color:black"><b>Email</b></label>
                                     <input type="email" id="email" placeholder="Nhập email đăng ký của bạn">
@@ -668,13 +714,13 @@
                                 </div>
                                 <button type="submit" class="ButtonLogin">Đăng nhập</button>
                                 <div class="options">
-                                    <p>Khách hàng mới? <a href="#">Tạo tài khoản</a></p>
+                                    <p>Khách hàng mới? <a href="javascript:void(0);" onclick="toggleSignup()">Tạo tài khoản</a></p>
                                     <p>Quên mật khẩu? <a href="#">Đặt lại mật khẩu</a></p>
                                 </div>
                             </form>
                         </div>
-                    </div>
-                    <div class="signup-container" style="display: none;">
+                    </div>*@
+                    @*<div class="signup-container" style="display: none;">
                         <div class="signup-box">
                             <span class="close-btn-signup" onclick="closeSignup(event);">&times;</span>
                             <h2><b>Tạo tài khoản</b></h2>
@@ -693,11 +739,11 @@
                                 </div>
                                 <button type="submit" class="ButtonSignup">Tạo tài khoản</button>
                                 <div class="options">
-                                    <p>Đã có tài khoản? <a href="javascript:void(0);" onclick="toggleLogin()">Đăng nhập</a></p>
+                                    <p>Đã có tài khoản? <a href="javascript:void(0);" onclick="toggleLogin()" class="have-account">Đăng nhập</a></p>
                                 </div>
                             </form>
                         </div>
-                    </div>
+                    </div>*@
                     <div class="cart">
                         <a href="javascript:void(0);" onclick="toggleCart()">
                             <img src="~/TopIcon/cart-shopping-solid.svg" class="cart-icon" />
@@ -721,26 +767,62 @@
             <nav>
                 <ul class="custom-list">
                     <li class="product-category">
-                        <button class="dropdown-btn"><b>DANH MỤC SẢN PHẨM</b></button>
+                        <a href="~/Home/DanhMucSanPham"><button class="dropdown-btn"><b>DANH MỤC SẢN PHẨM</b></button></a>
                         <div class="dropdown-content">
-                            <a href="#">Xây dựng cấu hình PC</a><br />
-                            <a href="#">PC Gaming</a><br />
-                            <a href="#">PC Đồ Họa</a><br />
-                            <a href="#">PC AI</a><br />
-                            <a href="#">Laptop - Máy Tính Xách Tay</a><br />
-                            <a href="#">Màn Hình Máy Tính</a><br />
-                            <a href="#">Máy chơi game - Console</a><br />
-                            <a href="#">Tay Cầm Chơi Game</a><br />
-                            <a href="#">VGA - Card màn hình</a><br />
-                            <a href="#">Linh kiện máy tính</a><br />
-                            <a href="#">Gaming Gears</a><br />
-                            <a href="#">PC Văn Phòng</a><br />
-                            <a href="#">Phụ Kiện - Tản Nhiệt PC</a><br />
-                            <a href="#">Apple</a><br />
-                            <a href="#">AUDIO</a><br />
-                            <a href="#">Hàng Cũ - Giá Tốt</a><br />
-                            <a href="#">Thiết bị văn phòng</a><br />
-                            <a href="#">Thiết bị mạng</a><br />
+                            <div class="dropdown-content_tach">
+                                <a href="#">Xây dựng cấu hình PC</a><br />
+                            </div>
+                            <div class="dropdown-content_tach">
+                                <a href="#">PC Gaming</a><br />
+                            </div>
+                            <div class="dropdown-content_tach">
+                                <a href="#">PC Đồ Họa</a><br />
+                            </div>
+                            <div class="dropdown-content_tach">
+                                <a href="#">PC AI</a><br />
+                            </div>
+                            <div class="dropdown-content_tach">
+                                <a href="#">Laptop - Máy Tính Xách Tay</a><br />
+                            </div>
+                            <div class="dropdown-content_tach">
+                                <a href="#">Màn Hình Máy Tính</a><br />
+                            </div>
+                            <div class="dropdown-content_tach">
+                                <a href="#">Máy chơi game - Console</a><br />
+                            </div>
+                            <div class="dropdown-content_tach">
+                                <a href="#">Tay Cầm Chơi Game</a><br />
+                            </div>
+                            <div class="dropdown-content_tach">
+                                <a href="#">VGA - Card màn hình</a><br />
+                            </div>
+                            <div class="dropdown-content_tach">
+                                <a href="#">Linh kiện máy tính</a><br />
+                            </div>
+                            <div class="dropdown-content_tach">
+                                <a href="#">Gaming Gears</a><br />
+                            </div>
+                            <div class="dropdown-content_tach">
+                                <a href="#">PC Văn Phòng</a><br />
+                            </div>
+                            <div class="dropdown-content_tach">
+                                <a href="#">Phụ Kiện - Tản Nhiệt PC</a><br />
+                            </div>
+                            <div class="dropdown-content_tach">
+                                <a href="#">Apple</a><br />
+                            </div>
+                            <div class="dropdown-content_tach">
+                                <a href="#">AUDIO</a><br />
+                            </div>
+                            <div class="dropdown-content_tach">
+                                <a href="#">Hàng Cũ - Giá Tốt</a><br />
+                            </div>
+                            <div class="dropdown-content_tach">
+                                <a href="#">Thiết bị văn phòng</a><br />
+                            </div>
+                            <div class="dropdown-content_tach">
+                                <a href="#">Thiết bị mạng</a><br />
+                            </div>
                         </div>
                     </li>
                     <li><a href="#">Xây Dựng Cấu Hình PC</a></li>
@@ -758,7 +840,7 @@
             </nav>
         </header>
     </div>
-    <div class="content-wrapper">
+    <div class="content-wrapper container-fluid col-md-8">
         @RenderBody()
     </div>
     <div id="div-footer">
@@ -844,52 +926,129 @@
         <p>&copy; @DateTime.Now.Year - Bản quyền của Công ty TNHH Hoàng Anh Tuấn & Nguyễn Anh Đức</p>
     </div>
     @*<script>
-        const signupContainer = document.querySelector('.signup-container');
-        const loginContainer = document.querySelector('.login-container');
+            const signupContainer = document.querySelector('.signup-container');
+            const loginContainer = document.querySelector('.login-container');
 
-        function toggleSignup() {
-            signupContainer.style.display = (signupContainer.style.display === 'none' || signupContainer.style.display === '') ? 'block' : 'none';
-            loginContainer.style.display = 'none'; // Đóng khung đăng nhập nếu mở
-        }
+            function toggleSignup() {
+                signupContainer.style.display = (signupContainer.style.display === 'none' || signupContainer.style.display === '') ? 'block' : 'none';
+                loginContainer.style.display = 'none'; // Đóng khung đăng nhập nếu mở
+            }
 
-        function toggleLogin() {
-            loginContainer.style.display = (loginContainer.style.display === 'none' || loginContainer.style.display === '') ? 'block' : 'none';
-            signupContainer.style.display = 'none'; // Đóng khung đăng ký nếu mở
-        }
+            function toggleLogin() {
+                loginContainer.style.display = (loginContainer.style.display === 'none' || loginContainer.style.display === '') ? 'block' : 'none';
+                signupContainer.style.display = 'none'; // Đóng khung đăng ký nếu mở
+            }
 
-        document.addEventListener('click', function (event) {
-            const target = event.target;
-            const isSignupContainer = signupContainer.contains(target);
-            const isLoginContainer = loginContainer.contains(target);
-            const isAccountLink = target.closest('a[href="javascript:void(0);"]');
+            document.addEventListener('click', function (event) {
+                const target = event.target;
+                const isSignupContainer = signupContainer.contains(target);
+                const isLoginContainer = loginContainer.contains(target);
+                const isAccountLink = target.closest('a[href="javascript:void(0);"]');
 
-            if (!isSignupContainer && !isLoginContainer && !isAccountLink) {
+                if (!isSignupContainer && !isLoginContainer && !isAccountLink) {
+                    signupContainer.style.display = 'none';
+                    loginContainer.style.display = 'none';
+                }
+            });
+
+            const closeSignupButton = document.querySelector('.close-btn-signup');
+            if (closeSignupButton) {
+                closeSignupButton.addEventListener('click', closeSignup);
+            }
+
+            const closeLoginButton = document.querySelector('.close-btn-login');
+            if (closeLoginButton) {
+                closeLoginButton.addEventListener('click', closeLogin);
+            }
+
+            function closeSignup(event) {
+                event.stopPropagation();
                 signupContainer.style.display = 'none';
+            }
+
+            function closeLogin(event) {
+                event.stopPropagation();
                 loginContainer.style.display = 'none';
             }
+        </script>*@
+    @*<script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const signupContainer = document.querySelector('.signup-container');
+            const loginContainer = document.querySelector('.login-container');
+            const toggleLoginBtn = document.querySelector('.account-cart a');
+            const signupLink = document.querySelector('.options a'); // link "Tạo tài khoản"
+
+            // Hiển thị khung đăng nhập
+            function toggleLogin() {
+                loginContainer.style.display = (loginContainer.style.display === 'none' || loginContainer.style.display === '') ? 'block' : 'none';
+                signupContainer.style.display = 'none'; // Ẩn khung đăng ký nếu mở
+            }
+
+            // Hiển thị khung đăng ký
+            function toggleSignup() {
+                signupContainer.style.display = (signupContainer.style.display === 'none' || signupContainer.style.display === '') ? 'block' : 'none';
+                loginContainer.style.display = 'none'; // Ẩn khung đăng nhập nếu mở
+            }
+
+            // Gắn sự kiện cho nút "Tài khoản" để mở khung đăng nhập
+            toggleLoginBtn.addEventListener('click', function () {
+                toggleLogin();
+            });
+
+            // Gắn sự kiện cho link "Tạo tài khoản" trong khung đăng nhập để mở khung đăng ký
+            signupLink.addEventListener('click', function (event) {
+                event.preventDefault(); // Ngăn chặn hành động mặc định của link
+                toggleSignup();
+            });
+
+            // Đóng khung đăng ký và đăng nhập khi nhấn dấu X
+            document.querySelector('.close-btn-login').addEventListener('click', function (event) {
+                event.stopPropagation();
+                loginContainer.style.display = 'none';
+            });
+
+            document.querySelector('.close-btn-signup').addEventListener('click', function (event) {
+                event.stopPropagation();
+                signupContainer.style.display = 'none';
+            });
+
+            // Đóng khung đăng ký và đăng nhập khi click ra ngoài vùng modal
+            document.addEventListener('click', function (event) {
+                const target = event.target;
+                if (!loginContainer.contains(target) && !signupContainer.contains(target) && !toggleLoginBtn.contains(target)) {
+                    loginContainer.style.display = 'none';
+                    signupContainer.style.display = 'none';
+                }
+            });
+        });
+    </script>*@
+    @*<script>
+        // ==================LOGIN FORM======================
+        const login_from = document.getElementById("login-box"),
+            user_login = document.getElementById("ButtonLogin"),
+            loginClose = document.getElementById("login-close");
+
+        user_login.addEventListener("click", () => {
+            login_from.classList.add("show-login");
         });
 
-        const closeSignupButton = document.querySelector('.close-btn-signup');
-        if (closeSignupButton) {
-            closeSignupButton.addEventListener('click', closeSignup);
-        }
+        loginClose.addEventListener("click", () => {
+            login_from.classList.remove("show-login");
+        });
 
-        const closeLoginButton = document.querySelector('.close-btn-login');
-        if (closeLoginButton) {
-            closeLoginButton.addEventListener('click', closeLogin);
-        }
+        const container = document.getElementById("container-login"),
+            registerBtn = document.getElementById("ButtonSignup"),
+            loginBtn = document.getElementById("login");
 
-        function closeSignup(event) {
-            event.stopPropagation();
-            signupContainer.style.display = 'none';
-        }
+        registerBtn.addEventListener("click", () => {
+            container.classList.add("active");
+        });
 
-        function closeLogin(event) {
-            event.stopPropagation();
-            loginContainer.style.display = 'none';
-        }
+        loginBtn.addEventListener("click", () => {
+            container.classList.remove("active");
+        });
     </script>*@
-    <script>
+    @*<script>
         document.addEventListener("DOMContentLoaded", function () {
             const signupContainer = document.querySelector('.signup-container');
             const loginContainer = document.querySelector('.login-container');
@@ -903,6 +1062,11 @@
                 loginContainer.style.display = (loginContainer.style.display === 'none' || loginContainer.style.display === '') ? 'block' : 'none';
                 signupContainer.style.display = 'none'; // Đóng khung đăng ký nếu mở
             }
+
+
+            // //Đảm bảo rằng hàm toggleSignup() được liên kết với sự kiện onclick
+            //const signupLink = document.querySelector('a[href="javascript:void(0);"]');
+            //signupLink.addEventListener('click', toggleSignup);
 
             document.addEventListener('click', function (event) {
                 const target = event.target;
@@ -932,7 +1096,7 @@
                 });
             }
         });
-    </script>
+    </script>*@
     <script>
         function toggleCart() {
             const cartDropdown = document.getElementById('cart-dropdown');
@@ -1003,83 +1167,155 @@
             window.location.href = '/Home/GioHang'; // Thay đổi URL tới trang giỏ hàng
         });
     </script>
-    <script>
-    const loginContainer = document.querySelector('.login-container');
-    const cartDropdown = document.getElementById('cart-dropdown');
+    @*<script>
+        const loginContainer = document.querySelector('.login-container');
+        const cartDropdown = document.getElementById('cart-dropdown');
 
-    function toggleLogin() {
-        // Ẩn giỏ hàng khi mở đăng nhập
-        if (cartDropdown.style.display === 'block') {
-            cartDropdown.style.display = 'none';
-        }
-        
-        // Toggle đăng nhập
-        loginContainer.style.display = (loginContainer.style.display === 'none' || loginContainer.style.display === '') ? 'block' : 'none';
-    }
+        function toggleLogin() {
+            // Ẩn giỏ hàng khi mở đăng nhập
+            if (cartDropdown.style.display === 'block') {
+                cartDropdown.style.display = 'none';
+            }
 
-    function toggleCart() {
-        // Ẩn đăng nhập khi mở giỏ hàng
-        if (loginContainer.style.display === 'block') {
-            loginContainer.style.display = 'none';
+            // Toggle đăng nhập
+            loginContainer.style.display = (loginContainer.style.display === 'none' || loginContainer.style.display === '') ? 'block' : 'none';
         }
 
-        // Toggle giỏ hàng
-        cartDropdown.style.display = (cartDropdown.style.display === 'none' || cartDropdown.style.display === '') ? 'block' : 'none';
-    }
+        function toggleCart() {
+            // Ẩn đăng nhập khi mở giỏ hàng
+            if (loginContainer.style.display === 'block') {
+                loginContainer.style.display = 'none';
+            }
 
-    document.addEventListener('click', function (event) {
-        const target = event.target;
-        const isLoginContainer = loginContainer.contains(target);
-        const isAccountLink = target.closest('a[href="javascript:void(0);"]');
-        const isCartDropdown = cartDropdown.contains(target);
-
-        // Kiểm tra nếu click ra ngoài thì sẽ ẩn cả hộp đăng nhập và giỏ hàng
-        if (!isLoginContainer && !isAccountLink && !isCartDropdown) {
-            loginContainer.style.display = 'none';
-            cartDropdown.style.display = 'none';
+            // Toggle giỏ hàng
+            cartDropdown.style.display = (cartDropdown.style.display === 'none' || cartDropdown.style.display === '') ? 'block' : 'none';
         }
-    });
 
-    const closeButton = document.querySelector('.close-btn-login');
-    if (closeButton) {
-        closeButton.addEventListener('click', closeLogin);
-    }
+        document.addEventListener('click', function (event) {
+            const target = event.target;
+            const isLoginContainer = loginContainer.contains(target);
+            const isAccountLink = target.closest('a[href="javascript:void(0);"]');
+            const isCartDropdown = cartDropdown.contains(target);
 
-    function closeLogin(event) {
-        event.stopPropagation();
-        loginContainer.style.display = 'none';
-    }
-
-    // Giữ nguyên các phần khác liên quan đến giỏ hàng như trước
-    function addToCart(product) {
-        cartItems.push(product); // Thêm sản phẩm vào mảng
-        const cartCount = document.getElementById('cart-count');
-        const cartTotal = document.getElementById('cart-total');
-        const cartItemsContainer = document.querySelector('.cart-items');
-        const checkoutButton = document.querySelector('.checkout-button');
-
-        // Cập nhật số lượng giỏ hàng và tổng giá
-        let count = cartItems.length;
-        let total = cartItems.reduce((sum, item) => sum + item.price, 0); // Tính tổng giá
-
-        cartCount.textContent = count;
-        cartTotal.textContent = total + " VNĐ"; // Cập nhật tổng giá
-
-        // Hiển thị các sản phẩm trong giỏ hàng
-        cartItemsContainer.innerHTML = ''; // Xóa nội dung hiện tại
-        cartItems.forEach(item => {
-            const itemElement = document.createElement('p');
-            itemElement.textContent = item.name + " - " + item.price + " VNĐ"; // Cập nhật thông tin sản phẩm
-            cartItemsContainer.appendChild(itemElement);
+            // Kiểm tra nếu click ra ngoài thì sẽ ẩn cả hộp đăng nhập và giỏ hàng
+            if (!isLoginContainer && !isAccountLink && !isCartDropdown) {
+                loginContainer.style.display = 'none';
+                cartDropdown.style.display = 'none';
+            }
         });
 
-        // Kiểm tra xem có sản phẩm nào trong giỏ không
-        if (cartItems.length === 0) {
-            checkoutButton.style.display = 'none'; // Ẩn nút "Thanh Toán" nếu giỏ hàng trống
-        } else {
-            checkoutButton.style.display = 'block'; // Hiển thị nút "Thanh Toán" nếu có sản phẩm
+        const closeButton = document.querySelector('.close-btn-login');
+        if (closeButton) {
+            closeButton.addEventListener('click', closeLogin);
         }
-    }
+
+        function closeLogin(event) {
+            event.stopPropagation();
+            loginContainer.style.display = 'none';
+        }
+
+        // Giữ nguyên các phần khác liên quan đến giỏ hàng như trước
+        function addToCart(product) {
+            cartItems.push(product); // Thêm sản phẩm vào mảng
+            const cartCount = document.getElementById('cart-count');
+            const cartTotal = document.getElementById('cart-total');
+            const cartItemsContainer = document.querySelector('.cart-items');
+            const checkoutButton = document.querySelector('.checkout-button');
+
+            // Cập nhật số lượng giỏ hàng và tổng giá
+            let count = cartItems.length;
+            let total = cartItems.reduce((sum, item) => sum + item.price, 0); // Tính tổng giá
+
+            cartCount.textContent = count;
+            cartTotal.textContent = total + " VNĐ"; // Cập nhật tổng giá
+
+            // Hiển thị các sản phẩm trong giỏ hàng
+            cartItemsContainer.innerHTML = ''; // Xóa nội dung hiện tại
+            cartItems.forEach(item => {
+                const itemElement = document.createElement('p');
+                itemElement.textContent = item.name + " - " + item.price + " VNĐ"; // Cập nhật thông tin sản phẩm
+                cartItemsContainer.appendChild(itemElement);
+            });
+
+            // Kiểm tra xem có sản phẩm nào trong giỏ không
+            if (cartItems.length === 0) {
+                checkoutButton.style.display = 'none'; // Ẩn nút "Thanh Toán" nếu giỏ hàng trống
+            } else {
+                checkoutButton.style.display = 'block'; // Hiển thị nút "Thanh Toán" nếu có sản phẩm
+            }
+        }
+    </script>*@
+    @*Giỏ hàng và thanh toán*@
+    <script>
+        // Mảng chứa sản phẩm trong giỏ hàng
+        let cartItems = [];
+
+        // Hàm thêm sản phẩm vào giỏ hàng
+        function addToCart(product) {
+            cartItems.push(product);
+            updateCartDisplay();
+        }
+
+        // Cập nhật hiển thị giỏ hàng
+        function updateCartDisplay() {
+            const cartItemsContainer = document.querySelector('.cart-items');
+            const cartTotal = document.querySelector('.cart-total');
+
+            // Xóa nội dung cũ
+            cartItemsContainer.innerHTML = '';
+            let total = 0;
+
+            // Hiển thị các sản phẩm trong giỏ hàng
+            cartItems.forEach(item => {
+                const itemElement = document.createElement('p');
+                itemElement.textContent = `${item.name} - ${item.price}₫ x ${item.quantity}`;
+                cartItemsContainer.appendChild(itemElement);
+                total += item.price * item.quantity; // Tính tổng
+            });
+
+            // Hiển thị tổng
+            cartTotal.textContent = `Tổng cộng: ${total}₫`;
+        }
+
+        // Thêm sự kiện cho nút "Thêm Vào Giỏ Hàng"
+        document.querySelector('.add-to-cart').addEventListener('click', () => {
+        const quantity = document.getElementById('quantity').value;
+            const product = {
+                name: 'Bàn Di Chuột Laptop TNC',
+                price: 49000,
+                quantity: parseInt(quantity),
+            };
+            addToCart(product);
+        });
 </script>
+    <script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            const cartItemsContainer = document.querySelector('.cart-items');
+            let totalPrice = 0;
+
+            cartItems.forEach(item => {
+                const itemDiv = document.createElement('div');
+            itemDiv.classList.add('cart-item');
+
+            itemDiv.innerHTML = `
+            <img src="${item.image}" alt="${item.name}" />
+            <div class="item-details">
+                <h2>${item.name}</h2>
+                <p>Giá: ${item.price}₫</p>
+                <p>Số lượng: ${item.quantity}</p>
+                <p>Tổng: ${item.totalPrice()}₫</p>
+            </div>
+            `;
+
+            cartItemsContainer.appendChild(itemDiv);
+            totalPrice += item.totalPrice();
+            });
+
+            document.getElementById('total-price').innerText = totalPrice + '₫';
+        });
+    </script>
+    </script>
 </body>
 </html>

@@ -1,0 +1,42 @@
+﻿@model IEnumerable<WebBanHang.Models.Category>
+
+@{
+    ViewBag.Title = "Danh Sách Danh Mục";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>DANH SÁCH DANH MỤC SẢN PHẨM</h2>
+
+<!-- Hiển thị thông báo lỗi nếu có -->
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+<table class="table bg-info col-lg-8 col-md-6 col-sm-3">
+    <tr>
+        <th class="bg-success col-lg-5 col-md-4 col-sm-2">
+            TÊN DANH MỤC
+        </th>
+        <th class="bg-success col-lg-3 col-md-2 col-sm-1"></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoryName)
+            </td>
+            <td align="right">
+                @Html.ActionLink("Cập nhật", "Edit", new { id = item.CategoryID }, new { @class = "btn btn-primary btn-sm" }) |
+                @Html.ActionLink("Xóa", "Delete", new { id = item.CategoryID }, new { @class = "btn btn-danger btn-sm" })
+            </td>
+        </tr>
+    }
+</table>
+
+<p>
+    @Html.ActionLink("Thêm mới", "Create", null, new { @class = "btn btn-primary" })
+</p>
