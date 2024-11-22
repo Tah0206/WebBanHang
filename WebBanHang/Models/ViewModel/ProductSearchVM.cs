@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using _23DH110809_MyStore.Models;
+using PagedList.Mvc;
+using WebBanHang.Models;
 
 namespace WebBanHang.Models.ViewModel
 {

@@ -1,5 +1,8 @@
 ﻿body {
 }
+.header {
+    background-color: #04323A;
+}
 #div-footer {
     background-color: #04323A;
     height: 125px;

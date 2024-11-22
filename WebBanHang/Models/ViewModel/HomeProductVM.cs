@@ -5,7 +5,7 @@ using System.Web;
 
 namespace WebBanHang.Models.ViewModel
 {
-    public class HomeProduct
+    public class HomeProductVM
     {
         public string SearchTerm { get; set; }
 
