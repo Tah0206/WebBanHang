@@ -196,6 +196,7 @@
   <ItemGroup>
     <Content Include="BottomIcon\mastercard-3.svg" />
     <Content Include="BottomIcon\tiền mặt.png" />
+    <Content Include="Content\ADMIN\Style-Layout.css" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />

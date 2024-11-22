@@ -9,6 +9,7 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
+    <link href="~/Content/ADMIN/Style-Layout.css" rel="stylesheet" />
     <!-- Header -->
     <div class="header">
         <!-- Logo -->
@@ -30,25 +31,87 @@
     </div>
 
     <!-- Footer -->
-    <div class="footer">
-        <p>© 2024 STRESSMAMA. All Rights Reserved.</p>
-        <div class="footer-links">
-            <a href="#">Chính sách bảo mật</a> |
-            <a href="#">Điều khoản sử dụng</a> |
-            <a href="#">Hỗ trợ</a>
+    <div id="div-footer">
+        <div class="fm-social-left">
+            <h2><b>Theo dõi chúng tôi tại</b></h2>
+            <a href="https://www.facebook.com/tncstore/" target="blank"><img src="~/BottomIcon/facebook-brands-solid.svg" class="social-icon-left" /></a>
+            <a href="https://www.instagram.com/tncstore_vn/" target="blank"><img src="~/BottomIcon/square-instagram-brands-solid.svg" class="social-icon-left" /></a>
+            <a href="https://www.youtube.com/channel/UCvLGkK-wBBaoXwV71Tgx08Q" target="blank"><img src="~/BottomIcon/youtube-brands-solid.svg" class="social-icon-left" /></a>
+            <a href="https://shopee.vn/tncofficialstore?is_from_login=true" target="blank"><img src="~/BottomIcon/shopee.svg" class="social-icon-left" /></a>
         </div>
-        <div class="social-icons">
-            <a href="https://www.facebook.com/stressmamaworldwide?locale=vi_VN" target="_blank">
-                <img src="/Content/images/facebook-icon.png" alt="Facebook" width="20" />
-            </a>
-            <a href="https://www.instagram.com/stress.mama/" target="_blank">
-                <img src="/Content/images/instagram-icon.png" alt="Instagram" width="20" />
-            </a>
-            <a href="https://x.com/?lang=vi" target="_blank">
-                <img src="/Content/images/twitter-icon.png" alt="Twitter" width="20" />
-            </a>
+        <div class="fm-social-right">
+            <h2><b>Đăng ký email để nhận tin khuyến mãi</b></h2>
+            <input type="text" id="txtDkyEmail" placeholder="Nhập email của bạn" />
+            <a href="#"><button class="btnMuaSocialRight" value="Mua">Đăng ký</button></a>
         </div>
-        <p>Liên hệ: 0909-xxx-xxx | Email: support@stressmama.vn</p>
+    </div>
+    <div id="div-footer2">
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h3>Danh Mục Sản Phẩm</h3>
+                <p>PC Gaming</p>
+                <p>Laptop Gaming</p>
+                <p>VGA NVidia Rtx 4070</p>
+                <p>Ps5 Rẻ nhất Việt Nam</p>
+                <p>VGA NVidia Rtx 4060</p>
+            </div>
+            <div class="footer-column">
+                <h3>Thông Tin Chung</h3>
+                <p>Giới Thiệu</p>
+                <p>Tuyển Dụng</p>
+                <p>Tin Tức</p>
+                <p>Ý Kiến Khách Hàng</p>
+                <p>Liên Hệ Hợp Tác</p>
+            </div>
+            <div class="footer-column">
+                <h3>Chính Sách</h3>
+                <p>Quy Định Chung</p>
+                <p>Chính Sách Vận Chuyển</p>
+                <p>Chính Sách Bảo Hành</p>
+                <p>Chính Sách Đổi, Trả Hàng</p>
+                <p>Chính Sách Cho Doanh Nghiệp</p>
+            </div>
+            <div class="footer-column">
+                <h3>Thông Tin Hữu Ích</h3>
+                <p>Build PC là TNC</p>
+                <p>Hướng dẫn Build PC TNC</p>
+                <p>Tips Build PC TNC nhiều Khuyến Mại</p>
+                <p>Cách sửa cấu hình mẫu của Build PC TNC</p>
+                <p>Chính Sách Build PC TNC Cho Doanh Nghiệp</p>
+            </div>
+        </div>
+        <div id="contact-info">
+            <div id="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d59596.92270727487!2d105.84709124340816!3d21.000345415297396!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac70cf94287f%3A0x7362ea6005b5ac6e!2sTNC%20Store!5e0!3m2!1sen!2sus!4v1727513070287!5m2!1sen!2sus"
+                        width="400"
+                        height="200"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy">
+                </iframe>
+            </div>
+            <div id="details">
+                <h3>Công ty TNHH Thương mại & Tin học Tú Nguyệt</h3>
+                <p>Showroom: 172 Lê Thanh Nghị, Phường Đồng Tâm, Quận Hai Bà Trưng, Hà Nội</p>
+                <p>Tel: (024) 36288790 / (086) 830.2123</p>
+                <p>Trung tâm bảo hành: 172 Lê Thanh Nghị, Phường Đồng Tâm, Quận Hai Bà Trưng, Hà Nội</p>
+                <p>Tel: (098) 978 1468</p>
+                <p>Trụ sở [Không bán hàng]: 11 Vũ Thanh - Cát Linh - Đống Đa - Hà Nội</p>
+                <p>Tel: (086) 8302123</p>
+                <p>Fax: (024) 36288790</p>
+            </div>
+        </div>
+        <div style="clear:both"></div>
+        <div id="payment">
+            <h3>Hình thức thanh toán</h3>
+            <img src="~/BottomIcon/visa.svg" class="social-icon-left" />
+            <img src="~/BottomIcon/mastercard-3.svg" class="social-icon-left" />
+            <img src="~/BottomIcon/money-bill-1-solid.svg" class="social-icon-left" />
+            <img src="~/BottomIcon/tiền mặt.png" style="width:50px;height:30px;margin-right:10px" />
+        </div>
+    </div>
+    <div id="div-footer3">
+        <p>&copy; @DateTime.Now.Year - Bản quyền của Công ty TNHH Hoàng Anh Tuấn & Nguyễn Anh Đức</p>
     </div>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

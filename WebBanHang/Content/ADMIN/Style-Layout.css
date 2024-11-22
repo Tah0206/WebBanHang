@@ -1,0 +1,119 @@
+﻿body {
+}
+#div-footer {
+    background-color: #04323A;
+    height: 125px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+    #div-footer h2 {
+        color: white;
+    }
+
+.fm-social-left {
+    float: left;
+}
+
+.social-icon-left {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.fm-social-right {
+    float: right;
+}
+
+#txtDkyEmail {
+    width: 73%;
+    height: 35px;
+    padding: 2px;
+    border: 1px solid #ccc;
+    border-right: none; /* Xóa đường viền phải để kết nối với nút */
+    border-radius: 5px 0 0 5px; /* Góc bo tròn bên trái */
+    font-size: 1rem;
+    float: left
+}
+
+.btnMuaSocialRight {
+    height: 35.8px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+}
+
+#div-footer2 {
+    padding-left: 160px;
+    padding-right: 160px;
+    background-color: white;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.footer-column {
+    width: 30%; /* Thay đổi chiều rộng tùy theo số lượng cột */
+}
+
+    .footer-column h3 {
+        font-weight: bold;
+        margin-bottom: 10px;
+        font-size: 1.2rem; /* Kích thước chữ tiêu đề */
+    }
+
+    .footer-column p {
+        margin: 5px 0; /* Khoảng cách giữa các mục */
+        font-size: 1rem; /* Kích thước chữ cho các mục */
+    }
+
+#contact-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    float: left
+}
+
+#map {
+    margin-right: 30px;
+}
+
+#details h3 {
+    margin: 0 0 10px;
+    font-size: 1.3rem; /* Kích thước chữ cho tiêu đề */
+    font-weight: bold;
+}
+
+#details p {
+    margin: 5px 0; /* Khoảng cách giữa các mục */
+    font-size: 1rem; /* Kích thước chữ cho các mục */
+}
+
+#payment h3 {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#div-footer3 {
+    padding-left: 160px;
+    padding-right: 160px;
+    float: left;
+    background-color: lightgray;
+}
+
+#div-footer3 {
+    height: 60px;
+    width: 100%;
+    margin-top: 10px;
+}
