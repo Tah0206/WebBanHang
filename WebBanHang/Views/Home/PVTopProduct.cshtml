@@ -1,38 +1,35 @@
-﻿@model  WebBanHang.Models.ViewModel.ProductDetailsVM
-
+﻿@model WebBanHang.Models.ViewModel.ProductDetailsVM
 @using PagedList.Mvc
+<link href="~/Content/myStyle/CustomerDetail.css" rel="stylesheet" />
 
-<link rel="stylesheet" type="text/css" href="/Content/ayStyle/CustomerHose.css" />
-
-<!-- Hiển thị danh sách sản phẩm -->
-
-@if (Model.TopProducts != null && Model.TopProducts.Any())
+@if (Model.TopProduct != null && Model.TopProduct.Any())
 {
-    <section class="container-Fluid listProduct">
-
-        <h4 style="font-weight:bold;">Sản phẩm bán chạy</h4>
-
+    <section class="container-fluid listProduct">
+        <h4 style="font-weight:bold">Sản phẩm Top</h4>
         <ul class="list-container">
-
-            @foreach (var product in Model.TopProducts)
+            @foreach (var product in Model.TopProduct)
             {
-            <li class="lproduct-item">
-                <div>
-                    <a href="@Url.Action("ProductDetails", "Home", new { id = product.ProductID })">
-                        <img src="@Html.DisplayFor(modelItem => product.ProductImage)" />
-                    </a>
-                </div>
-
-                <div>
-                    <h5>@Html.DisplayFor(modelItem => product.ProductName) </h5>
-                    <p class="prodSale">@Html.DisplayFor(modelItem => product.ProductPrice)</p>
-                </div>
-            </li>
+                <li class="lproduct-item">
+                    <div>
+                        <a href="@Url.Action("ProductDetail","Home",new { id = product.ProductID })">
+                            <img src="@Html.DisplayFor(modelItem => product.ProductImage)" />
+                        </a>
+                    </div>
+                    <div>
+                        <h5> @Html.DisplayFor(modleItem => product.ProductName)</h5>
+                        <p class="prodSale">@Html.DisplayFor(modelItem => product.ProductPrice)</p>
+                    </div>
+                </li>
             }
         </ul>
-
     </section>
+    <!-- hiển thị phân trang-->
+    <div class="pagination-container">
+        @Html.PagedListPager(Model.TopProduct, page => Url.Action("ProductDetail", new
+    {
+       id = Model.product.ProductID,
+       quantity = Model.quantity,
+       page
+    }))
+    </div>
 }
-
-
-<!-- Hiển thị phân trang -->

@@ -1,0 +1,144 @@
+﻿@model WebBanHang.Models.ViewModel.ProductDetailsVM
+@{
+    ViewBag.Title = "ProductDetail";
+    Layout = "~/Views/Shared/_LayoutDivMain.cshtml";
+    <link href="~/Content/myStyle/CustomerHome.css" rel="stylesheet" />
+}
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Thanh header, cố định ở trên */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 5px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        /* Thanh điều hướng trong header */
+        .nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+            .nav a:hover {
+                text-decoration: underline;
+            }
+
+        /* Căn chỉnh và tạo khoảng cách giữa các phần */
+        .pro {
+            padding: 50px 10px 50px 10px;
+            background-color: ghostwhite;
+        }
+
+        /* Section của sản phẩm */
+        .pro-section {
+            background-color: white;
+            border: 1px groove #ffffff;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 10px;
+        }
+
+            /* Căn chỉnh hình ảnh */
+            .pro-section img {
+                max-height: 250px;
+                max-width: 200px;
+                padding: 5px;
+                object-fit: contain;
+            }
+
+        .pro-price {
+            font-weight: bolder;
+            font-size: large;
+            color: red;
+        }
+
+        .pro-sale {
+            font-weight: lighter;
+        }
+
+        /* Căn chỉnh các phần trong sản phẩm */
+        .container-fluid {
+            padding-top: 100px;
+        }
+
+        /* Tối ưu kiểu dáng của button */
+        .btn-info {
+            background-color: #5bc0de;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            cursor: pointer;
+        }
+
+            .btn-info:hover {
+                background-color: #31b0d5;
+            }
+    </style>
+</head>
+<body>
+    
+
+    <div class="container-fluid pro">
+        <div class="row">
+            <!-- Khối bên trái -->
+            <div class="col-md-3 pro-section">
+                <img src="@Model.product.ProductImage" alt="Product Image" />
+            </div>
+
+            <!-- Khối ở giữa -->
+            <div class="col-md-5 pro-section">
+                <h4><strong>@Html.DisplayFor(model => model.product.ProductName)</strong></h4>
+                <p class="pro-sale">Đã bán: @Model.product.OrderDetails.Count</p>
+                <p class="pro-price">@Model.product.ProductPrice.ToString("C")</p>
+                <p>Danh mục: @Model.product.Category.CategoryName</p>
+                <hr />
+                <h5><strong>Mô tả</strong></h5>
+                <p>@Model.product.ProductDescription</p>
+                <hr />
+
+            </div>
+
+            <!-- Khối bên phải -->
+            <div class="col-md-3 pro-section">
+                <div class="form-group">
+                    @using (Html.BeginForm("ProductDetail", "Home", FormMethod.Get))
+                    {
+                        <h4><strong>Số lượng</strong></h4>
+                        <p>
+                            @Html.TextBoxFor(model => model.quantity, new
+                       {
+                           @class = "form-control",
+                           @type = "number",
+                           @min = 1
+                            })
+                        </p>
+                        <h4><strong>Tạm tính</strong></h4>
+                        <p>@Model.estimatedValue.ToString("C")</p>
+                        <p>
+                            @Html.ActionLink("Thêm vào giỏ hàng", "AddToCart", "Cart", new { id = Model.product.ProductID, quantity = Model.quantity }, new { @class = "btn btn-info" })
+                        </p>
+                    }
+                    <hr />
+                </div>
+
+                <!-- Sản phẩm top (thêm vào dưới phần Thêm vào giỏ hàng) -->
+                <div>@Html.Partial("PVTopProduct", Model)</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

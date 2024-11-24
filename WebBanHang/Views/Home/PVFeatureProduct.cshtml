@@ -1,7 +1,7 @@
 ﻿@model WebBanHang.Models.ViewModel.HomeProductVM
+@using PagedList.Mvc
+<link href="~/Content/myStyle/stylE.css" rel="stylesheet" />
 
-<link rel="stylesheet" type="text/css" href="~/Content/myStyle/CustomerHome.css" />
-<!-- Hiển thị danh sách sản phầm-->
 @if (Model.FeaturedProducts != null && Model.FeaturedProducts.Any())
 {
     <section class="container-fluid featureProd">
@@ -11,7 +11,7 @@
             {
                 <div class="fproduct-item">
                     <div>
-                        <a href="@Url.Action("ProductDetails", "Home", new { id = product.ProductID })">
+                        <a href="@Url.Action("ProductDetail", "Home", new {id = product.ProductID})">
                             <img src="@Html.DisplayFor(modelItem => product.ProductImage)" />
                         </a>
                     </div>
@@ -19,22 +19,31 @@
                         <p class="prodPrice">
                             @Html.DisplayFor(modelItem => product.ProductPrice)
                         </p>
-
                         <p class="prodName">
                             @Html.DisplayFor(modelItem => product.ProductName)
                         </p>
-
                         <p class="prodCate">
-                            @Html.DisplayFor(modelIetm => product.Category.CategoryName)
+                            @Html.DisplayFor(modelItem => product.Category.CategoryName)
                         </p>
-
                         <p class="prodSale">
                             Đã bán: &nbsp; @Html.DisplayFor(modelItem => product.OrderDetails.Count)
                         </p>
                     </div>
                 </div>
             }
+            <div class="pagination-container">
+                @Html.PagedListPager(Model.NewProducts, page => Url.Action("Index", new { page, searchTerm = Model.SearchTerm }))
+            </div>
         </div>
     </section>
+
     <hr />
 }
+
+else
+{
+    <p>Không tìm được sản phẩm phù hợp</p>
+}
+
+
+

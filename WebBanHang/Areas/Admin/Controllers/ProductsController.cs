@@ -13,7 +13,7 @@ using WebBanHang.Models;
 
 
 
-namespace _23DH110809_MyStore.Areas.Admin.Controllers
+namespace WebBanHang.Areas.Admin.Controllers
 {
     public class ProductsController : Controller
     {

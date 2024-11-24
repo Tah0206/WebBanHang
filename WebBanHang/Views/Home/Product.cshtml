@@ -1,4 +1,4 @@
-﻿@model WebBanHang.Models.Product
+﻿@model WebBanHang.Models.ViewModel.HomeProductVM
 
 @{
     ViewBag.Title = "Product";
@@ -6,4 +6,10 @@
 }
 
 <h2>Product</h2>
+<html>
+<body>
+    @Html.Partial("PVFeatureProduct", Model)
 
+    @Html.Partial("PVNewProduct", Model)
+</body>
+</html>
